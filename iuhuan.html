@@ -1,0 +1,1258 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="通过示例了解ECMASCRIPT 6">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/zh-ecmascript6-oct-2019/iuhuan.html">
+      
+      
+        <link rel="prev" href="iianianguiiang.html">
+      
+      
+        <link rel="next" href="hengeiaoahi.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>6. 字符串 - 通过示例了解ECMASCRIPT 6</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "通过示例了解ECMASCRIPT 6";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="通过示例了解ECMASCRIPT 6" class="md-header__button md-logo" aria-label="通过示例了解ECMASCRIPT 6" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            通过示例了解ECMASCRIPT 6
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. 字符串
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/zh-ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="通过示例了解ECMASCRIPT 6" class="md-nav__button md-logo" aria-label="通过示例了解ECMASCRIPT 6" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    通过示例了解ECMASCRIPT 6
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/zh-ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecmascript-6-uanuen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. ECMASCRIPT 6 语言入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aianaiauaning.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 搭建开发环境
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="javascript-ihu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. JavaScript 基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iaoe.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 表格
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="iianianguiiang.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 字面量对象
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 字符串
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="iuhuan.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 字符串
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-str-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. 脚本 [str-01]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-str-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. 脚本 [str-02]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-str-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. 脚本 [str-03]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-str-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4. 脚本 [str-04]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-str-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5. 脚本 [str-05]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-str-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6. 脚本 [str-06]
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hengeiaoahi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 正则表达式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="anhu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="uouuihang.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 错误与异常
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="es6-ouai.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. ES6 模块
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="hiianuongianhenguiuanhu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 事件驱动编程与异步函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="javascript-http-anhu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. JavaScript HTTP 函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ei.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. 类
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. 税费计算服务的 JavaScript HTTP 客户端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><a id="refheadingtoc2042253980233556"></a></p>
+<h1 id="6">6. <span style="color: #365f91">字符串</span></h1>
+<p>JavaScript 字符串与 PHP 中的字符串非常相似。</p>
+<p><img src="images/10000000000000C9000001318D77205E.png" width="81" height="122" style="width:2.133cm;height:3.237cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C9000001318D77205E.png" /></p>
+<p><a id="refheadingtoc2042273980233556"></a></p>
+<h2 id="61-str-01">6.1. <span style="color: #4f81bd"><strong>脚本</strong> [str-01]</span></h2>
+<p>首先需要理解的是，一旦字符串创建完成，就无法再对其进行修改。虽然有许多方法可以基于原始字符串创建新的字符串，但原始字符串本身保持不变。此外，字符串有两种类型：</p>
+<ul>
+  <li><b>[string]</b>：当使用字符串字面量初始化时；
+  </li>
+  <li><b>[object] </b>当其作为 <b>[String]</b> 类的实例创建时；
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// strings are read-only (cannot be modified)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// a chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne1 = </span><span style="color:#a31515">&quot;abcd &quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(chaîne1)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne1));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// character n° 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;chaîne1</span><span style="font-weight:bold;color:#a31515">[2]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, chaîne1</span><span style="font-weight:bold;color:#000000">[2]</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// causes an error</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">chaîne1</span><span style="font-weight:bold;color:#000000">[2]</span><span style="color:#000000"> = </span><span style="color:#a31515">&quot;0&quot;</span><span style="color:#000000">;</span></span></span>
+</code></pre></div>
+
+<p><strong>执行</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Temp\19-09-01\javascript\strings\str-01.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">typeof(chaîne1)= string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">chaîne1<span style="font-weight:bold">[2]</span>= c</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">c:\Temp\19-09-01\javascript\strings\str-01.js:1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">TypeError: Cannot assign to read only property &#x27;2&#x27; of string &#x27;abcd &#x27;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\strings\str-01.js:12:12)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Generator.next (&lt;anonymous&gt;)</span></span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2042293980233556"></a></p>
+<h2 id="62-str-02">6.2. <span style="color: #4f81bd"><strong>脚本</strong> [str-02]</span></h2>
+<p>本脚本演示了字符串可以通过两种方式构建。</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// strings can be of two types</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// a literal string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne1 = </span><span style="color:#a31515">&quot;abcd &quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(chaîne1)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne1));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// string instance</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne2 = </span><span style="color:#0000ff">new</span><span style="color:#000000"> String(</span><span style="color:#a31515">&quot;xyzt&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(chaîne2)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne2));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// other entry (without new) - type [string] not [object]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne3 = String(</span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(chaîne3)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne3));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// type [string] and type [object] offer the same methods, those of the String class</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;chaîne1.length=&quot;</span><span style="color:#000000">, chaîne1.length);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;chaîne2.length=&quot;</span><span style="color:#000000">, chaîne2.length);</span></span></span>
+</code></pre></div>
+
+<p><strong>注释</strong></p>
+<ul>
+  <li>第 6 行：定义字符串的标准方法。<b>[string1] </b>的类型为 <b>[string]</b>；
+  </li>
+  <li>第 10 行：可以使用 <b>[String]</b> 类的构造函数来构建字符串。<b>[string2] </b>的类型将是 <b>[object]</b>；
+  </li>
+</ul>
+
+<p><strong>执行</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\strings\str-02.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">typeof(chaîne1)= string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">typeof(chaîne2)= object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">typeof(chaîne3)= string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">chaîne1.length= 5</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">chaîne2.length= 4</span></span>
+</code></pre></div>
+
+<p><strong>[string]</strong> 类型继承了 <strong>[String]</strong> 类的所有方法。</p>
+<p><a id="refheadingtoc2042313980233556"></a></p>
+<h2 id="63-str-03">6.3. <span style="color: #4f81bd"><strong>脚本</strong> [str-03]</span></h2>
+<p>此脚本通过变量插值显示特定字符串。</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;Introduction à Javascript par l&#x27;exemple&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// chain with variable interpolation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> str = </span><span style="color:#a31515">`</span><span style="font-weight:bold;color:#a31515">[${chaîne}]</span><span style="color:#a31515">.substr(3, 2)=`</span><span style="color:#000000"> + chaîne.substr(3, 2)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">console.log(str);</span></span>
+</code></pre></div>
+
+<p><strong>注释</strong></p>
+<ul>
+  <li>第 6 行：字符串中可以包含 ${变量} 表达式，这些表达式会被替换为变量的值。这与 PHP 字符串中的 $ 变量遵循相同的逻辑。请注意此类字符串的语法：它必须用反引号（法语键盘上的 AltGr-7）括起来；
+  </li>
+</ul>
+
+<p><strong>执行</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Temp\19-09-01\javascript\strings\tempCodeRunnerFile.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Introduction à Javascript par l&#x27;exemple]</span>.substr(3, 2)=ro</span></span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2042333980233556"></a></p>
+<h2 id="64-str-04">6.4. <span style="color: #4f81bd"><strong>脚本</strong> [str-04]</span></h2>
+<p>带变量插值的字符串仍显不足。无法在 ${variable} 表达式中用表达式替换变量。对于有 C 语言编程经验的人来说，没有什么能比得上 <strong>[printf, sprintf]</strong> 函数来编写或构造格式化字符串。成百上千的开发者创建了数千个 JavaScript 包，形成了庞大的生态系统。 当 JavaScript 原生功能无法满足您的需求时，就该寻找能实现该功能的包了。为此，我们使用包管理器 <strong>[npm]</strong>。它提供了一个 <strong>[搜索]</strong> 选项，允许您在包描述中搜索特定字符串。 <strong>[npm]</strong> 会返回符合搜索条件的包列表。因此，我们将搜索包描述中是否包含字符串 <strong>[sprintf]</strong>：</p>
+<p><img src="images/10000000000008B9000002C23DAD22B5.png" width="670" height="212" style="width:17.722cm;height:5.604cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008B9000002C23DAD22B5.png" /></p>
+<ul>
+  <li>第 <b>[4]</b> 列为第 <b>[3]</b> 列中包的关键词；
+  </li>
+  <li>在第 <b>[5]</b> 列中，显示第 <b>[3]</b> 列中包的描述；
+  </li>
+</ul>
+
+<p>下一步是访问 <strong>[npm]</strong> 网站 <strong>[https://www.npmjs.com/]</strong>，并阅读包的描述：</p>
+<p><img src="images/100000000000069700000427F84A598B.png" width="422" height="266" style="width:11.16cm;height:7.033cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000069700000427F84A598B.png" /></p>
+<p>在 <strong>[3]</strong> 中，我们查看包列表并选择一个。</p>
+<p><img src="images/1000000000000485000002026D3D5A42.png" width="347" height="154" style="width:9.179cm;height:4.078cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000485000002026D3D5A42.png" /></p>
+<p>在包的描述中，你会找到安装和使用的说明：</p>
+<p><img src="images/10000000000004970000034CF10EC898.png" width="294" height="211" style="width:7.772cm;height:5.583cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004970000034CF10EC898.png" /></p>
+<p>我们在 <strong>[VSCode]</strong> 终端中安装 <strong>[sprintf-js]</strong> 包：</p>
+<p><img src="images/1000000000000558000001CE1C9B1593.png" width="410" height="139" style="width:10.86cm;height:3.667cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000558000001CE1C9B1593.png" /></p>
+<p>此安装操作将修改位于 <strong>[javascript]</strong> 文件夹根目录下的 <strong>[package.json]</strong> 文件 <strong>[2]</strong>：</p>
+<p><img src="images/100000000000026B000001AB5E547E08.png" width="248" height="171" style="width:6.549cm;height:4.517cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026B000001AB5E547E08.png" /></p>
+<p>如上所示，该包已安装在 <strong>[dependencies]</strong> 中，即运行项目所需的包。请记住，仅在项目开发期间需要的包会被放置在 <strong>[devDependencies]</strong> 中。这些包在运行时不会被使用。在创建项目最终版本以进行生产部署时，这一区别至关重要。有工具可用于：</p>
+<ul>
+  <li>将执行所需的所有 JavaScript 文件合并为一个文件。因此，<b>[devDependencies]</b> 中的包不会包含在此最终文件中；
+  </li>
+  <li>对其进行压缩，即尽可能减小文件大小。例如，此过程会移除所有注释；
+  </li>
+  <li>“混淆”代码以增加其可读性难度。例如，变量 rate、salary 和 tax 将被替换为变量 a、b 和 c；
+  </li>
+  <li>执行其他优化操作；
+  </li>
+</ul>
+
+<p>这种对 JavaScript 项目最终文件的优化在 Web 编程中被广泛应用。一个 Web 应用程序可能依赖于大量 JavaScript 文件。在浏览器中加载这些文件可能会减慢应用程序首页的显示速度。上述优化旨在缩短这种加载时间。如果用户觉得加载时间过长，他们将不会使用该应用程序。</p>
+<p>既然我们已经有了 <strong>[sprintf-js]</strong> 包，就需要使用它。以下是 <strong>[str-04]</strong> 脚本：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;Introduction à Javascript par l&#x27;exemple&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// method</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(3,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.substr(3, 2)));</span></span></span>
+</code></pre></div>
+
+<p>在 ECMAScript 6 中，我们使用 <strong>[import]</strong> 关键字<strong>来</strong>导入包导出的对象。要了解包导出了什么，可以查看其代码：</p>
+<p><img src="images/100000000000060D0000015281E8D3FA.png" width="620" height="135" style="width:16.392cm;height:3.577cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000060D0000015281E8D3FA.png" /></p>
+<ul>
+  <li>在 <b>[1] </b>中，右键单击导入的包；
+  </li>
+  <li>在 <b>[2] </b>中，我们希望查看其定义；
+  </li>
+  <li>在 <b>[3-4] </b>中，我们可以看到该包导出了一个名为 <b>[sprintf] </b>的函数；
+  </li>
+</ul>
+
+<p>通过以下语句导入来自 <strong>[sprintf-js]</strong> 包的 <strong>[sprintf]</strong> 函数：</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
+</code></pre></div>
+
+<p>完整代码：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;Introduction à Javascript par l&#x27;exemple&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// method</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(3,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.substr(3, 2)));</span></span></span>
+</code></pre></div>
+
+<p>产生以下结果：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\strings\str-04.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">c:\Temp\19-09-01\javascript\strings\str-04.js:3</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">import { sprintf } from &#x27;sprintf-js&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">^</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">SyntaxError: Unexpected token {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at new Script (vm.js:79:7)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at createScript (vm.js:251:10)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Object.runInThisContext (vm.js:303:10)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Module._compile (internal/modules/cjs/loader.js:657:28)</span></span>
+</code></pre></div>
+
+<p>第 3 行：无法识别 <strong>[import]</strong> 语句。这是因为本课程使用的 <strong>[node.js]</strong> 10.15.1 版本（2019 年 9 月）尚未支持名为 modules 的 ECMAScript 包导入标准。 2019 年，<strong>[node.js]</strong> 支持名为 CommonJS 的模块标准。<strong>[node.js]</strong> 计划于 2020 年集成 ECMAScript 模块。开发者们再次挺身而出，创建了允许在 <strong>[node.js]</strong> 中立即（2019 年）使用 ES6 模块的包。</p>
+<p>我们将使用一个名为 <strong>[esm]</strong>（ECMAScript Modules）的包。我们在终端中为 <strong>[javascript]</strong> 项目安装它：</p>
+<p><img src="images/10000000000005560000017C3D85E466.png" width="547" height="152" style="width:14.46cm;height:4.023cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005560000017C3D85E466.png" /></p>
+<p>在 <strong>[4]</strong> 中，我们可以看到安装 <strong>[esm]</strong> 包 <strong>[1-3]</strong> 已修改了 <strong>[javascript/package.json]</strong> 文件。</p>
+<p>我们还没完成。为了让 <strong>[node.js]</strong> 能够使用 <strong>[esm]</strong> 模块，我们需要使用 <strong>[-r esm]</strong> 参数来运行它。</p>
+<p>因此，我们需要修改 <strong>[VSCode]</strong> 中 <strong>[Code Runner]</strong> 扩展的配置：</p>
+<p><img src="images/1000000000000623000003283CBE44C5.png" width="629" height="323" style="width:16.632cm;height:8.555cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000623000003283CBE44C5.png" /></p>
+<p><img src="images/1000000000000674000001DF96DD6E5D.png" width="578" height="168" style="width:15.289cm;height:4.433cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000674000001DF96DD6E5D.png" /></p>
+<p>在 <strong>[11]</strong> 处，我们添加 <strong>[-r esm]</strong> 参数，并保存（Ctrl-S）配置。</p>
+<p>现在我们可以运行 <strong>[str-04]</strong> 脚本：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;Introduction à Javascript par l&#x27;exemple&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// substr method</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(3,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.substr(3, 2)));</span></span></span>
+</code></pre></div>
+
+<p><img src="images/10000000000007E30000010E2282F9EF.png" width="606" height="81" style="width:16.03cm;height:2.143cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007E30000010E2282F9EF.png" /></p>
+<p><a id="refheadingtoc2042353980233556"></a></p>
+<h2 id="65-str-05">6.5. <span style="color: #4f81bd"><strong>脚本</strong> [str-05]</span></h2>
+<p>以下是文档中关于 <strong>[sprintf]</strong> 函数的说明：</p>
+<p><em>格式字符串中的占位符以 % 开头，后跟一个或多个以下元素，顺序如下：</em></p>
+<ul>
+  <li>一个可选的数字，后跟 $ 符号，用于指定从哪个参数索引获取值。如果未指定，参数将按与输入字符串中占位符相同的顺序放置。
+  </li>
+  <li>一个可选的 + 符号，用于强制在数值结果前添加正号或负号。默认情况下，仅对负数使用 - 符号。
+  </li>
+  <li>一个可选的填充指定符，用于指定填充字符（若指定）。可能的值为 0 或任何以 &#x27;（单引号）开头的字符。默认使用空格进行填充。
+  </li>
+  <li>一个可选的 - 符号，用于使 sprintf 将此占位符的结果左对齐。默认情况下，结果为右对齐。
+  </li>
+  <li>一个可选数字，指定结果应包含的字符数。如果要返回的值短于此数字，结果将被补齐。当与 j（JSON）类型指定符一起使用时，补齐长度指定用于缩进的制表符大小。
+  </li>
+  <li>一个可选的精度修饰符，由 .（点）后跟一个数字组成，用于指定浮点数应显示的位数。当与 g 类型指定符一起使用时，它指定有效位数。当用于字符串时，会导致结果被截断。
+  </li>
+  <li>类型指定符，可以是以下任意一种：
+    <ul>
+      <li>% — 生成字符 %
+      </li>
+      <li>b — 返回一个二进制整数
+      </li>
+      <li><i>c — 返回一个整数，表示具有该 ASCII 值的字符</i>
+      </li>
+      <li>d 或 i — 返回一个带符号的十进制整数
+      </li>
+      <li>e — 返回采用科学记数法的浮点数
+      </li>
+      <li>u — 返回一个无符号十进制整数
+      </li>
+      <li>f — 直接返回浮点数；参见上文关于精度的说明
+      </li>
+      <li>g — 原样返回浮点数；参见上文关于精度的说明
+      </li>
+      <li>o — 返回一个八进制整数
+      </li>
+      <li>s — 原样返回字符串
+      </li>
+      <li>t — 返回 true 或 false
+      </li>
+      <li><i>T — 返回</i><a href="https://www.npmjs.com/package/sprintf-js#fn-1"><u><span style="color: #0563c1">参数1</span></u></a><i>的类型</i>
+      </li>
+      <li>v — 返回指定参数的原始值
+      </li>
+      <li>x — 将整数以十六进制形式返回（小写）
+      </li>
+      <li>X — 返回一个十六进制数（大写）
+      </li>
+      <li>j — 返回一个 JavaScript 对象或数组，以 JSON 编码的字符串形式呈现
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>脚本 <strong>[script-05]</strong> 实现了其中部分格式：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;Javascript&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// character strings</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s, %%s]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s, %%20s]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%20s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s, %%-20s]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%-20s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// integers</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%d, %%d]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%d]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, 10, 10));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%d, %%4d]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%4d]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, 10, 10));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%d, %%-4d]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%-4d]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, 10, 10));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%d, %%04d]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%04d]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, 10, 10));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// real</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%f, %%f]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%f]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, -10.5, -10.5));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%f, %%10.2f]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%10.2f]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, -10.5, -10.5));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%f, %%-10.2f]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%-10.2f]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, -10.5, -10.5));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%f, %%010.3f]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%010.3f]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, -10.5, -10.5));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// json</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;personne (%%j)=%j&quot;</span><span style="color:#000000">, { nom: </span><span style="color:#a31515">&quot;mathieu&quot;</span><span style="color:#000000">, âge: 34 }));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;type personne (%%T)=%T&quot;</span><span style="color:#000000">, { nom: </span><span style="color:#a31515">&quot;mathieu&quot;</span><span style="color:#000000">, âge: 34 }));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// boolean</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;booléen (%%t)=%t&quot;</span><span style="color:#000000">, 4 === 4));</span></span></span>
+</code></pre></div>
+
+<p><strong>执行</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\strings\str-05.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Javascript, %s]</span>=&gt;<span style="font-weight:bold">[Javascript]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Javascript, %20s]</span>=&gt;<span style="font-weight:bold">[ Javascript]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Javascript, %-20s]</span>=&gt;<span style="font-weight:bold">[Javascript ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[10, %d]</span>=&gt;<span style="font-weight:bold">[10]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[10, %4d]</span>=&gt;<span style="font-weight:bold">[ 10]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[10, %-4d]</span>=&gt;<span style="font-weight:bold">[10 ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[10, %04d]</span>=&gt;<span style="font-weight:bold">[0010]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[-10.5, %f]</span>=&gt;<span style="font-weight:bold">[-10.5]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[-10.5, %10.2f]</span>=&gt;<span style="font-weight:bold">[ -10.50]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[-10.5, %-10.2f]</span>=&gt;<span style="font-weight:bold">[-10.50 ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[-10.5, %010.3f]</span>=&gt;<span style="font-weight:bold">[-00010.500]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">personne (%j)={&quot;nom&quot;:&quot;mathieu&quot;,&quot;âge&quot;:34}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">type personne (%T)=object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">booléen (%t)=true</span></span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2042373980233556"></a></p>
+<h2 id="66-str-06">6.6. <span style="color: #4f81bd"><strong>脚本</strong> [str-06]</span></h2>
+<p><strong>[str-06]</strong> 脚本演示了 <strong>[String]</strong> 类的某些方法，这些方法也可用于 <strong>[string]</strong> 类型：</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;  Introduction à Javascript &quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// a few methods</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// substr(10,2): 2 characters starting from number 10</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(10,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.substr(10, 2)));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// trim: eliminates blanks at the beginning and end of a chain (blank=b \t \r \n \f)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.trim()=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.trim()));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// toLowerCase: transformation to lower case</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.toLowerCase=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.toLowerCase()));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// toUpperCase: transformation into uppercase letters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.toUpperCase=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.toUpperCase()));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// indexOf: position of a searched  string within the string, -1 if the substring doesn&#x27;t exist</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.indexOf(&#x27;Java&#x27;)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.indexOf(</span><span style="color:#a31515">&#x27;Java&#x27;</span><span style="color:#000000">)));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.trim().indexOf(&#x27;abcd&#x27;)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.indexOf(</span><span style="color:#a31515">&#x27;abcd&#x27;</span><span style="color:#000000">)));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// includes: true if the string searched for is in the string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.includes(&#x27;Java&#x27;)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.includes(</span><span style="color:#a31515">&#x27;Java&#x27;</span><span style="color:#000000">)));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// length: string length - not a method but a property</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.length=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.length));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// slice (7,10): strings of characters 7 to 9</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.slice(7,10)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.slice(7, 10)));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// match: searches for an expression in the string - this expression can be a regular expression</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// /intro/i: regular expression designating the string [intro] in upper or lower case</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// returns the string found</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.match(/intro/i)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.match(</span><span style="color:#a31515">/intro/</span><span style="color:#0000ff">i</span><span style="color:#000000">)));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// replace: replaces string1 with string2 in string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// replaces the 1st occurrence of i with x</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.replace(&#x27;i&#x27;,&#x27;x&#x27;)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.replace(</span><span style="color:#a31515">&#x27;i&#x27;</span><span style="color:#000000">, </span><span style="color:#a31515">&#x27;x&#x27;</span><span style="color:#000000">)));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// replaces all occurrences of i with x</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// /i/g is a regular expression designating all (g) occurrences of i</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.replace(/i/g,&#x27;x&#x27;)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.replace(</span><span style="color:#a31515">/i/</span><span style="color:#0000ff">g</span><span style="color:#000000">, </span><span style="color:#a31515">&#x27;x&#x27;</span><span style="color:#000000">)));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// split: splits the string into words separated by the split parameter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// renders the table of these words</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// /\s*/ : words separated by 0 or more spaces</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.split(/\\s*/)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.split(</span><span style="color:#a31515">/\s*/</span><span style="color:#000000">)));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// /\s+/ : words separated by one or more spaces</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.split(/\\s+/)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.split(</span><span style="color:#a31515">/\s+/</span><span style="color:#000000">)));</span></span></span>
+</code></pre></div>
+
+<p><strong>执行</strong></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\strings\str-06.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.substr(10,2)=<span style="font-weight:bold">[ti]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.trim()=<span style="font-weight:bold">[Introduction à Javascript]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.toLowerCase=<span style="font-weight:bold">[ introduction à javascript ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.toUpperCase=<span style="font-weight:bold">[ INTRODUCTION À JAVASCRIPT ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.indexOf(&#x27;Java&#x27;)=<span style="font-weight:bold">[17]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.trim().indexOf(&#x27;abcd&#x27;)=<span style="font-weight:bold">[-1]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.includes(&#x27;Java&#x27;)=<span style="font-weight:bold">[true]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.length=<span style="font-weight:bold">[28]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.slice(7,10)=<span style="font-weight:bold">[duc]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.match(/intro/i)=<span style="font-weight:bold">[Intro]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.replace(&#x27;i&#x27;,&#x27;x&#x27;)=<span style="font-weight:bold">[ Introductxon à Javascript ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.replace(/i/g,&#x27;x&#x27;)=<span style="font-weight:bold">[ Introductxon à Javascrxpt ]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.split(/\s*/)=<span style="font-weight:bold">[,I,n,t,r,o,d,u,c,t,i,o,n,à,J,a,v,a,s,c,r,i,p,t,]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[ Introduction à Javascript ]</span>.split(/\s+/)=<span style="font-weight:bold">[,Introduction,à,Javascript,]</span></span></span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        本教程由 <strong>Serge Tahé</strong> 编写，根据
+<em>知识共享 署名-非商业性使用-
+相同方式共享 3.0 未本地化</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
