@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://stahe.github.io/zh-ecmascript6-oct-2019/javascript-ihu.html">
       
       
-        <link rel="prev" href="aianaiauaning.html">
+        <link rel="prev" href="onguouaningenhuang.html">
       
       
-        <link rel="next" href="iaoe.html">
+        <link rel="next" href="huu.html">
       
       
         
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 工作环境的安装
   
 
     
@@ -472,10 +474,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#36-script-bases-06" class="md-nav__link">
+  <a href="#36-bases-06" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.6. script [bases-06]
+        3.6. 脚本 [bases-06]
       
     </span>
   </a>
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iaoe.html" class="md-nav__link">
+      <a href="huu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -735,14 +737,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-anhu.html" class="md-nav__link">
+      <a href="javascript-anhu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -789,14 +791,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+      <a href="http-euuan-huieiiuanuue-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 税费计算服务的 JavaScript HTTP 客户端
+    14. HTTP 客户端 税费计算服务的 JavaScript
   
 
     
@@ -829,64 +831,64 @@
   
 
 
-<p><a id="refheadingtoc2041813980233556"></a></p>
-<h1 id="3-javascript">3. <span style="color: #365f91">JavaScript 基础</span></h1>
-<p><strong>注</strong>：从这里开始，术语 <strong>[JavaScript]</strong> 将始终指代 ECMAScript 6 标准。</p>
-<p>在之前的 JavaScript 项目中，创建一个<strong>名为 [bases]</strong> 的文件夹。我们将把本节中的示例放在那里：</p>
-<p><img src="images/1000000000000444000001D76F20A45A.png" width="437" height="188" style="width:11.561cm;height:4.987cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000444000001D76F20A45A.png" /></p>
-<p><a id="refheadingtoc2041833980233556"></a></p>
+<p><span id="refheadingtoc2041813980233556" name="refheadingtoc2041813980233556" class="odt-bookmark-anchor"></span></p>
+<h1 id="3-javascript">3. <span style="color: #365f91"><strong>JavaScript 基础</strong></span></h1>
+<p><strong>注</strong>：下文中，术语 <strong>[Javascript]</strong> 将始终指代 ECMAScript 6 标准。</p>
+<p>在之前的 JavaScript 项目中，创建一个<strong>名为 [bases]</strong> 的文件夹。我们将把本节的示例放在其中：</p>
+<p><img src="images/1000000000000444000001D76F20A45A.png" width="437" height="188" style="width:11.561cm;height:4.979cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000444000001D76F20A45A.png" /></p>
+<p><span id="refheadingtoc2041833980233556" name="refheadingtoc2041833980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="31-bases-01">3.1. <span style="color: #4f81bd">脚本 [bases-01]</span></h2>
-<p>为了介绍 PHP7 的基础知识，我们使用了以下代码（参见<a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">相关</span></u></a>段落）：</p>
+<p>为了介绍 PHP7 的基础知识，我们使用了以下代码（参见<a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">链接</span></u></a>段落）：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// this is a comment</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// variable used without being declared</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 这是一条注释</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 未声明的变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$nom</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;dupont&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a screen display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 屏幕显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;nom=</span><span style="color:#0000ff">$nom</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an array with elements of different types</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 包含不同类型元素的数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$tableau</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;un&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;deux&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">3</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">4</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// its number of elements</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 其元素个数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$n</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">count(</span><span style="color:#0000ff">$tableau</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a loop</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个循环</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">for</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">&lt;</span><span style="color:#008080"> </span><span style="color:#0000ff">$n</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#000000">++)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;tableau</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#008000">=</span><span style="color:#0000ff">$tableau</span><span style="font-weight:bold;color:#0000ff">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// initialize 2 variables with the contents of an array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用数组内容初始化两个变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$chaine1</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$chaine2</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;chaine1&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;chaine2&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// concatenation of the 2 strings</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将两个字符串连接</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$chaine3</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$chaine1</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#0000ff">$chaine2</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// result display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显示结果</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;</span><span style="font-weight:bold;color:#008000">[$chaine1,$chaine2,$chaine3]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">affiche(</span><span style="color:#0000ff">$chaine1</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the type of a variable can be known</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 变量的类型可以确定</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">afficheType(</span><span style="color:#008000">&quot;n&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$n</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">afficheType(</span><span style="color:#008000">&quot;chaine1&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$chaine1</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">afficheType(</span><span style="color:#008000">&quot;tableau&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$tableau</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the type of a variable can change at runtime</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 变量的类型在运行时可能会改变</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$n</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;a changé&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">afficheType(</span><span style="color:#008000">&quot;n&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$n</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a function can return a result</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数可以返回结果</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$res1</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">f1(</span><span style="color:#000080">4</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;res1=</span><span style="color:#0000ff">$res1</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a function can return a table of values</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数可以返回一个值数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$res1</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$res2</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$res3</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">f2();</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;(res1,res2,res3)=</span><span style="font-weight:bold;color:#008000">[$res1,$res2,$res3]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we could have retrieved these values in a table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 本可以将这些值存入数组中</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$t</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">f2();</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">for</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">&lt;</span><span style="color:#008080"> </span><span style="color:#000000">count(</span><span style="color:#0000ff">$t</span><span style="color:#000000">);</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#000000">++)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#008000">=</span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#0000ff">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// testing</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 测试</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">for</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">&lt;</span><span style="color:#008080"> </span><span style="color:#000000">count(</span><span style="color:#0000ff">$t</span><span style="color:#000000">);</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#000000">++)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// displays only channels</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// 仅显示字符串</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(getType(</span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#000000">[$i]</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">===</span><span style="color:#008080"> </span><span style="color:#008000">&quot;string&quot;</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#008000">=</span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#0000ff">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// == and === comparison operators</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 比较运算符 == 和 ===</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">if</span><span style="color:#000000">(</span><span style="color:#008000">&quot;2&quot;</span><span style="color:#000000">==</span><span style="color:#000080">2</span><span style="color:#000000">){</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;avec l&#x27;opérateur ==, la chaîne 2 est égale à l&#x27;entier 2\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}</span><span style="font-weight:bold;color:#000000">else</span><span style="color:#000000">{</span></span></span>
@@ -898,14 +900,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">else</span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;avec l&#x27;opérateur ===, la chaîne 2 n&#x27;est pas égale à l&#x27;entier 2\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// other tests</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 其他测试</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">for</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">&lt;</span><span style="color:#008080"> </span><span style="color:#000000">count(</span><span style="color:#0000ff">$t</span><span style="color:#000000">);</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#000000">++)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// displays only integers &gt;10</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// 仅显示大于10的整数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(getType(</span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#000000">[$i]</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">===</span><span style="color:#008080"> </span><span style="color:#008000">&quot;integer&quot;</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">and</span><span style="color:#008080"> </span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#000000">[$i]</span><span style="color:#008080"> </span><span style="color:#000000">&gt;</span><span style="color:#008080"> </span><span style="color:#000080">10</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;t</span><span style="font-weight:bold;color:#008000">[$i]</span><span style="color:#008000">=</span><span style="color:#0000ff">$t</span><span style="font-weight:bold;color:#0000ff">[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a while loop</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个 while 循环</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$t</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">[8, 5, 0, -2, 3, 4]</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$somme</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span></span></span>
@@ -915,89 +917,89 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  $i++;               //$i=$i+1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}//while</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;somme=</span><span style="color:#0000ff">$somme</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// end of program</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 程序结束</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//----------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">affiche(</span><span style="color:#0000ff">$chaine</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// displays $chaine</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// 显示 $chaine</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;chaine=</span><span style="color:#0000ff">$chaine</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">//poster</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">//显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//----------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">afficheType(</span><span style="color:#0000ff">$name</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$variable</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// displays the type of $variable</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// 显示 $variable 的类型</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;type</span><span style="font-weight:bold;color:#008000">[variable $&quot; . $name . &quot;]</span><span style="color:#008000">=&quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">getType(</span><span style="color:#0000ff">$variable</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//afficheType</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//----------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">f1(</span><span style="color:#0000ff">$param</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// adds 10 to $param</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// 将 10 加到 $param</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$param</span><span style="color:#008080"> </span><span style="color:#000000">+</span><span style="color:#008080"> </span><span style="color:#000080">10</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//----------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">f2()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// returns 3 values</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// 返回 3 个值</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;un&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">100</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">?&gt;</span></span>
 </code></pre></div>
 
-<p>转换为 JavaScript 后，结果如下：</p>
+<p>将其转换为 JavaScript 后，得到以下代码：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// this is a comment</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// constant</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 这是一条注释</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 常量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> nom = </span><span style="color:#a31515">&quot;dupont&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a screen display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 屏幕显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;nom : &quot;</span><span style="color:#000000">, nom);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an array with elements of different types</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个包含不同类型元素的数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tableau = </span><span style="font-weight:bold;color:#000000">[&quot;un&quot;, &quot;deux&quot;, 3, 4]</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// its number of elements</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 其元素个数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> n = tableau.length;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a loop</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个循环</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; n; i++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;tableau</span><span style="font-weight:bold;color:#a31515">[&quot;, i, &quot;]</span><span style="color:#a31515"> = &quot;</span><span style="color:#000000">, tableau</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// initialize 2 variables with the contents of an array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用数组内容初始化两个变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#000000">[chaine1, chaine2]</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#000000">[&quot;chaine1&quot;, &quot;chaine2&quot;]</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// concatenation of the 2 strings</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 两个字符串的拼接</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaine3 = chaine1 + chaine2;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// result display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显示结果</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(<span style="font-weight:bold">[chaine1, chaine2, chaine3]</span>);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">affiche(chaine1);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the type of a variable can be known</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 变量的类型可以确定</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">afficheType(</span><span style="color:#a31515">&quot;n&quot;</span><span style="color:#000000">, n);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">afficheType(</span><span style="color:#a31515">&quot;chaine1&quot;</span><span style="color:#000000">, chaine1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">afficheType(</span><span style="color:#a31515">&quot;tableau&quot;</span><span style="color:#000000">, tableau);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the type of a variable can change at runtime</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 变量的类型在运行时可能会改变</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">n = </span><span style="color:#a31515">&quot;a changé&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">afficheType(</span><span style="color:#a31515">&quot;n&quot;</span><span style="color:#000000">, n);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a function can return a result</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数可以返回结果</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> res1 = f1(4);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;res1=&quot;</span><span style="color:#000000">, res1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a function can return a table of values</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数可以返回一个值数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> res2, res3;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[res1, res2, res3]</span> = f2();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;(res1,res2,res3)=&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#000000">[res1, res2, res3]</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we could have retrieved these values in a table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 本可以将这些值存入数组中</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> t = f2();</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; t.length; i++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;t</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// testing</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 测试</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; t.length; i++) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// displays only channels</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 仅显示字符串</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (</span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">) === </span><span style="color:#a31515">&quot;string&quot;</span><span style="color:#000000">) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;t</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// == and === comparison operators</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 比较运算符 == 和 ===</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">if</span><span style="color:#000000"> (</span><span style="color:#a31515">&quot;2&quot;</span><span style="color:#000000"> == 2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;avec l&#x27;opérateur ==, la chaîne 2 est égale à l&#x27;entier 2&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
@@ -1008,14 +1010,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;avec l&#x27;opérateur ===, la chaîne 2 n&#x27;est pas égale à l&#x27;entier 2&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// other tests</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 其他测试</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; t.length; i++) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// displays only integers &gt;10</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">//仅显示大于10的整数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (</span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">) === </span><span style="color:#a31515">&quot;number&quot;</span><span style="color:#000000"> &amp;&amp; Math.floor(t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">) === t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000"> &amp;&amp; t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000"> &gt; 10) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;t</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, t</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a while loop</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个 while 循环</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">t = <span style="font-weight:bold">[8, 5, 0, -2, 3, 4]</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> somme = 0;</span></span></span>
@@ -1025,51 +1027,51 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  i++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme=&quot;</span><span style="color:#000000">, somme);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// program stopped because no executable code left</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">//poster</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 程序终止，因为没有可执行的代码了</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">//显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//----------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> affiche(chaine) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// chain poster</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 显示字符串</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;chaine=&quot;</span><span style="color:#000000">, chaine);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//afficheType</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//----------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> afficheType(name, variable) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// displays variable type</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 显示变量类型</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;type</span><span style="font-weight:bold;color:#a31515">[variable &quot;, name, &quot;]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (variable));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//----------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f1(param) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// adds 10 to param</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 将 10 加到参数上</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param + 10;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//----------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f2() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// returns 3 values</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 返回 3 个值</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#000000">[&quot;un&quot;, 0, 100]</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>让我们来讨论一下带有 <strong>[use strict]</strong> 声明（第 1 行）的 PHP 代码与 ECMAScript 6 代码之间的区别：</p>
+<p>下面我们来分析一下代码 PHP 和 ECMAScript 6 与声明 <strong>[use strict]</strong>（第 1 行）之间的差异：</p>
 <ul>
-  <li>第一个区别在于，在 ECMAScript <b>中，变量</b>使用以下关键字进行<b>声明</b>：
+  <li>第一个区别在于，在 ECMAScript <b>中，变量</b>使用以下关键字<b>进行声明</b>：
     <ul>
       <li><b>[let]</b> 用于声明在代码执行过程中值<b>可能会改变</b>的变量；
       </li>
-      <li><b>[const]</b> 用于声明在代码执行过程中值<b>不会改变</b>（即常量）的变量；
+      <li><b>[const]</b> 用于声明在代码执行过程中值<b>不会改变</b>的变量（即常量）；
       </li>
-      <li>您也可以使用 <b>[var]</b> 关键字代替 <b>[let]</b>。这是 ECMAScript 5 中使用的关键字。本课程中我们将不使用它；
+      <li>也可以使用关键字 <b>[var]</b> 代替 <b>[let]</b>。这是在 ECMAScript 5 中使用的关键字。本课程中我们将不使用它；
       </li>
     </ul>
   </li>
-  <li>第 6 行：<b>[console.log]</b> 方法可以显示各种类型的数据：字符串、数字、布尔值、数组和对象。PHP 的 <b>[print]</b> 方法无法原生显示数组和对象。在 <b>[console.log]</b> 表达式中，<b>[console]</b> 是一个对象，而 <b>[log] </b>是该对象的一个方法；
+  <li>第 6 行：显示方法 <b>[console.log]</b> 可以显示各种类型的数据：字符串、数字、布尔值、数组、对象。方法 PHP 和 <b>[print]</b> 无法原生显示数组和对象。 在表达式 <b>[console.log] 中，[console]</b> 是一个对象，而 <b>[log] </b>是该对象的一个方法；
   </li>
-  <li>第 8 行：JavaScript 数组<b>是通过指针引用的对象</b>。当我们编写：
+  <li>第 8 行：JavaScript 数组<b>是通过指针引用的对象</b>。当编写：
   </li>
 </ul>
 
@@ -1077,32 +1079,32 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tableau = </span><span style="font-weight:bold;color:#000000">[&quot;un&quot;, &quot;deux&quot;, 3, 4]</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>变量 <strong>[array]</strong> 是一个指向字面量数组 <strong>[&quot;one&quot;, &quot;two&quot;, 3, 4]</strong> 的<strong>指针</strong>。修改数组的内容不会改变其指针。因此，数组通常使用 <strong>[const]</strong> 关键字进行声明。在 PHP 中，数组并非由指针引用。它是一个字面量值；</p>
+<p>变量 <strong>[tableau]</strong> 是指向字面量数组 <strong>[&quot;un&quot;, &quot;deux&quot;, 3, 4]</strong> 的<strong>指针</strong>。修改数组的内容不会改变其指针。因此，数组通常会使用关键字 <strong>[const]</strong> 进行声明。 在 PHP 中，数组不通过指针引用。它是一个字面量；</p>
 <ul>
-  <li>第 12 行：循环变量 <b>[i] </b>在循环内部声明（let）。关键字 <b>[let]</b> 具有块作用域（大括号内的代码）。因此，第 12 行中的变量 <b>[i]</b> 仅在循环内部可见；
+  <li>第12行：循环变量<b>[i]</b>在循环中通过let声明。 关键字 <b>[let]</b> 遵循代码块作用域（大括号内的代码）。因此，第 12 行中的变量 <b>[i]</b> 仅在循环内部有效；
   </li>
-  <li>第 18 行：字符串连接运算符在 JavaScript 中是 + 运算符，在 PHP 中是 . 运算符。该运算符的一个显著特点是，它优先于 + 加法运算符。因此：
+  <li>第 18 行：字符串连接运算符在 JavaScript 中是 +，在 PHP 中是 .。该运算符的一个特点是，它优先于加法运算符 +。因此：
     <ul>
-      <li>在 PHP 中，‘1’ + 2 结果为数字 3；
+      <li>在 PHP 中，‘1’ +2 结果为数字 3；
       </li>
-      <li>在 JavaScript 中，‘1’+2 返回字符串 ‘12’；
+      <li>在 JavaScript 中，‘1’+2 结果为字符串 ‘12’；
       </li>
     </ul>
   </li>
-  <li>第 20 行：<b>[console.log]</b> 可以显示数组；
+  <li>第 20 行：<b>[console.log]</b> 支持显示数组；
   </li>
   <li>第 82 行：在 JavaScript 中，无法指定函数参数的类型；
   </li>
-  <li>第 91 行：<b>[typeof]</b> 运算符可用于确定数据项的类型。共有四种类型：number、string、boolean 和 object。请注意，JavaScript 中没有 <b>[integer]</b> 类型或 <b>[array]</b> 类型。如前所述，数组通过指针处理，并归类为 object 类型；
+  <li>第 91 行：运算符 <b>[typeof] </b>可用于判断数据的类型。 共有四种类型：数字、字符串、布尔值和对象。需要注意的是，JavaScript中既<b>没有[integer]类型</b>，<b>也没有[tableau]</b>类型。如前所述，数组是通过指针操作的，因此属于对象类别；
   </li>
-  <li>第 50–59 行：与 PHP 类似，JavaScript 拥有两个比较运算符 == 和 ‘===’，其含义与 PHP 中相同。ESLint 通常会将 == 运算符标记为潜在错误。我们将始终使用 ‘===’ 运算符；
+  <li>第50-59行：与PHP一样，JavaScript有两个比较运算符，即==和‘===’，其含义与PHP中的相同。 ESLint通常会将运算符==标记为可能的错误。应系统地使用运算符‘===’；
   </li>
-  <li>第 79 行：我们本可以包含 <b>[return]</b> 语句，但 ESLint 会发出警告，指出 <b>[return]</b> 仅应在函数内部使用；
+  <li>第79行：本可以使用指令 [return]，但 ESLint 会发出警告，指出 <b>[return]</b> 只能在函数中使用；
   </li>
 </ul>
 
-<p>现在运行这段代码：</p>
-<p><img src="images/100000000000033C00000192E8D1CF4C.png" width="331" height="161" style="width:8.759cm;height:4.253cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000033C00000192E8D1CF4C.png" /></p>
+<p>运行以下代码：</p>
+<p><img src="images/100000000000033C00000192E8D1CF4C.png" width="331" height="161" style="width:8.759cm;height:4.249cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000033C00000192E8D1CF4C.png" /></p>
 <p>执行结果：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-01.js&quot;</span></span></span>
@@ -1129,64 +1131,65 @@
 <span class="odt-code-line"><span class="odt-code-line-content">t<span style="font-weight:bold">[ 0 ]</span>= 8</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">t<span style="font-weight:bold">[ 1 ]</span>= 5</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">somme= 13</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.316</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p>在编写的代码中，ESLint 报告了两个错误：</p>
-<p><img src="images/10000000000005D50000015C686F68EF.png" width="597" height="139" style="width:15.799cm;height:3.683cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D50000015C686F68EF.png" /></p>
+<p>在编写的代码中，ESLINT 报告了两个错误：</p>
+<p><img src="images/10000000000005D50000015C686F68EF.png" width="597" height="139" style="width:15.799cm;height:3.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D50000015C686F68EF.png" /></p>
 <ul>
-  <li>当您将鼠标悬停在红色警告线上时，会看到错误信息 <b>[3]</b>。在此处，ESLint 无法识别两个常量正在进行比较。两个操作数中应有一个是变量；
+  <li>将光标悬停在警告的红线上，会显示错误信息 <b>[3]</b>。这里 ESLint 无法识别这是对两个常量的比较。两个操作数中应有一个是变量；
   </li>
-  <li>在 <b>[4] </b>中，如果决定不修正该错误，可通过 <b>[快速修复]</b> 选项忽略此警告；
+  <li>在 <b>[4] </b>中，若决定不修正该错误，可通过 <b>[Quick Fix]</b> 选项来消除该警告；
   </li>
 </ul>
 
-<p><img src="images/10000000000005DA0000010746915282.png" width="599" height="105" style="width:15.85cm;height:2.783cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DA0000010746915282.png" /></p>
+<p><img src="images/10000000000005DA0000010746915282.png" width="599" height="105" style="width:15.85cm;height:2.782cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DA0000010746915282.png" /></p>
 <ul>
-  <li>在<b>第 [5]</b> 行，您可以禁用当前行或整个文件的警告。这里我们选择后者。随后，文件开头会生成<b>第 [6]</b> 行；
+  <li>在 <b>[5] </b>中，我们可以选择仅对当前行或整个文件禁用该警告。此处我们选择后者。随后，文件开头将生成一行 <b>[6]</b>；
   </li>
 </ul>
-<p><a id="refheadingtoc2041853980233556"></a></p>
+
+<p><span id="refheadingtoc2041853980233556" name="refheadingtoc2041853980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="32-bases-02">3.2. <span style="color: #4f81bd">脚本 [bases-02]</span></h2>
-<p><strong>[bases-02]</strong> 脚本演示了 <strong>[let]</strong> 和 <strong>[const]</strong> 关键字的使用：</p>
+<p>脚本 <strong>[bases-02]</strong> 展示了关键字 <strong>[let]</strong> 和 <strong>[const]</strong> 的用法：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// to initialize a variable, use let or const</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// let for variables</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 初始化变量时，使用 let 或 const</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// let 用于变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> x = 4;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">x++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(x);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// const for constants</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// const 用于常量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> y = 10;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">x += y;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// prohibited</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 禁止</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">y++;</span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 11 行会导致运行时错误 <b>[1-2]</b>。在执行之前，ESLint 会对此进行标记 <b>[3]</b>：
+  <li>第 11 行在执行 <b>[1-2]</b> 时引发错误。该错误由 ESLint 在执行 <b>[3]</b> 之前报告：
   </li>
 </ul>
 
 <p><img src="images/100000000000056E000001566AC0ABC5.png" width="556" height="137" style="width:14.713cm;height:3.62cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000056E000001566AC0ABC5.png" /></p>
-<p><a id="refheadingtoc2041873980233556"></a></p>
-<h2 id="33-bases-03">3.3. <span style="color: #4f81bd">脚本 [bases-03]</span></h2>
-<p>脚本 <strong>[bases-03]</strong> 用于检查 JavaScript 中的变量作用域：</p>
+<p><span id="refheadingtoc2041873980233556" name="refheadingtoc2041873980233556" class="odt-bookmark-anchor"></span></p>
+<h2 id="33-bases-03">3.3. <span style="color: #4f81bd"><strong>脚本 [bases-03]</strong></span></h2>
+<p>脚本 <strong>[bases-03]</strong> 检查 JavaScript 中的变量作用域：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// variable scope</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 变量的作用域</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> count = 1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomething() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// count is known here</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 此处已知 count</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">,count);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 调用</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomething();</span></span>
 </code></pre></div>
 
 <ul>
-  <li>尽管变量 <b>[count]</b> 是在 <b>[doSomething]</b> 函数外部声明的，但在该函数内部仍可访问。这与 PHP 存在根本性的差异；
+  <li>尽管变量 <b>[count]</b> 是在函数 <b>[doSomething]</b> 外部声明的，但在该函数内部仍可访问。这与 PHP 存在根本区别；
   </li>
 </ul>
 
@@ -1194,25 +1197,25 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-03.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">count= 1</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.3</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2041893980233556"></a></p>
+<p><span id="refheadingtoc2041893980233556" name="refheadingtoc2041893980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="34-bases-04">3.4. <span style="color: #4f81bd">脚本 [bases-04]</span></h2>
-<p>局部变量会隐藏同名的全局变量：</p>
+<p>一个局部变量掩盖了同名的全局变量：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// variable scope</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 变量作用域</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> count = 1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomething() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the local variable hides the global variable</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 局部变量遮蔽全局变量</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> count = 2;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count inside function=&quot;</span><span style="color:#000000">,count);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// global variable</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 全局变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;count outside function=&quot;</span><span style="color:#000000">,count);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// local variable</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 局部变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomething();</span></span>
 </code></pre></div>
 
@@ -1221,81 +1224,81 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-04.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">count outside function= 1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">count inside function= 2</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.246</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2041913980233556"></a></p>
+<p><span id="refheadingtoc2041913980233556" name="refheadingtoc2041913980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="35-bases-05">3.5. <span style="color: #4f81bd">脚本 [bases-05]</span></h2>
-<p>在函数内部定义的变量在函数外部不可见：</p>
+<p>在函数中定义的变量在函数外部不可见：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// variable scope</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 变量的作用域</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomething() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// local variable to the</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 函数内的局部变量</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> count = 2;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count inside function=&quot;</span><span style="color:#000000">, count);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// here count is unknown</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 此处 count 未定义</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;count outside function=&quot;</span><span style="color:#000000">, count);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomething();</span></span>
 </code></pre></div>
 
-<p>ESLint 在第 9 行报告了一个错误：</p>
-<p><img src="images/10000000000005BA00000149D2F450CA.png" width="513" height="115" style="width:13.58cm;height:3.048cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BA00000149D2F450CA.png" /></p>
-<p><a id="refheadingtoc2041933980233556"></a></p>
-<h2 id="36-script-bases-06">3.6. <span style="color: #4f81bd">script [bases-06]</span></h2>
-<p>关键字 <strong>[let]</strong> 和 <strong>[const]</strong> 定义具有 <strong>[块]</strong> 作用域（大括号内的代码）的变量，但关键字 <strong>[var]</strong> 并非如此：</p>
+<p>ESLint 在第 9 行报错：</p>
+<p><img src="images/10000000000005BA00000149D2F450CA.png" width="513" height="115" style="width:13.58cm;height:3.039cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BA00000149D2F450CA.png" /></p>
+<p><span id="refheadingtoc2041933980233556" name="refheadingtoc2041933980233556" class="odt-bookmark-anchor"></span></p>
+<h2 id="36-bases-06">3.6. <span style="color: #4f81bd">脚本 [bases-06]</span></h2>
+<p>关键字 <strong>[let]</strong> 和 <strong>[const]</strong> 定义了作用域为 <strong>[bloc]</strong> 的变量（大括号内的代码），但关键字 <strong>[var]</strong> 未定义：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the [let] keyword is used to define a block-scope variable</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 关键字 [let] 用于定义块作用域变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the [count] variable is only known in this block</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 变量 [count] 仅在此代码块内有效</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> count = 1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">, count);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// here the variable [count] is not known</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 在此处，变量 [count] 未被识别</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">count++;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the [const] keyword is used to define a block-span variable</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 关键字 [const] 用于定义块作用域变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the [count2] variable is only known in this block</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 变量 [count2] 仅在此块中有效</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> count2 = 1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">, count2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// here the variable [count2] is not known</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 此处变量 [count2] 未被识别</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">count2++;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the [var] keyword cannot be used to define a block-scope variable</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 关键字 [var] 无法用于定义块作用域变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the variable [count3] will be known globally</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 变量 [count3] 将作为全局变量</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">var</span><span style="color:#000000"> count3 = 1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;count=&quot;</span><span style="color:#000000">, count3);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// here the variable [count3] is known</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 此处变量 [count3] 已定义</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">count3++;</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 5 行：变量 <b>[count]</b> 仅在声明它的代码块（第 3–7 行）内有效；
+  <li>第 5 行：变量 <b>[count]</b> 仅在声明它的代码块（第 3-7 行）内有效；
   </li>
-  <li>第 14 行：常量 <b>[count2]</b> 仅在声明它的代码块（第 12–16 行）内有效；
+  <li>第 14 行：常量 <b>[count2]</b> 仅在声明它的代码块（第 12-16 行）内有效；
   </li>
-  <li>第 23 行：变量 <b>[count3] </b>在其声明所在的代码块（第 21–25 行）之外也是已知的；
+  <li>第 23 行：变量 <b>[count3] </b>在其声明的代码块（第 21-25 行）之外被引用；
   </li>
 </ul>
 
-<p>ESLint 报告了以下错误：</p>
-<p><img src="images/100000000000053400000459582F975E.png" width="400" height="334" style="width:10.582cm;height:8.842cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000053400000459582F975E.png" /></p>
-<p>鉴于上述与代码块作用域相关的原因，从现在起我们将仅使用 <strong>[let]</strong> 和 <strong>[const]</strong> 关键字。</p>
-<p><a id="refheadingtoc2041953980233556"></a></p>
+<p>ESLint 报告以下错误：</p>
+<p><img src="images/100000000000053400000459582F975E.png" width="400" height="334" style="width:10.582cm;height:8.841cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000053400000459582F975E.png" /></p>
+<p>鉴于上述代码块作用域问题，后续我们将仅使用关键字 <strong>[let]</strong> 和 <strong>[const]</strong>。</p>
+<p><span id="refheadingtoc2041953980233556" name="refheadingtoc2041953980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="37-bases-07">3.7. <span style="color: #4f81bd">脚本 [bases-07]</span></h2>
 <p>JavaScript 中的数据类型：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// data type jS</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 数据类型 jS</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> var1 = 10;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> var2 = </span><span style="color:#a31515">&quot;abc&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> var3 = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
@@ -1306,7 +1309,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> var6 = </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> +3;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// type display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显示类型</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(var1)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (var1));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(var2)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (var2));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(var3)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (var3));</span></span></span>
@@ -1324,27 +1327,28 @@
 <span class="odt-code-line"><span class="odt-code-line-content">typeof(var4)= object</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">typeof(var5)= object</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">typeof(var6)= function</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.26</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>第 7 行（代码）：数组是一种对象。因此，<b>[var4]</b> 是指向该数组的指针，而非数组本身；
+  <li>第7行（代码）：数组是一个对象。因此<b>，[var4]</b> 是指向该数组的指针，而非数组本身；
   </li>
-  <li>第 8 行（代码）：<b>[var5]</b> 是指向字面量对象的指针。我们将看到，JavaScript 的字面量对象与 PHP 的类实例非常相似。它们同样是通过指针来引用的；
+  <li>第8行（代码）：<b>[var5]</b>是一个指向字面量对象的指针。我们将看到，JavaScript中的字面量对象与PHP的类实例非常相似。它们同样是通过指针来引用的；
   </li>
-  <li>第 11 行（代码）：变量可以是 <b>[function]</b> 类型（结果中的第 7 行）；
+  <li>第 11 行（代码）：变量可以是 <b>[fonction]</b> 类型（结果中的第 7 行）；
   </li>
 </ul>
-<p><a id="refheadingtoc2041973980233556"></a></p>
+
+<p><span id="refheadingtoc2041973980233556" name="refheadingtoc2041973980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="38-bases-08">3.8. <span style="color: #4f81bd">脚本 [bases-08]</span></h2>
-<p>此脚本演示了 JavaScript 中可能发生的类型转换。</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// implicit type changes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// type --&gt;bool</span></span>
+<p>该脚本展示了 JavaScript 中可能发生的类型转换。</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 隐式类型转换</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 类型 --&gt; bool</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Conversion implicite vers un booléen]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showBool(</span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showBool(</span><span style="color:#a31515">&quot;&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1356,25 +1360,25 @@
 <span class="odt-code-line"><span class="odt-code-line-content">showBool(4.6);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">showBool({});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">showBool(undefined);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> showBool(data) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the conversion from data to Boolean is done automatically in the following test</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 在随后的测试中，数据会自动转换为布尔值</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[data=&quot;, data, &quot;]</span><span style="color:#a31515">, </span><span style="font-weight:bold;color:#a31515">[type(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (data), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[valeur booléenne(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, data ? </span><span style="color:#0000ff">true</span><span style="color:#000000"> : </span><span style="color:#0000ff">false</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// implicit type changes to a nume ric type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 隐式类型转换 为数值类型 </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Conversion implicite vers un nombre]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showNumber(</span><span style="color:#a31515">&quot;12&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showNumber(</span><span style="color:#a31515">&quot;45.67&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showNumber(</span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> showNumber(data) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// data + 1 doesn&#x27;t work, because then jS concatenates strings rather than adding them together</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// data + 1 无法正常工作，因为此时 jS 会执行字符串连接而非加法运算</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> nombre = data * 1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[data=&quot;, data, &quot;]</span><span style="color:#a31515">, </span><span style="font-weight:bold;color:#a31515">[type(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (data), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[nombre]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, nombre, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type(nombre)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (nombre));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// explicit type changes to Boolean</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显式将类型转换为布尔值</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Conversion explicite vers un booléen]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showBool2(</span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showBool2(</span><span style="color:#a31515">&quot;&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1386,55 +1390,55 @@
 <span class="odt-code-line"><span class="odt-code-line-content">showBool2(4.6);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">showBool2({});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">showBool2(undefined);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> showBool2(data) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the conversion from data to Boolean is explicitly done in the following test</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 在随后的测试中，data 显式转换为布尔值</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[&quot;, data, &quot;]</span><span style="color:#a31515">, </span><span style="font-weight:bold;color:#a31515">[type(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (data), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[valeur booléenne(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, Boolean(data));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// changements explicites de type vers Number</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显式将类型转换为 Number</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Conversion explicite vers un nombre]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showNumber2(</span><span style="color:#a31515">&quot;12.45&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">showNumber2(67.8);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showNumber2(</span><span style="color:#0000ff">true</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showNumber2(</span><span style="color:#0000ff">null</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> showNumber2(data) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> nombre = Number(data);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[data=&quot;, data, &quot;]</span><span style="color:#a31515">, </span><span style="font-weight:bold;color:#a31515">[type(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (data), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[nombre]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, nombre, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type(nombre)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (nombre));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// to String</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 转换为字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Conversion explicite vers un string]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">showString(5);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">showString(6.7);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showString(</span><span style="color:#0000ff">false</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">showString(</span><span style="color:#0000ff">null</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> showString(data) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = String(data);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[data=&quot;, data, &quot;]</span><span style="color:#a31515">, </span><span style="font-weight:bold;color:#a31515">[type(data)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (data), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[chaîne]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, chaîne, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type(chaîne)]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// some unexpected implicit conversions</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一些意外的隐式转换</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;---------------</span><span style="font-weight:bold;color:#a31515">[Autres cas]</span><span style="color:#a31515">------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> string1 = </span><span style="color:#a31515">&#x27;1000.78&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// default string concatenation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 默认字符串拼接</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data1 = string1 + 1.034;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;data1=&quot;</span><span style="color:#000000">, data1, </span><span style="color:#a31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (data1));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data2 = 1.034 + string1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;data2=&quot;</span><span style="color:#000000">, data2, </span><span style="color:#a31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (data2));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// explicit conversion to number</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显式转换为数字</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data3 = Number(string1) + 1.034;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;data3=&quot;</span><span style="color:#000000">, data3, </span><span style="color:#a31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (data3));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// true is converted into the number 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// true 被转换为数字 1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data4 = </span><span style="color:#0000ff">true</span><span style="color:#000000"> * 1.18;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;data4=&quot;</span><span style="color:#000000">, data4, </span><span style="color:#a31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (data4));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// false is converted into the number 0</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// false 被转换为数字 0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data5 = </span><span style="color:#0000ff">false</span><span style="color:#000000"> * 1.18;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;data5=&quot;</span><span style="color:#000000">, data5, </span><span style="color:#a31515">&quot;type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (data5));</span></span></span>
 </code></pre></div>
 
-<p><strong>执行结果</strong></p>
+<p><strong>执行</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Data\st-2019\dev\es6\javascript\bases\bases-08.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">---------------[Conversion implicite vers un booléen]------------------------------</span></span></span>

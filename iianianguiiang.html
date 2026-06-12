@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/zh-ecmascript6-oct-2019/iianianguiiang.html">
       
       
-        <link rel="prev" href="iaoe.html">
+        <link rel="prev" href="huu.html">
       
       
         <link rel="next" href="iuhuan.html">
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 工作环境的安装
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iaoe.html" class="md-nav__link">
+      <a href="huu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -471,10 +473,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#51-script-obj-01" class="md-nav__link">
+  <a href="#51-obj-01" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1. script [obj-01]
+        5.1. 脚本 [obj-01]
       
     </span>
   </a>
@@ -559,10 +561,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#59" class="md-nav__link">
+  <a href="#59-conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.9. 结论
+        5.9. Conclusion
       
     </span>
   </a>
@@ -746,14 +748,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-anhu.html" class="md-nav__link">
+      <a href="javascript-anhu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -800,14 +802,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+      <a href="http-euuan-huieiiuanuue-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 税费计算服务的 JavaScript HTTP 客户端
+    14. HTTP 客户端 税费计算服务的 JavaScript
   
 
     
@@ -840,33 +842,33 @@
   
 
 
-<p><a id="refheadingtoc2042093980233556"></a></p>
+<p><span id="refheadingtoc2042093980233556" name="refheadingtoc2042093980233556" class="odt-bookmark-anchor"></span></p>
 <h1 id="5">5. <span style="color: #365f91">字面量对象</span></h1>
-<p>此处，我们将代码中直接定义的对象称为“字面量对象”。JavaScript 包含类和类实例对象的概念。因此，这并非我们当前讨论的对象类型。</p>
-<p><img src="images/10000000000000D400000142997DBFD1.png" width="85" height="129" style="width:2.24cm;height:3.403cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D400000142997DBFD1.png" /></p>
-<p><a id="refheadingtoc2042113980233556"></a></p>
-<h2 id="51-script-obj-01">5.1. <span style="color: #4f81bd"><strong>script</strong> [obj-01]</span></h2>
-<p>在此，我们将介绍字面量对象的基本特性。其主要特征在于，该对象是通过指针进行操作的。</p>
+<p>此处所指的“字面量对象”是指在代码中直接定义的对象。JavaScript 包含类和类实例对象的概念，因此我们目前讨论的并非此类对象。</p>
+<p><img src="images/10000000000000D400000142997DBFD1.png" width="85" height="129" style="width:2.24cm;height:3.41cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D400000142997DBFD1.png" /></p>
+<p><span id="refheadingtoc2042113980233556" name="refheadingtoc2042113980233556" class="odt-bookmark-anchor"></span></p>
+<h2 id="51-obj-01">5.1. <span style="color: #4f81bd"><strong>脚本</strong> [obj-01]</span></h2>
+<p>本文将介绍字面量对象的基本特性。其主要特征在于，该对象是通过指针进行操作的。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an empty object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个空对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj1={};</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// object properties can be dynamically created</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 可以动态创建对象的属性</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">obj1.prop1=</span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&#x27;obj1=&#x27;</span><span style="color:#000000">,obj1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// other property</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 另一个属性</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">obj1.prop2=<span style="font-weight:bold">[1,2,3]</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj1=&quot;</span><span style="color:#000000">,obj1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// another property with a different notation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用不同语法定义的另一个属性</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">obj1</span><span style="font-weight:bold;color:#000000">[&#x27;prop3&#x27;]</span><span style="color:#000000">=</span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj1=&quot;</span><span style="color:#000000">,obj1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// obj1 is a reference to the object (pointer), not the object itself</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// obj1 是对象的引用（指针），而非对象本身</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj2=obj1;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// obj2 and obj1 point to the same object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// obj2 和 obj1 指向同一个对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">obj2.prop1=</span><span style="color:#a31515">&quot;xyzt&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj1=&quot;</span><span style="color:#000000">,obj1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj2=&quot;</span><span style="color:#000000">,obj2);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// properties can be variables</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 属性可以是变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> var1=</span><span style="color:#a31515">&#x27;prop1&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&#x27;prop1=&#x27;</span><span style="color:#000000">,obj1</span><span style="font-weight:bold;color:#000000">[var1]</span><span style="color:#000000">);</span></span></span>
 </code></pre></div>
@@ -884,21 +886,22 @@
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>代码第3行：对象是通过指针进行操作的。因此，<b>[obj1]</b> 是一个指针。修改被指针指向的对象并不会修改指针 <b>[obj1]</b>。这就是为什么，就像数组一样，对象引用需要使用 <b>[const]</b> 关键字进行声明；
+  <li>代码第3行：对象是通过指针进行操作的。因此 <b>[obj1]</b> 是一个指针。修改被指针指向的对象不会改变指针 <b>[obj1]</b>。 因此，与数组类似，使用关键字 <b>[const]</b> 声明了一个对象引用；
   </li>
-  <li>代码第 6 行：与数组类似，<b>[console.log]</b> 可以显示对象；
+  <li>代码第 6 行：与数组类似，<b>[console.log]</b> 能够显示对象；
   </li>
-  <li>代码第 11 行：obj1.prop3 可以重写为 obj1.<b>[‘prop3’]</b>。当 ‘prop3’ 实际上是一个变量时（第 20–21 行），这种后一种写法非常有用；
+  <li>代码第11行：obj1.prop3 可以重写为 obj1.<b>[‘prop3’]</b>。当“prop3”实际上是一个变量（第20-21行）时，这种写法非常有用；
   </li>
-  <li>代码第 13–18 行：表明语句 <b>[obj2=obj1] </b>是对对象引用的复制，而非对象本身的复制；
+  <li>代码第13-18行：表明指令 <b>[obj2=obj1] </b>是对象的引用副本，而非对象本身；
   </li>
 </ul>
-<p><a id="refheadingtoc2042133980233556"></a></p>
+
+<p><span id="refheadingtoc2042133980233556" name="refheadingtoc2042133980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="52-obj-02">5.2. <span style="color: #4f81bd"><strong>脚本</strong> [obj-02]</span></h2>
-<p>本脚本演示了对象的属性可以取对象作为其值。这将形成多层级对象。我们还介绍了全局对象 <strong>[JSON]，</strong>它支持对象转字符串和字符串转对象的转换。</p>
+<p>该脚本表明，对象的属性可以取对象作为值。这样就形成了多级对象。此外，还引入了全局对象 [JSON]，用于实现对象与字符串之间的转换。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a multi-level object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 多层级对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> personne = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  âge: 12,</span></span>
@@ -911,27 +914,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    âge: 42</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// access to properties</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 访问属性</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;prénom personne=&quot;</span><span style="color:#000000">, personne.prénom);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;prénom mère=&quot;</span><span style="color:#000000">, personne.mère.prénom);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">personne.mère.âge = 40;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;âge mère=&quot;</span><span style="color:#000000">, personne.mère.âge);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// console.log can display objects</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// console.log 能够显示对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;mère=&quot;</span><span style="color:#000000">, personne.mère);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you can also display the jSON string of the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 还可以显示对象的字符串 jSON</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> json = JSON.stringify(personne);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;jSON=&quot;</span><span style="color:#000000">, json);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you can reread the jSON</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 可以重新读取 jSON</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> personne2 = JSON.parse(json);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;père=&quot;</span><span style="color:#000000">, personne2.père);</span></span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 24 行：将 JavaScript 对象转换为 JSON 字符串；
+  <li>第 24 行：将 JavaScript 对象转换为字符串 jSON；
   </li>
-  <li>第 27 行：将 JSON 字符串转换为 JavaScript 对象；
+  <li>第 27 行：将字符串 jSON 转换为 JavaScript 对象；
   </li>
 </ul>
 
@@ -942,9 +945,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">prénom mère= micheline</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">âge mère= 40</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">personne= { &#x27;prénom&#x27;: &#x27;martin&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&#x27;âge&#x27;: 12,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&#x27;père&#x27;: { &#x27;prénom&#x27;: &#x27;paul&#x27;, &#x27;âge&#x27;: 45 },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&#x27;mère&#x27;: { &#x27;prénom&#x27;: &#x27;micheline&#x27;, &#x27;âge&#x27;: 40 } }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;年龄&#x27;: 12,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;父亲&#x27;: { &#x27;名字&#x27;: &#x27;paul&#x27;, &#x27;年龄&#x27;: 45 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;母亲&#x27;: { &#x27;名字&#x27;: &#x27;米歇琳&#x27;, &#x27;年龄&#x27;: 40 } }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">mère= { &#x27;prénom&#x27;: &#x27;micheline&#x27;, &#x27;âge&#x27;: 40 }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">jSON= {&quot;prénom&quot;:&quot;martin&quot;,&quot;âge&quot;:12,&quot;père&quot;:{&quot;prénom&quot;:&quot;paul&quot;,&quot;âge&quot;:45},&quot;mère&quot;:{&quot;prénom&quot;:&quot;micheline&quot;,&quot;âge&quot;:40}}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">père= { &#x27;prénom&#x27;: &#x27;paul&#x27;, &#x27;âge&#x27;: 45 }</span></span>
@@ -952,15 +955,16 @@
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 10 行：在 JSON 字符串中，属性必须用引号括起来，字符串值也必须如此；
+  <li>第 10 行：在字符串 jSON 中，属性必须用引号括起来，字符串类型的值也必须用引号括起来；
   </li>
 </ul>
-<p><a id="refheadingtoc2042153980233556"></a></p>
+
+<p><span id="refheadingtoc2042153980233556" name="refheadingtoc2042153980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="53-obj-03">5.3. <span style="color: #4f81bd"><strong>脚本</strong> [obj-03]</span></h2>
-<p>本脚本介绍了对象属性的getter和setter概念：</p>
+<p>该脚本介绍了对象属性获取器/设置器的概念：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// object getters and setters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 对象的getter和setter</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> personne = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">get</span><span style="color:#000000"> nom() {</span></span></span>
@@ -973,30 +977,30 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">._nom = unNom;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// setter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 设置器</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">personne.nom = </span><span style="color:#a31515">&quot;Hercule&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// getter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 获取器</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(personne.nom);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the object itself</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 对象本身</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// this does not prevent direct access to property [_nom]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 这并不妨碍直接访问属性 [_nom]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">personne._nom = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne);</span></span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 5–7 行：定义了一个 <b>[getter]</b>，这通常是一个返回对象属性值的函数，但实际上可以返回任何内容。关键字 <b>[function]</b> 被关键字 <b>[get]</b> 替换；
+  <li>第 5-7 行：定义了一个 [getter]，这是一个通常返回对象属性值但实际上可以返回任何内容的函数。关键字 <b>[function]</b> 被关键字 <b>[get]</b> 替换；
   </li>
-  <li>第 7 行：getter 返回 <b>[_name]</b> 属性。请注意，该属性无需声明；
+  <li>第 7 行：该 getter 返回属性 <b>[_nom]</b>。可以看到该属性无需声明；
   </li>
-  <li>第 10–13 行：定义 <b>[setter]</b>，这通常是一个将接收到的值赋给对象属性的函数，但实际上可以执行任何操作。关键字 <b>[function]</b> 被关键字 <b>[set]</b> 替换。可以使用<b> [setter]</b> 来验证作为参数传递给 <b>[setter] </b>的值；
+  <li>第10-13行：定义了一个<b>名为[setter]的</b>函数，该函数通常会将接收到的值赋给对象的某个属性，但实际上可以执行任何操作。 关键字 <b>[function]</b> 被关键字 <b>[set]</b> 替换。<b>[setter] </b>可用于验证传递给 <b>[setter]</b> 的参数值的有效性；
   </li>
-  <li>第 16 行：将隐式调用 <b>[set name]</b> 函数；
+  <li>第 16 行：将隐式调用函数 <b>[set nom]</b>；
   </li>
-  <li>第 18 行：将隐式调用 <b>[get name]</b> 函数；
+  <li>第 18 行：将隐式调用函数 <b>[get nom]</b>；
   </li>
-  <li>第 22 行：表明是否使用 getter/setter 取决于开发者的选择。如果开发者知道由其管理的属性名称，则可以直接访问该属性；
+  <li>第 22 行：表明是否使用 getter/setter 取决于开发人员的意愿。如果开发人员知道由它们管理的属性名称，则可以直接访问该属性；
   </li>
 </ul>
 
@@ -1010,41 +1014,41 @@
 <span class="odt-code-line"><span class="odt-code-line-content">personne= { nom: <span style="font-weight:bold">[Getter/Setter]</span>, _nom: &#x27;xyz&#x27; }</span></span>
 </code></pre></div>
 
-<p>注意第 5–6 行：<strong>[console.log]</strong> 也会显示作为函数的属性。</p>
-<p><a id="refheadingtoc2042173980233556"></a></p>
+<p>请注意第 5-6 行，<strong>[console.log]</strong> 也会显示那些作为函数的属性。</p>
+<p><span id="refheadingtoc2042173980233556" name="refheadingtoc2042173980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="54-obj-04">5.4. <span style="color: #4f81bd"><strong>脚本</strong> [obj-04]</span></h2>
-<p>本脚本展示了三种编写对象属性名称的方法以及两种访问这些属性的方法。</p>
+<p>该脚本展示了三种编写对象属性名称的方法以及两种访问属性名称的方法。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// object property names may be literal [name], surrounded by apostrophes [&#x27;name&#x27;], or may have a double quotation mark [&#x27;name&#x27;]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// or quotation marks [&quot;name&quot;]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// literal</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 对象的属性名称  可以是字面量 [nom]，也可以用单引号 [&#x27;nom&#x27;]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 或双引号 [&quot;nom&quot;]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字面量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj1 = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  nom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;jean&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;prénom=&quot;</span><span style="color:#000000">, obj1.prénom);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// surrounded by apostrophes</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 被单引号包围</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj2 = {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&#x27;nom&#x27;: &quot;martin&quot;,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&#x27;prénom&#x27;: &quot;jean&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&#x27;姓氏&#x27;: &quot;martin&quot;,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&#x27;姓&#x27;: &quot;jean&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;nom=&quot;</span><span style="color:#000000">, obj2.nom);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// surrounded by quotation marks</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 用引号包围</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj3 = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#a31515">&quot;nom&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#a31515">&quot;prénom&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;jean&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// two possible syntaxes for accessing the [name] property</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 访问该属性的两种可能语法 [nom]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;nom=&quot;</span><span style="color:#000000">, obj3.nom);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;nom=&quot;</span><span style="color:#000000">, obj3</span><span style="font-weight:bold;color:#000000">[&#x27;nom&#x27;]</span><span style="color:#000000">);</span></span></span>
 </code></pre></div>
 
-<p><strong>执行结果</strong></p>
+<p><strong>运行</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-04.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">prénom= jean</span></span>
@@ -1053,15 +1057,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content">nom= martin</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042193980233556"></a></p>
+<p><span id="refheadingtoc2042193980233556" name="refheadingtoc2042193980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="55-obj-05">5.5. <span style="color: #4f81bd"><strong>脚本</strong> [obj-05]</span></h2>
-<p>该脚本展示了字面量对象的属性可以是函数。这与具有属性和方法的类实例对象非常相似。</p>
+<p>该脚本展示了字面量对象的属性可以是函数。这与具有属性和方法的类实例对象非常接近。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an object can have properties of type [function]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个对象可以拥有类型为 [function] 的属性</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> personne = {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// properties</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 属性</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  âge: 12,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  père: {</span></span>
@@ -1072,19 +1076,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    prénom: </span><span style="color:#a31515">&quot;micheline&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    âge: 42</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// method</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 方法</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  toString: </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 用法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne=&quot;</span><span style="color:#000000">, personne);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;personne.toString=&quot;</span><span style="color:#000000">, personne.toString());</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 17–19 行：对象的内部方法。在此方法中，我们使用关键字 <b>[this]</b>（第 18 行）访问对象的属性。<b>[this]</b> 指代对象本身，而 <b>[this.firstName]</b> 指代其 <b>[firstName]</b> 属性；
+  <li>第 17-19 行：对象的内部方法。在此方法中，通过关键字 <b>[this]</b>（第 18 行）访问对象的属性。 <b>[this]</b> 指代对象<b>本身，[this.prénom]</b> 指代该对象的属性 <b>[prénom]</b>；
   </li>
 </ul>
 
@@ -1092,22 +1096,22 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-05.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">personne= { &#x27;prénom&#x27;: &#x27;martin&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&#x27;âge&#x27;: 12,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&#x27;père&#x27;: { &#x27;prénom&#x27;: &#x27;paul&#x27;, &#x27;âge&#x27;: 45 },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&#x27;mère&#x27;: { &#x27;prénom&#x27;: &#x27;micheline&#x27;, &#x27;âge&#x27;: 42 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;&#x27;年龄&#x27;: 12,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;父亲&#x27;: { &#x27;名字&#x27;: &#x27;保罗&#x27;, &#x27;年龄&#x27;: 45 },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;母亲&#x27;: { &#x27;名字&#x27;: &#x27;米歇琳&#x27;, &#x27;年龄&#x27;: 42 },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">toString: <span style="font-weight:bold">[Function: toString]</span> }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">personne.toString= {&quot;prénom&quot;:&quot;martin&quot;,&quot;âge&quot;:12,&quot;père&quot;:{&quot;prénom&quot;:&quot;paul&quot;,&quot;âge&quot;:45},&quot;mère&quot;:{&quot;prénom&quot;:&quot;micheline&quot;,&quot;âge&quot;:42}}</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042213980233556"></a></p>
+<p><span id="refheadingtoc2042213980233556" name="refheadingtoc2042213980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="56-obj-06">5.6. <span style="color: #4f81bd"><strong>脚本</strong> [obj-06]</span></h2>
-<p>本脚本演示了如何在未知对象属性名称的情况下访问这些属性。</p>
+<p>该脚本演示了在事先不知道属性名称的情况下如何访问对象的属性。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an object can have properties of type [function]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个对象可以具有 [function] 类型的属性</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> personne = {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// properties</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 属性</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  âge: 12,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  père: {</span></span>
@@ -1118,15 +1122,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    prénom: </span><span style="color:#a31515">&quot;micheline&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    âge: 42</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// method</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 方法</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  toString: </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> JSON.stringify(</span><span style="color:#0000ff">this</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 用法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(personne);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// properties</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 属性</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-----------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">const</span><span style="color:#000000"> key </span><span style="color:#0000ff">in</span><span style="color:#000000"> personne) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (personne.hasOwnProperty(key)) {</span></span></span>
@@ -1134,7 +1138,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(key, </span><span style="color:#a31515">&quot;=&quot;</span><span style="color:#000000">, element);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// to escape the eslint warning (1)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 用于规避 eslint 警告 (1)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-----------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">const</span><span style="color:#000000"> key </span><span style="color:#0000ff">in</span><span style="color:#000000"> personne) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (Object.prototype.hasOwnProperty.call(personne, key)) {</span></span></span>
@@ -1142,7 +1146,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(key, </span><span style="color:#a31515">&quot;=&quot;</span><span style="color:#000000">, element);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// to escape the eslint warning (2)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 用于规避 eslint 警告 (2)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-----------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">const</span><span style="color:#000000"> key </span><span style="color:#0000ff">in</span><span style="color:#000000"> personne) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// eslint-disable-next-line no-prototype-builtins</span></span></span>
@@ -1155,48 +1159,49 @@
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 26–31 行：用于获取对象属性列表（不包括方法）的代码。这段代码会触发 ESLint 警告：
+  <li>第 26-31 行：用于获取对象属性列表（不包括方法）的代码。此代码会触发 ESLint 的警告：
   </li>
 </ul>
 
-<p><img src="images/1000000000000687000002662860A8EF.png" width="501" height="184" style="width:13.259cm;height:4.872cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000687000002662860A8EF.png" /></p>
+<p><img src="images/1000000000000687000002662860A8EF.png" width="501" height="184" style="width:13.259cm;height:4.881cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000687000002662860A8EF.png" /></p>
 <ul>
-  <li>第 32–39 行：用于绕过 ESLint 警告的代码。我们使用了 <b>[Object]</b> 类的原型；
+  <li>第 32-39 行：用于规避 ESLint 警告的代码。通过 <b>[Object]</b> 类的原型实现；
   </li>
-  <li>第 41–47 行：或者我们可以直接禁用该警告（第 43 行）；
+  <li>第 41-47 行：或者直接禁用该警告（第 43 行）；
   </li>
 </ul>
-<p><a id="refheadingtoc5458631626043720"></a></p>
+
+<p><span id="refheadingtoc5458631626043720" name="refheadingtoc5458631626043720" class="odt-bookmark-anchor"></span></p>
 <h2 id="57-obj-07">5.7. <span style="color: #4f81bd">脚本 [obj-07]</span></h2>
-<p>[obj-07] 脚本演示了解构对象的功能：</p>
+<p>脚本 [obj-07] 展示了拆解对象的可能性：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// destructuring</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// literal</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 解构</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字面量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj1 = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  nom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;jean&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// destructuring obj1 into variables [n,p]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将 obj1 解构到变量中 [n,p]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> { nom: n, prénom: p } = obj1;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;n=&quot;</span><span style="color:#000000">, n, </span><span style="color:#a31515">&quot;p=&quot;</span><span style="color:#000000">, p);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// destructure obj1 in variables [n2,p2]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将 obj1 解构到变量中 [n2,p2]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f({ nom: n2, prénom: p2 }) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;f-n2=&quot;</span><span style="color:#000000">, n2, </span><span style="color:#a31515">&quot;f-p2=&quot;</span><span style="color:#000000">, p2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">f(obj1);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// destructuring obj1 into variables [last name,first name]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将 obj1 解构到变量中 [nom,prénom]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> g({ nom: nom, prénom: prénom }) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;g-nom=&quot;</span><span style="color:#000000">, nom, </span><span style="color:#a31515">&quot;g-prénom=&quot;</span><span style="color:#000000">, prénom);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">g(obj1);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// destructuring obj1 into variables [last name,first name]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// with shortened notation equivalent to h({name:surname,firstname:firstname})</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将 obj1 解构到变量中 [nom,prénom]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用等同于 h({姓:姓,名:名}) 的简写形式</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> h({ nom, prénom }) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;h-nom=&quot;</span><span style="color:#000000">, nom, </span><span style="color:#a31515">&quot;h-prénom=&quot;</span><span style="color:#000000">, prénom);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -1205,7 +1210,7 @@
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 11 行：大括号 {} 支持解构。语法
+  <li>第11行：正是大括号 {} 使得解构成为可能。语法
   </li>
 </ul>
 
@@ -1213,22 +1218,22 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> { nom: n, prénom: p } = obj1</span></span></span>
 </code></pre></div>
 
-<p>会创建两个变量 [n] 和 [p]，其等效于：</p>
+<p>会创建两个变量 [n] 和 [p]，其效果等同于：</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> </span><span style="color:#000000">n</span><span style="color:#000000"> = obj1.nom</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> p = obj1.prénom</span></span></span>
 </code></pre></div>
 
-<p>该声明可以写成如下形式：</p>
+<p>该声明可读作：</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> { nom =&gt; n, prénom =&gt; p } = obj1</span></span></span>
 </code></pre></div>
 
-<p>以表明属性 [lastName, firstName] 的值将赋给变量 [n, p]；</p>
+<p>以提醒 [nom, prénom] 属性的值将赋给变量 [n, p]；</p>
 <ul>
   <li>解构操作在第 15、21 和 28 行重复出现。每次出现大括号 {} 都表示将对一个对象进行解构并赋值给变量；
   </li>
-  <li>第 28 行可能令人困惑。这是以下语法的简写形式：
+  <li>第28行可能会让人感到困惑。这是以下语法的简写形式：
   </li>
 </ul>
 
@@ -1245,29 +1250,29 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>g-nom= martin g-prénom= jean
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>h-nom= martin h-prénom= jean
 </code></pre></div></td></tr></table></div>
-<p><a id="refheadingtoc5458651626043720"></a></p>
+<p><span id="refheadingtoc5458651626043720" name="refheadingtoc5458651626043720" class="odt-bookmark-anchor"></span></p>
 <h2 id="58-obj-08">5.8. <span style="color: #4f81bd">脚本 [obj-08]</span></h2>
 <p>脚本 [obj-08] 演示了如何获取对象的副本：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// object cloning</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 对象克隆</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj1 = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  nom: </span><span style="color:#a31515">&quot;martin&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  prénom: </span><span style="color:#a31515">&quot;jean&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// clone (copy) of obj1 with the spread operator</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用展开运算符克隆（复制）obj1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj2 = { ...obj1 }</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// checks</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// obj2 points to a copy of obj1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 验证</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// obj2 指向 obj1 的副本</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj2===obj1 :&quot;</span><span style="color:#000000">, obj1 === obj2)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;obj2=&quot;</span><span style="color:#000000">, obj2)</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 10 行：复制对象 [obj1] 的操作。... 运算符被称为展开运算符；
+  <li>第 10 行：对象 [obj1] 的复制操作。运算符 ... 被称为展开运算符；
   </li>
 </ul>
 
@@ -1279,13 +1284,13 @@
 <ul>
   <li>第 1 行：表明引用 [obj1] 和 [obj2] 指向的不是同一个对象；
   </li>
-  <li>第 2 行：表明 [obj2] 所指向的对象是 [obj1] 所指向的对象的副本；
+  <li>第 2 行：表明 [obj2] 所指向的对象是 [obj1] 所指向对象的副本；
   </li>
 </ul>
 
-<p><a id="refheadingtoc2042233980233556"></a></p>
-<h2 id="59">5.9. <span style="color: #4f81bd">结论</span></h2>
-<p>本节中的脚本表明，JavaScript 字面量对象类似于面向对象语言中的类实例对象。可以在其上定义属性、方法以及 getter/setter。它是一个动态对象，其属性可在运行时定义。此时，它的行为类似于一个字典，其元素可以是任何类型，包括 <strong>[function]</strong> 类型。</p>
+<p><span id="refheadingtoc2042233980233556" name="refheadingtoc2042233980233556" class="odt-bookmark-anchor"></span></p>
+<h2 id="59-conclusion">5.9. <span style="color: #4f81bd">Conclusion</span></h2>
+<p>本节的脚本表明，JavaScript 的字面量对象与面向对象语言中的类实例对象非常相似。 可以在其中定义属性、方法以及 getter/setter。这是一个动态对象，可以在运行时定义其属性。此时它表现得像一个字典，其元素可以是任何类型，特别是 <strong>[fonction]</strong> 类型。</p>
 
 
 

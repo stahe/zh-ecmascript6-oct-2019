@@ -18,7 +18,7 @@
         <link rel="prev" href="es6-ouai.html">
       
       
-        <link rel="next" href="javascript-http-anhu.html">
+        <link rel="next" href="javascript-anhu-http.html">
       
       
         
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 工作环境的安装
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iaoe.html" class="md-nav__link">
+      <a href="huu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -713,14 +715,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-anhu.html" class="md-nav__link">
+      <a href="javascript-anhu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -767,14 +769,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+      <a href="http-euuan-huieiiuanuue-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 税费计算服务的 JavaScript HTTP 客户端
+    14. HTTP 客户端 税费计算服务的 JavaScript
   
 
     
@@ -807,107 +809,108 @@
   
 
 
-<p><a id="fontionsasync"></a>
-<a id="refheadingtoc2091462346209355"></a></p>
+<p><span id="refheadingtoc2091462346209355" name="refheadingtoc2091462346209355" class="odt-bookmark-anchor"></span>
+<span id="fontionsasync" name="fontionsasync" class="odt-bookmark-anchor"></span></p>
 <h1 id="11">11. <span style="color: #365f91">事件驱动编程与异步函数</span></h1>
-<p><img src="images/10000000000000E900000136448462DF.png" width="93" height="124" style="width:2.469cm;height:3.284cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E900000136448462DF.png" /></p>
-<p>异步函数是指其执行已被启动但未等待结果的函数。当执行完成时，异步函数会触发一个事件，并通过该事件传递其结果。</p>
-<p>这种运行模式非常适合在网页浏览器中执行。事实上，在浏览器中运行的应用程序就是事件驱动型应用程序：应用程序会对事件做出反应，这些事件主要由用户触发（点击、鼠标移动、文本输入等）。 在浏览器中运行的 JavaScript 应用程序通过 HTTP 协议与外部服务进行交互。JavaScript 的原生 HTTP 函数是异步的：它们被启动后，当收到所请求外部服务的响应时，会通过一个事件发出信号，该事件会被添加到应用程序管理的事件集合中。</p>
-<p>以下脚本将由 <strong>[node.js]</strong> 执行，而非由浏览器执行。<strong>[node.js]</strong> 同样采用事件驱动的执行模型：</p>
+<p><img src="images/10000000000000E900000136448462DF.png" width="93" height="124" style="width:2.469cm;height:3.283cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E900000136448462DF.png" /></p>
+<p>异步函数是指已启动执行但无需等待结果的函数。当执行完成时，异步函数会触发一个事件，并通过该事件传递其结果。</p>
+<p>这种工作模式非常适合在网页浏览器中运行。事实上，在浏览器中运行的应用程序本质上是基于事件的：应用程序会对事件做出响应，这些事件主要由用户触发（如点击、鼠标移动、输入文本等）。 在浏览器中运行的 JavaScript 应用程序需要通过 HTTP 协议与外部服务进行交互。 JavaScript 的原生 HTTP 函数是异步的：它们被调用后，获取所请求外部服务响应的结果将通过一个事件来通知，该事件会被添加到应用程序管理的事件集合中。</p>
+<p>以下脚本将由 <strong>[node.js]</strong> 执行，而非由浏览器执行。<strong>[node.js]</strong> 同样采用基于事件的执行模式：</p>
 <ul>
-  <li><b>[node.js]</b> 与浏览器类似，使用事件循环来执行脚本；
+  <li><b>[node.js]</b> 如同浏览器一样，使用事件循环来执行脚本；
   </li>
-  <li>脚本的主代码执行是第一个被处理的事件；
+  <li>脚本主代码的执行是第一个被触发的事件；
   </li>
-  <li>如果该主代码启动了异步任务，则执行将持续进行直至这些异步任务完成。这些任务在完成时会触发事件。这些事件会被排队加入事件循环；
+  <li>如果该主代码启动了异步任务，则在这些异步任务完成之前，执行将持续进行。这些任务在完成时会触发一个事件。这些事件会被放入事件循环的队列中；
   </li>
-  <li>若主脚本希望获取异步操作的结果，则必须订阅这些事件；
+  <li>主脚本必须订阅这些事件，才能获取异步操作的结果；
   </li>
-  <li>在脚本发出的所有事件均被处理完毕之前，脚本不会结束；
+  <li>只有当脚本发出的所有事件均被处理完毕后，脚本才算结束；
   </li>
 </ul>
-<p><a id="refheadingtoc225376640539168"></a></p>
+
+<p><span id="refheadingtoc225376640539168" name="refheadingtoc225376640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="111-async-01">11.1. <span style="color: #4f81bd">脚本 [async-01]</span></h2>
-<p>以下脚本演示了包含异步操作的脚本的行为。</p>
+<p>以下脚本展示了包含异步操作的脚本的行为。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// start</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 开始</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutScript = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// setTimeout arms a 1000 ms timer (2nd parameter) and immediately returns the timer number</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// when the timer has run out of 1000 ms, it emits an event which is queued by the runtime</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// when the event is processed by the runtime, the function (1st parameter) is executed</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// setTimeout 设置一个 1000 毫秒的定时器（第二个参数），并立即返回该定时器的编号</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 当定时器计时满 1000 毫秒时，它会触发一个事件，该事件会被放入运行时的队列中</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 当运行时处理该事件时，将执行该函数（第一个参数）</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// this code will be executed when the timer reaches value 0</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当计时器倒计时至 0 时，将执行此代码</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin de l&#x27;action asynchrone setTimeout]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}, 1000)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// will be displayed before the internal timer function msg</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将在定时器内部函数的消息之前显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin du code principal du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// time and duration display utility</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显示时间和持续时间的工具</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> heure(début) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// current time</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当前时间</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = moment(Date.now());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// time formatting</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 时间格式化</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> result = </span><span style="color:#a31515">&quot;heure=&quot;</span><span style="color:#000000"> + now.format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// is it necessary to calculate a duration?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 是否需要计算时长？</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (début) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> durée = now - début;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> milliseconds = durée % 1000;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> seconds = Math.floor(durée / 1000);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// format time + duration</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 时间+时长格式化</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    result = result + sprintf(</span><span style="color:#a31515">&quot;, durée= %s seconde(s) et %s millisecondes&quot;</span><span style="color:#000000">, seconds, milliseconds);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> result;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 4 行：我们导入 <b>[moment]</b> 库来格式化日期（第 27 行）；
+  <li>第 4<b> </b>行：导入库 [moment]，以便格式化日期（第 27 行）；
   </li>
-  <li>第 5 行：导入 <b>[sprintf-js]</b> 库以格式化时长（第 34 行）；
+  <li>第 5 行：导入库 [sprintf-js]，以便格式化时间（第 34 行）；
   </li>
   <li>第 8 行：记录脚本的开始时间；
   </li>
-  <li>第 9 行：我们使用第 20–34 行中的 <b>[time]</b> 方法显示该时间；
+  <li>第 9 行：使用第 20-34 行中的 <b>[heure]</b> 方法将其显示出来；
   </li>
-  <li>第 14–17 行：<b>[setTimeout]</b> 函数有两个参数（f, duration）：<b>f</b> 是一个函数，当经过 <b>[duration]</b> 毫秒后执行；
+  <li>第14-17行：函数[setTimeout]有两个参数（f, 时长）：f是一个函数，当经过[durée]毫秒后执行；
   </li>
-  <li>第 14 行：脚本运行时，<b>[setTimeout]</b> 函数被执行：
+  <li>第14行：脚本执行时，将调用<b>函数[setTimeout]</b>：
     <ul>
-      <li>第 17 行：启动一个 1000 毫秒的计时器，并开始倒计时，直至最终到达 0。一旦计时器初始化并开始倒计时，<b>[setTimeout]</b> 函数即完成执行。它<b>不会</b>等待倒计时结束。它返回所用计时器的 ID 号，随后执行流程移至下一条指令（第 20 行）。在此处，<b>[setTimeout] </b>的结果并未被使用；
+      <li>第 17 行：一个 1000 毫秒的定时器被启动，并开始倒计时，直至后续计数为 0。一旦定时器初始化并开始倒计时，函数 <b>[setTimeout]</b> 即告结束。 该函数<b>不会等待</b>倒计时结束，而是返回一个标识所用定时器的编号，随后执行流程跳转至下一条指令（第20行）。在此处<b>，[setTimeout]函数</b>的结果并未被使用；
       </li>
     </ul>
   </li>
-  <li>第 16 行：该消息将在 <b>[setTimeout]</b> 函数的 1000 毫秒延迟结束后显示；
+  <li>第 16 行：该消息将在 <b>[setTimeout]</b> 函数的 1000 毫秒延迟结束时显示；
   </li>
-  <li>第 15–16 行：作为 <b>[setTimeout]</b> 函数第一个参数的函数 f，将在 1000 毫秒延迟结束后执行。随后将显示第 16 行中的消息；
+  <li>第15-16行：函数f（<b>即函数[setTimeout]的</b>第一个参数）将在1000毫秒延迟结束后执行。随后将显示第16行的消息；
   </li>
-  <li>第 20 行：该消息将在第 16 行的消息之前显示；
+  <li>第20行：该消息将在第16行的消息之前显示；
   </li>
 </ul>
 
 <p><strong>时间</strong>函数：</p>
 <ul>
-  <li>第 23 行：该函数接受一个可选参数 <b>[time]，</b>即需显示其持续时间的操作的开始时间；
+  <li>第23行：该函数接受一个可选参数<b>[heure]</b>，即需显示其持续时间的操作的开始时间；
   </li>
-  <li>第25–27行：计算并格式化当前时间；
+  <li>第25-27行：计算并格式化当前时间；
   </li>
-  <li>第 29 行：如果存在 <b>[start]</b> 参数，则必须计算持续时间；
+  <li>第29行：如果存在<b>参数</b>[début]，则需计算持续时间；
   </li>
   <li>第 30 行：计算操作的持续时间。结果为毫秒数；
   </li>
-  <li>第 31–32 行：将该毫秒数拆分为秒和毫秒；
+  <li>第31-32行：将该毫秒数拆分为秒和毫秒；
   </li>
-  <li>第 34 行：将持续时间加到时间上；
+  <li>第34行：将时长加到时间上；
   </li>
 </ul>
 
@@ -917,134 +920,135 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début du script]</span>, heure=09:26:40:238</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin du code principal du script]</span>, heure=09:26:40:246, durée= 0 seconde(s) et 11 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin de l&#x27;action asynchrone setTimeout]</span>, heure=09:26:41:249, durée= 1 seconde(s) et 14 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">1.672</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 4 行，我们可以看到异步操作 <b>[setTimeout] </b>在脚本主代码结束约 1 秒后完成；
+  <li>第4行，可以看到异步操作<b>[setTimeOut]</b>在脚本主代码结束约1秒后完成；
   </li>
-  <li>第6行：第3行显示的时间是主代码完成的时间。如果主代码已启动异步任务，则在所有异步任务执行完毕之前，脚本不会完成。第6行显示的时长是脚本的总执行时间（主代码 + 异步任务）；
+  <li>第6行：第3行显示的时间是主代码结束的时间。如果主代码启动了异步任务，则脚本只有在所有异步任务执行完毕后才算结束。第6行显示的时长是脚本的总执行时长（主代码 + 异步任务）；
   </li>
 </ul>
 
-<p><strong>[setTimeout]</strong> 函数允许我们在 <strong>[node.js]</strong> 环境中模拟异步任务。事实上，<strong>[setTimeout]</strong> 函数的行为就像一个异步任务：</p>
+<p>函数 <strong>[setTimeout]</strong> 将使我们能够在 <strong>[node.js]</strong> 环境中模拟异步任务。实际上，函数 <strong>[setTimeout]</strong> 的行为就像一个异步任务：</p>
 <ul>
-  <li>它会立即返回一个结果——在此情况下为定时器 ID——使用标准的函数机制（return）；
+  <li>它通过函数的常规机制（return）立即返回结果，此处为一个定时器编号；
   </li>
-  <li>它可能<b>在稍后</b>（上述情况尚未发生）<b>通过事件</b>返回其他结果，这些结果随后由 <b>[node.js]</b> 事件循环处理；
+  <li>它还可能<b>在后续</b>（上述情况尚不属于此类）<b>通过事件</b>返回其他结果，这些事件随后将由 <b>[node.js]</b> 的事件循环进行处理；
   </li>
-  <li>在后续的大多数情况下，将存在两个此类事件：
+  <li>在后续的大多数情况下，这类事件将有两个：
     <ul>
-      <li>一个可称为 <b>[success] </b>的事件，由成功完成任务的异步任务触发。该事件关联着一段数据——即任务的结果；
+      <li>一个可称为 <b>[success]</b> 的事件，由成功完成预定任务的异步任务触发。该事件关联着一项数据，即任务的结果；
       </li>
-      <li>一个可称为 <b>[failure] </b>的事件，由未能完成任务的异步任务触发。该事件关联着一段数据——通常是一个描述错误的对象。例如，异步网络任务可能出现的错误包括“网络不可用”、“服务器不存在”、“超时”等；
+      <li>另一个事件可称为 [failure]，由未能完成预定任务的异步任务触发。该事件通常关联一个数据对象，该对象描述了错误详情。 例如，在异步网络任务中可能出现的错误包括“网络不可用”、“服务器不存在”、“超时”等。
       </li>
     </ul>
   </li>
-  <li>启动异步任务的主代码可以订阅该任务可能发出的事件。当其中一个事件被发出时，主代码会收到通知，并可触发专门用于处理该事件的特定函数的执行。该函数会接收与所发事件关联的异步任务的数据作为参数；
+  <li>启动异步任务的主代码可以订阅该任务可能发出的事件。当其中一个事件被触发时，主代码会收到通知，并可触发执行一个专门用于处理该事件的函数。该函数会接收异步任务关联到该事件的数据作为参数；
   </li>
 </ul>
-<p><a id="refheadingtoc225378640539168"></a></p>
-<h2 id="112-async-02">11.2. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">脚本 [async-02]</span></strong></span></h2>
-<p>在此脚本中，异步函数 <strong>[setTimeout]</strong> 将发布事件，以将数据传递给已订阅这些事件的代码。</p>
-<p>访问 <strong>[node.js]</strong> 事件需要额外的库。我们选择 <strong>[events]</strong> 库，并通过 <strong>[npm]</strong> 进行安装：</p>
-<p><img src="images/10000000000005850000019732E59DD8.png" width="565" height="163" style="width:14.951cm;height:4.306cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005850000019732E59DD8.png" /></p>
-<p><strong>[async-02]</strong> 脚本如下：</p>
+
+<p><span id="refheadingtoc225378640539168" name="refheadingtoc225378640539168" class="odt-bookmark-anchor"></span></p>
+<h2 id="112-async-02">11.2. <span style="color: #4f81bd">脚本 [async-02]</span></h2>
+<p>在此脚本中，异步函数 <strong>[setTimeout]</strong> 将发布事件，向已订阅这些事件的代码传递数据。</p>
+<p>访问 <strong>[node.js]</strong> 的事件需要额外的库。我们选择 <strong>[events]</strong> 库，并将其与 <strong>[npm]</strong> 一起安装：</p>
+<p><img src="images/10000000000005850000019732E59DD8.png" width="565" height="163" style="width:14.951cm;height:4.309cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005850000019732E59DD8.png" /></p>
+<p><strong>[async-02]</strong>脚本如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous functions can return a result by emitting an event</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the main code can retrieve these results by subscribing to the events issued</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 异步函数可以通过触发事件返回结果</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 主代码可以通过订阅发布的事件来获取这些结果</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> EventEmitter </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;events&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// start</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 开始</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutScript = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an event transmitter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个事件发布器</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> eventEmitter = </span><span style="color:#0000ff">new</span><span style="color:#000000"> EventEmitter();</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// setTimeout sets a 1000 ms timer (2nd parameter) and immediately returns the timer number</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// when the timer has run out of 1000 ms, it emits an event which is queued by the runtime</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// when the event is processed by the runtime, the function (1st parameter) is executed</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// setTimeout 设置一个 1000 毫秒的定时器（第二个参数），并立即返回该定时器的编号</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 当计时器耗尽 1000 毫秒时，它会触发一个事件，该事件会被放入运行时的队列中</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 当运行时处理该事件时，将执行该函数（第一个参数）</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// this code will be executed when the timer reaches value 0</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当计时器倒计时至0时，将执行此代码</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[setTimeout, fin du timer d&#x27;1 s]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// an event is issued to indicate that a result is available</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 触发事件以通知结果已可用</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  eventEmitter.emit(</span><span style="color:#a31515">&quot;timer1Success&quot;</span><span style="color:#000000">, { success: 4 });</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// another event is issued to indicate that another result is available</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 触发另一个事件，表示另有结果可用</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  eventEmitter.emit(</span><span style="color:#a31515">&quot;timer1Failure&quot;</span><span style="color:#000000">, { failure: 6 });</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}, 1000)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// subscribe to evt [timer1Success]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 订阅事件 [timer1Success]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">eventEmitter.on(</span><span style="color:#a31515">&#x27;timer1Success&#x27;</span><span style="color:#000000">, (result) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;la fonction asynchrone du timer a rendu le résultat </span><span style="font-weight:bold;color:#a31515">[%j]</span><span style="color:#a31515">, %s, via l&#x27;événement </span><span style="font-weight:bold;color:#a31515">[timer1Success]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, result, heure(débutScript)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// subscribe to evt [timer1Failure]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 订阅事件 [timer1Failure]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">eventEmitter.on(</span><span style="color:#a31515">&#x27;timer1Failure&#x27;</span><span style="color:#000000">, (result) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;la fonction asynchrone du timer a rendu le résultat </span><span style="font-weight:bold;color:#a31515">[%j]</span><span style="color:#a31515">, %s, via l&#x27;événement </span><span style="font-weight:bold;color:#a31515">[timer1Failure]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, result, heure(débutScript)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// will be displayed before the msg of evts issued by the function associated with [timer1]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将在由 [timer1] 关联函数发出的事件消息之前显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin du code principal du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// time and duration display utility</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显示时间和持续时间的实用程序</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> heure(début) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// current time</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当前时间</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = moment(Date.now());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// time formatting</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 时间格式化</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> result = </span><span style="color:#a31515">&quot;heure=&quot;</span><span style="color:#000000"> + now.format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// is it necessary to calculate a duration?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 是否需要计算时长？</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (début) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> durée = now - début;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> milliseconds = durée % 1000;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> seconds = Math.floor(durée / 1000);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// format time + duration</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 时间+时长格式化</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    result = result + sprintf(</span><span style="color:#a31515">&quot;, durée= %s seconde(s) et %s millisecondes&quot;</span><span style="color:#000000">, seconds, milliseconds);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> result;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 9 行：我们从 <b>[events]</b> 库中导入了 <b>[EventEmitter]</b> 类。这是新的内容：此前，我们只导入过字面量对象和函数；
+  <li>第 9 行，从库 <b>[events]</b> 中导入类 <b>[EventEmitter]</b>。这是一项新功能：此前我们仅导入过字面量对象和函数；
   </li>
-  <li>第 15 行：我们通过 <b>[new]</b> 关键字实例化 <b>[EventEmitter]</b> 类，创建了一个 <b>[node.js]</b> 事件发射器；
+  <li>第 15 行：通过使用关键字 <b>[new]</b> 实例化类 <b>[EventEmitter]，</b>创建了一个事件发射器 <b>[node.js]</b>；
   </li>
-  <li>第 20–27 行：异步函数 <b>[setTimeout]</b>。执行时，它将触发两个事件：
+  <li>第20-27行：异步函数 <b>[setTimeout]</b>。该函数在执行时将触发两个事件：
     <ul>
-      <li>第 24 行，<b>[timer1Success]</b> 事件，其关联值为对象 {success: 4}；
+      <li>第 24 行，事件 [timer1Success]，其关联值为对象 {success : 4}；
       </li>
-      <li>第 26 行，<b>[timer1Failure]</b> 事件，其关联值为对象 {failure: 6}；
+      <li>第 26 行，事件 [timer1Failure]，其关联值为对象 {failure : 6}；
       </li>
-      <li>一个异步函数可以发出任意数量的事件。我们之前提到，通常它只会发出 <b>[success] 或 [failure]</b> 其中一个事件，而不是像我们这里这样同时发出两个；
+      <li>一个异步函数可以触发任意数量的事件。此前我们提到，通常它只会触发两个事件中的一个<b>（[success, failure]</b>），而不是像这里这样同时触发两个；
       </li>
     </ul>
   </li>
-  <li>第 20 行：<b>[setTimeout] </b>的执行是即时的：定时器被设置，其 ID 返回给调用代码。事件将在稍后触发，本例中为 1 秒后；
+  <li>第 20 行：<b>[setTimeout]</b> 的执行是即时的：一个定时器被启动，其编号返回给调用方代码。事件的触发将在稍后进行，此处为 1 秒后；
   </li>
-  <li>如果事件发生时没有代码来处理它们，触发事件就没有意义。这就是为什么主代码必须订阅这两个事件 <b>[timer1Success, timer1Failure]</b> 才能处理它们，特别是为了获取与这些事件关联的数据；
+  <li>如果事件发生时没有代码来处理它们，那么触发事件就没有意义。因此，如果主代码想要管理这两个事件（特别是获取与这些事件相关的数据），就必须订阅这两个事件 <b>[timer1Success, timer1Failure]</b>；
   </li>
-  <li>第 30–32 行：主代码订阅了 <b>[timer1Success]</b> 事件。当 <b>[node.js]</b> 事件监听器处理此事件时，它将调用 <b>[eventEmitter.on]</b> 方法的第二个参数所指定的函数，并向其传递与 <b>[timer1Success]</b> 事件相关的数据（此处称为 <b>[result]</b>）；
+  <li>第30-32行：主代码订阅了事件<b>[timer1Success]</b>。当事件源<b>[node.js]</b>处理该事件时， 它将调用作为 <b>[eventEmitter.on]</b> 方法第二个参数的函数，并向其传递与事件 <b>[timer1Success]</b> 相关的数据（此处称为 <b>[result]</b>）；
   </li>
-  <li>第 31 行：事件处理函数将显示与该事件相关的数据的 JSON 格式以及当前时间；
+  <li>第 31 行：事件处理函数将显示与该事件关联的数据的 jSON 以及当前时间；
   </li>
-  <li>第 35–37 行：使用类似的代码，主代码订阅了 <b>[timer1Failure]</b> 事件；
+  <li>第35-37行：通过类似的代码，主程序订阅事件<b>[timer1Failure]</b>；
   </li>
-  <li>订阅事件（第一个参数）不会立即执行 <b>[callback]</b> 函数（第二个参数）中的代码。该函数仅在事件发生后才会被执行；
+  <li>订阅事件（第一个参数）不会立即执行函数 <b>[callback]</b>（第二个参数）中的代码。该函数仅在事件发生后才会被执行；
   </li>
-  <li>第 40 行：主脚本代码已执行完毕，但脚本本身尚未结束，因为主代码启动了一个异步任务。在该异步任务完成之前，整个脚本不会结束；
+  <li>第40行：脚本的主代码已执行完毕，但脚本本身尚未结束，因为主代码启动了一个异步任务。只有在该异步任务完成后，整个脚本才会结束；
   </li>
 </ul>
 
-<p>结果如下所示：</p>
+<p>以下结果即说明了这一点：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-02.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début du script]</span>, heure=09:34:58:909</span></span>
@@ -1052,84 +1056,85 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[setTimeout, fin du timer d&#x27;1 s]</span>, heure=09:34:59:929, durée= 1 seconde(s) et 23 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat <span style="font-weight:bold">[{&quot;success&quot;:4}]</span>, heure=09:34:59:931, durée= 1 seconde(s) et 25 millisecondes, via l&#x27;événement <span style="font-weight:bold">[timer1Success]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat <span style="font-weight:bold">[{&quot;failure&quot;:6}]</span>, heure=09:34:59:932, durée= 1 seconde(s) et 26 millisecondes, via l&#x27;événement <span style="font-weight:bold">[timer1Failure]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">1.627</span><span style="color:#a31515"> seconds</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 3 行：脚本启动 10 毫秒后，主代码结束；
+  <li>第3行：脚本开始10毫秒后，主代码结束；
   </li>
-  <li>第 4 行：封装在 1000 毫秒定时器中的函数开始，距脚本启动约 1 秒；
+  <li>第4行：封装在1000毫秒定时器中的函数开始执行，距脚本开始约1秒；
   </li>
-  <li>第 5 行：处理 <b>[‘timer1Success’]</b> 事件，2 毫秒后；
+  <li>第5<b>行</b>：处理事件[‘timer1Success’]，2毫秒后；
   </li>
-  <li>第 6 行：处理 <b>[‘timer1Failure’]</b> 事件，发生在 <b>[‘timer1Success’]</b> 事件之后 1 毫秒；
+  <li>第6<b>行</b>：处理事件[‘timer1Failure’]，比事件[‘timer1Success’]晚1毫秒；
   </li>
-  <li>第 8 行：全局脚本结束，总时长为 1.627 秒；
-  </li>
-</ul>
-<p><a id="refheadingtoc225380640539168"></a></p>
-<h2 id="113-async-03">11.3. <span style="color: #4f81bd">脚本 [async-03]</span></h2>
-<p>以下脚本演示了 <strong>[node.js]</strong> 事件循环的另一个方面：</p>
-<ul>
-  <li>该循环依次处理事件，通常按事件到达的顺序进行。某些操作系统会为事件分配优先级，此时事件将按优先级顺序而非到达顺序进行处理；
-  </li>
-  <li>该循环<b>每次仅处理一个事件</b>。只有在前一个事件完成后，才会处理下一个事件。因此，在事件驱动系统中，应避免编写长期独占处理器的代码，因为事件不会在发生时立即被处理，而是等到事件循环到达该位置时才处理。这会导致应用程序“响应”不灵敏；
+  <li>第 8 行：全局脚本结束，总耗时 1.627 秒；
   </li>
 </ul>
 
-<p>脚本 <strong>[async-03]</strong> 演示了这一现象的示例：</p>
+<p><span id="refheadingtoc225380640539168" name="refheadingtoc225380640539168" class="odt-bookmark-anchor"></span></p>
+<h2 id="113-async-03">11.3. <span style="color: #4f81bd">脚本 [async-03]</span></h2>
+<p>以下脚本展示了 <strong>[node.js]</strong> 事件循环的另一个方面：</p>
+<ul>
+  <li>该循环依次执行事件，通常按事件到达的顺序进行。某些 OS 会为事件分配优先级，此时事件按优先级顺序处理，而非按到达顺序；
+  </li>
+  <li>该循环<b>每次仅处理一个事件</b>。只有当前一个事件的处理完成后，才会处理下一个事件。因此，在事件驱动系统中，应避免编写长期独占处理器的代码，因为这样会导致事件在发生时无法被处理，而要等到事件循环轮到它们时才处理。这将导致应用程序“响应性”较差；
+  </li>
+</ul>
+
+<p>脚本 <strong>[async-03]</strong> 展示了这一现象的示例：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous functions can return a result by emitting an event</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the main code can retrieve these results by subscribing to the events issued</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 异步函数可以通过触发事件返回结果</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 主代码可以通过订阅发布的事件来获取这些结果</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> EventEmitter </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;events&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// start</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 开始</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutScript = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an event transmitter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个事件发布器</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> eventEmitter = </span><span style="color:#0000ff">new</span><span style="color:#000000"> EventEmitter();</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// setTimeout sets a 1000 ms timer (2nd parameter) and immediately returns the timer number</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// when the timer has run out of 1000 ms, it emits an event which is queued by the runtime</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// when the event is processed by the runtime, the function (1st parameter) is executed</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// setTimeout 设置一个 1000 毫秒的定时器（第二个参数），并立即返回该定时器的编号</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 当计时器耗尽 1000 毫秒时，它会触发一个事件，该事件会被放入运行时的队列中</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 当运行时处理该事件时，将执行该函数（第一个参数）</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// this code will be executed when the timer reaches value 0</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当计时器达到0时，将执行此代码</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[setTimeout, fin du timer d&#x27;1 s]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// an event is issued to indicate that a result is available</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 触发事件以通知结果已可用</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  eventEmitter.emit(</span><span style="color:#a31515">&quot;timer1Success&quot;</span><span style="color:#000000">, { success: 4 });</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// another event is issued to indicate that another result is available</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 触发另一个事件，表示又有结果可用</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  eventEmitter.emit(</span><span style="color:#a31515">&quot;timer1Failure&quot;</span><span style="color:#000000">, { failure: 6 });</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}, 1000)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// subscribe to evt [timer1Success]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 订阅事件 [timer1Success]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">eventEmitter.on(</span><span style="color:#a31515">&#x27;timer1Success&#x27;</span><span style="color:#000000">, (result) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;la fonction asynchrone du timer a rendu le résultat </span><span style="font-weight:bold;color:#a31515">[%j]</span><span style="color:#a31515">, %s, via l&#x27;événement </span><span style="font-weight:bold;color:#a31515">[timer1Success]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, result, heure(débutScript)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// subscribe to evt [timer1Failure]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 订阅事件 [timer1Failure]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">eventEmitter.on(</span><span style="color:#a31515">&#x27;timer1Failure&#x27;</span><span style="color:#000000">, (result) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;la fonction asynchrone du timer a rendu le résultat </span><span style="font-weight:bold;color:#a31515">[%j]</span><span style="color:#a31515">, %s, via l&#x27;événement </span><span style="font-weight:bold;color:#a31515">[timer1Failure]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, result, heure(débutScript)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// slightly intensive synchronous code that prevented the main code from completing before the end of [timer1]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一段稍显耗时的同步代码，导致主代码无法在 [timer1] 结束前完成</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 1000000; i++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> j = 0; j &lt; 10000; j++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    i + i ^ 2 + i ^ 3;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// will be displayed before the msg of evts issued by the function associated with [timer1]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将显示在由与 [timer1] 关联的函数发出的事件消息之前</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// time and duration display utility</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显示时间和持续时间的实用程序</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> heure(début) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> ...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -1137,19 +1142,19 @@
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>此代码源自前一个示例 <b>[async-02]，</b>并在其中添加了第 39–44 行；
+  <li>此代码基于前例 [async-02]，并在其中添加了第 39-44 行；
   </li>
-  <li>第 20–27 行：<b>[setTimeout]</b> 函数已被编程为在延迟一秒后执行一个内部异步函数。一秒钟过去后，定时器的异步函数并不会立即执行：系统会在执行循环中放置一个事件来请求执行。如果执行循环正忙于处理另一个事件，定时器的异步函数就必须等待；
+  <li>第20-27行：<b>函数</b>[setTimeout]被编程为在一秒后执行一个内部异步函数。 一秒钟后，定时器的异步函数不会立即执行：系统会在执行循环中放置一个事件以请求执行。如果执行循环正忙于处理其他事件，定时器的异步函数执行将不得不等待；
   </li>
-  <li>第 20–27 行：一旦 <b>[setTimeout]</b> 函数设置好一秒延迟的定时器，它便释放处理器并控制权交还给调用代码。调用代码继续执行第 30–37 行，这些是事件订阅，其执行时间可以忽略不计；
+  <li>第20-27行：一旦<b>函数[setTimeout]</b>将定时器设置为一秒延迟后，它便释放处理器并控制权交还给调用方代码。调用方代码继续执行第30-37行，这些是事件订阅操作，其执行时间可以忽略不计；
   </li>
-  <li>主代码随后执行第40–44行，该部分构成一个包含1,010次迭代的循环。当定时器触发“1秒延迟结束”事件时，这段代码正处于执行中。该事件随后被放入事件循环，但必须等待脚本的主代码执行完毕，才有机会被处理；
+  <li>主代码随后执行第40-44行，构成一个1010次迭代的循环。当定时器触发“1秒倒计时结束”事件时，该代码正处于执行中。该事件会被放入事件循环中，但必须等到脚本主代码执行完毕才有机会被处理；
   </li>
-  <li>第 47 行：脚本主代码的结尾。只有在完成这最后的显示操作后，才能处理定时器结束事件并执行<b> [setTimeout] </b>的内部异步函数；
+  <li>第47行：脚本主代码结束。只有在完成最后一次输出后，定时器结束事件才能被处理<b>，[setTimeout]</b>内部的异步函数才能被执行；
   </li>
 </ul>
 
-<p>该脚本产生以下结果：</p>
+<p>脚本输出结果如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-03.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début du script]</span>, heure=08:55:02:665</span></span>
@@ -1157,23 +1162,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[setTimeout, fin du timer d&#x27;1 s]</span>, heure=08:55:11:794, durée= 9 seconde(s) et 136 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat <span style="font-weight:bold">[{&quot;success&quot;:4}]</span>, heure=08:55:11:794, durée= 9 seconde(s) et 136 millisecondes, via l&#x27;événement <span style="font-weight:bold">[timer1Success]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">la fonction asynchrone du timer a rendu le résultat <span style="font-weight:bold">[{&quot;failure&quot;:6}]</span>, heure=08:55:11:794, durée= 9 seconde(s) et 136 millisecondes, via l&#x27;événement <span style="font-weight:bold">[timer1Failure]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">9.796</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>第 3 行：我们可以看到脚本的主体代码执行耗时 9 秒。在此期间发生的任何事件都被排入事件循环队列；
+  <li>第3行：可见脚本主代码的执行耗时9秒。在此期间可能发生的事件已被暂存于事件循环中；
   </li>
-  <li>第4行：我们看到<b>[timer end]</b>事件在主代码执行完毕5毫秒后被处理。该事件在脚本启动后约1秒被触发，但最终被处理前还需额外等待8秒；
+  <li>第4行：可见<b>事件[fin du timer]</b>在主代码结束5毫秒后被处理。该事件在脚本开始约1秒后触发，但需额外等待8秒才最终被处理；
   </li>
 </ul>
 
-<p>本例的核心要点在于：在事件驱动系统中，代码绝不应长时间占用处理器资源。若存在执行耗时的同步代码，必须设法将其拆分为多个较短的异步任务，并通过事件信号来标记任务完成。</p>
-<p><a id="refheadingtoc225382640539168"></a></p>
+<p>从这个例子中可以得出，在基于事件的系统中，代码绝不能长时间占用处理器。如果遇到执行时间较长的同步代码，必须设法将其分解为更短的异步任务，这些任务将通过事件来通知其完成。</p>
+<p><span id="refheadingtoc225382640539168" name="refheadingtoc225382640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="114-async-04">11.4. <span style="color: #4f81bd">脚本 [async-04]</span></h2>
-<p><strong>[async-04]</strong> 脚本演示了另一种机制，即 <strong>[Promise]</strong>（结果承诺）。该机制避免了显式处理 <strong>[node.js]</strong> 事件的必要性。它通过隐式方式进行处理，因此开发者可以忽略这些事件的存在。不过，理解这些事件将有助于开发者更好地掌握 <strong>[Promise]</strong> 的工作原理，因为乍看之下它相当复杂。</p>
-<p><strong>[Promise]</strong> 类型是 JavaScript 中的一个类。其构造函数接受一个异步函数作为参数，并向该函数传递两个传统上称为 <strong>[resolve]</strong> 和 <strong>[reject]</strong> 的参数。这些参数也可以使用其他名称；</p>
+<p>脚本 <strong>[async-04]</strong> 展示了一种名为 <strong>[Promise]</strong> 的机制，即结果承诺。该机制避免了显式管理 <strong>[node.js]</strong> 事件。这些操作是隐式完成的，因此开发人员可以忽略这些事件的存在。 不过，理解这些事件将有助于开发者更好地掌握 <strong>[Promise]</strong> 的工作原理，该机制乍看之下较为复杂。</p>
+<p><strong>[Promise]</strong> 类型是一个 JavaScript 类。其构造函数接受一个异步函数作为参数，并向该函数传递两个通常称为 <strong>[resolve]</strong> 和 <strong>[reject]</strong> 的参数。这些参数可能有其他名称；</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -1181,25 +1186,25 @@
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
 <span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">promise</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">reject</span><span class="p">){</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">     </span><span class="c1">// an asynchronous task is launched</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">     </span><span class="c1">// 启动一个异步任务</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="err">…</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">     </span><span class="c1">// if successful: call resolve(result) where [result] is the result of the asynchronous task;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">     </span><span class="c1">// if unsuccessful: call reject(error) where [error] is an object encapsulating the error encountered;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">     </span><span class="c1">// 若成功：调用 resolve(result)，其中 [result] 是异步任务的结果；</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">     </span><span class="c1">// 若失败：调用 reject(error)，其中 [error] 是封装所遇错误的对象；</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">// subscribe to events issued by the [Promise] asynchronous task</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">// 订阅由 [Promise] 异步任务发出的事件</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li><b>[Promise]</b> 构造函数执行两项操作：
+  <li><b>[Promise]</b> 的构造函数执行两项操作：
     <ul>
-      <li>它会创建一个事件来触发作为参数传递的<b> [function(resolve, reject)] 函数</b>的执行，但不会等待其结果，而是立即将一个 <b>[Promise]</b> 对象返回给调用方。该对象可能处于以下四种状态：
+      <li>它会创建一个事件来触发作为参数传递的 <b>[function(resolve, reject)]</b> 函数的执行，但不会等待其结果，而是立即向调用方返回一个 <b>[Promise]</b> 对象。该对象可能处于以下四种状态：
         <ul>
-          <li><b>[pending]</b>：返回 <b>[Promise] </b>的异步操作尚未完成；
+          <li><b>[pending]</b>：导致 <b>[Promise]</b> 的异步操作尚未完成；
           </li>
-          <li><b>[fulfilled]</b>：返回 <b>[Promise] </b>的异步操作已成功完成；
+          <li><b>[fulfilled]</b>：生成 <b>[Promise]</b> 的异步操作已成功完成；
           </li>
-          <li><b>[rejected]</b>：返回 <b>[Promise] </b>的异步操作已失败；
+          <li><b>[rejected]</b>：生成 <b>[Promise]</b> 的异步操作以失败告终；
           </li>
-          <li><b>[settled]</b>：返回 <b>[Promise] </b>的异步操作已完成；
+          <li><b>[settled]</b>：返回 <b>[Promise]</b> 的异步操作已完成；
           </li>
         </ul>
       </li>
@@ -1207,13 +1212,13 @@
   </li>
 </ul>
 
-<p>当构造函数返回结果时，生成的 <strong>[Promise]</strong> 对象处于 <strong>[pending]</strong> 状态，等待异步函数的结果；</p>
+<p>当构造函数返回结果时，创建的 <strong>[Promise]</strong> 对象处于 <strong>[pending]</strong> 状态，正在等待异步函数的结果；</p>
 <ul>
-  <li>（待续）
+  <li>（续）
     <ul>
-      <li>第 2 至 5 行中的异步任务会<b>立即启动</b>。异步任务通常是输入/输出任务，其工作原理如下：
+      <li>第 2-5 行中的异步任务<b>会立即启动</b>。异步任务通常是输入/输出异步任务，其结构如下：
         <ol>
-          <li>执行同步代码以启动与另一个组件（例如远程服务器）的 I/O 操作；
+          <li>执行同步代码以启动与另一个组件（例如远程服务器）的I/O操作；
           </li>
           <li>等待该组件的响应；
           </li>
@@ -1225,35 +1230,35 @@
   </li>
 </ul>
 
-<p>第二阶段——等待外部组件——是最耗费资源的。与其等待：</p>
+<p>其中，等待处理器外部组件的第2阶段耗时最长。与其等待：</p>
 <ul>
-  <li>由事件来通知已收到从外部组件请求的数据；
+  <li>通过事件通知已收到向外部组件请求的数据；
   </li>
-  <li>在紧随第一阶段之后的同步代码中（示例代码第 7 行），我们将订阅该事件，随后在某个时刻返回 <b>[node.js]</b> 事件循环。此时，待处理事件列表中的下一个事件将被处理；
+  <li>在紧随阶段1之后的同步代码中（示例代码第7行），我们将订阅该事件，随后在适当时候返回<b>[node.js]</b>的事件循环。此时，事件列表中下一个待处理的事件将被处理；
   </li>
-  <li>在第二阶段，虽然存在并行执行，但发生在不同的设备上：
+  <li>在第2阶段，虽然存在并行执行，但分别在不同的设备上进行：
     <ul>
-      <li>事件循环的处理器；
+      <li>处理器负责事件循环；
       </li>
-      <li>用于检索请求数据的外部组件（磁盘、数据库、远程服务器）；
+      <li>外部组件（磁盘、数据库、远程服务器）负责检索所需数据；
       </li>
     </ul>
   </li>
-  <li>在第 2 阶段结束时，一旦 I/O 操作获取了请求的数据，将触发一个事件以指示 I/O 结果已可用。该事件随后将加入事件队列中的其他事件；
+  <li>在第2阶段结束时，当I/O操作获取到所需数据后，将触发一个事件以指示I/O结果已就绪。该事件随后将加入事件队列；
   </li>
-  <li>轮到它时，该事件将被处理。随后将执行与该事件关联的函数（示例代码第 7 行）；
+  <li>轮到它时，该事件将被处理。与该事件关联的函数（示例代码第7行）随即被执行；
   </li>
 </ul>
 
-<p>这种工作模式有助于避免停机：即处理器等待比自身运行速度更慢的设备响应的情况；</p>
+<p>这种工作模式有助于避免空闲时间：即处理器等待比自身运行速度更慢的外设响应所造成的等待时间；</p>
 <ul>
   <li>（续）
     <ul>
-      <li>一旦第2行和第5行的异步任务启动并完成工作，它就可以使用<b>[Promise]</b>构造函数作为参数传递给它的两个函数<b>[resolve, reject]</b>向调用代码返回结果。约定如下：
+      <li>当第2行和第5行的异步任务启动并完成工作后，它可以通过<b>构造函数[Promise]</b>传递的两个参数<b>函数[resolve, reject]，</b>向调用代码返回结果。约定如下：
         <ul>
-          <li>异步任务通过 <b>[resolve(result)]</b> 信号成功。这相当于向 <b>[node.js]</b> 事件循环中添加一个名为 <b>[resolved] </b>的事件，并将 <b>[result]</b> 作为关联数据；
+          <li>异步任务通过 <b>[resolve(result)] 函数</b>报告成功。 这相当于在 <b>[node.js]</b> 的事件循环中，添加一个可命名为 <b>[resolved]</b> 的事件，并将其关联数据设为 <b>[result]</b>；
           </li>
-          <li>异步任务通过 <b>[reject(error)]</b> 信号失败。这相当于向 <b>[node.js]</b> 事件循环中添加一个名为 <b>[rejected] </b>的事件，并将 <b>[error]</b> 作为关联数据——通常是一个详细描述发生错误的对象；
+          <li>异步任务通过 <b>[reject(error)]</b> 报告失败。 这相当于在 <b>[node.js]</b> 的事件循环中，添加一个可命名为 <b>[rejected]</b> 的事件，其关联数据为 <b>[error]</b>（通常是一个详细描述所发生错误的对象）；
           </li>
           <li>因此，调用方必须订阅这两个事件，以便在异步函数的结果可用时收到通知；
           </li>
@@ -1263,133 +1268,133 @@
   </li>
 </ul>
 
-<p>当封装在 <strong>[Promise]</strong> 中的异步任务执行完毕后，由 <strong>[Promise(…)]</strong> 构造函数返回的 <strong>[promise]</strong> 对象的状态会发生变化：</p>
+<p>当封装在 <strong>[Promise]</strong> 中的异步任务执行完成后，由构造函数 <strong>[Promise(…)]</strong> 返回的对象 <strong>[promise]</strong> 的状态会发生变化：</p>
 <ul>
-  <li><b>[resolved]</b> 事件将其状态从 <b>[pending]</b> 更改为 <b>[resolved]</b>；
+  <li>事件 <b>[resolved]</b> 将其状态从 <b>[pending]</b> 切换至 <b>[resolved]</b>；
   </li>
-  <li><b>[rejected]</b> 事件的状态从 <b>[pending]</b> 变为 <b>[rejected]</b>；
+  <li>事件 <b>[rejected]</b> 将其状态从 <b>[pending]</b> 切换为 <b>[rejected]</b>；
   </li>
 </ul>
 
-<p>订阅异步任务的 <strong>[resolved]</strong> 和 <strong>[rejected]</strong> 事件，需使用 <strong>[Promise]</strong> 类的相关方法，语法如下：</p>
-<p><strong>promise.then(f1).catch(f2).finally(f3);</strong></p>
+<p>订阅异步任务的事件 <strong>[resolved]</strong> 和 <strong>[rejected]</strong> 需使用 <strong>[Promise]</strong> 类的相关方法，语法如下：</p>
+<p><strong>promise.then(f1).catch(f2).finally(f3) ;</strong></p>
 <p>其中：</p>
 <ul>
-  <li><b>f1</b> 是在 <b>[promise]</b> 状态从 <b>[pending]</b> 变为 <b>[resolved]</b> 时执行的函数，即当异步任务成功完成其工作时。它接收值 <b>[result]</b> 作为参数，该参数由异步任务的 <b>[resolve(result)]</b> 语句传递；
+  <li><b>f1</b> 是一个在 <b>[promise]</b> 的状态从 <b>[pending]</b> 切换到 <b>[resolved]</b> 时执行的函数，即当异步任务成功完成工作时。 该函数接收由异步任务的 <b>[resolve(result)]</b> 指令传递的 <b>[result]</b> 值作为参数；
   </li>
-  <li><b>f2</b> 是在 <b>[promise] </b>的状态从 <b>[pending]</b> 变为 <b>[rejected]</b> 时执行的函数，即当异步任务未能完成其工作时。它接收由异步任务的 <b>[reject(error)]</b> 语句传递的 <b>[error]</b> 值作为参数；
+  <li><b>f2</b> 是在 <b>[promise]</b> 的状态从 <b>[pending]</b> 切换到 <b>[rejected]</b> 时执行的函数，即当异步任务未能完成其工作时。 该函数接收由异步任务中的 <b>[reject(errror)]</b> 指令传递的 <b>[error]</b> 值作为参数；
   </li>
-  <li><b>f3</b> 是在 <b>[then] </b>或 <b>[catch]</b> 方法执行完毕后执行的函数，因此它总是会被执行。它不接收任何参数；
+  <li><b>f3</b> 是在执行完 <b>[then] </b>或 <b>[catch]</b> 方法后执行的函数，因此总是会被执行。它不接收任何参数；
   </li>
 </ul>
 
-<p>这种语法完全隐藏了我们订阅的事件。然而，这仍是一种订阅，与前一个示例中的情况一样，它不会立即执行函数 <strong>[f1, f2, f3]</strong>。这些函数将在我们订阅的事件 <strong>[resolved, rejected]</strong> 中的任一事件发生时被执行——或者不被执行。</p>
-<p><strong>[async-04]</strong> 脚本演示了这一机制：</p>
+<p>这种语法完全隐藏了所订阅的事件。但这确实是一种订阅，与前面的示例一样，它不会立即执行 <strong>[f1, f2, f3]</strong> 函数。这些函数将在订阅的 <strong>[resolved, rejected]</strong> 事件之一发生时执行或不执行。</p>
+<p>脚本 <strong>[async-04]</strong> 展示了这一机制：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// it is possible to obtain the results (success, failure) of an asynchronous function</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// without explicitly using events thanks to the [Promise] class</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// this class implicitly uses events, but these are not visible in the code</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 可以获取异步函数的结果（成功、失败）</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 借助 [Promise] 类，无需显式使用事件</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 该类隐式使用了事件，但在代码中无法直接看到</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// start</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 开始</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutScript = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// definition of an asynchronous task using a promise [Promise]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the asynchronous task is the [Promise] constructor parameter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用 Promise 定义异步任务 [Promise]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 异步任务是构造函数的参数 [Promise]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutPromise1 = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> promise1 = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (resolve) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// log</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 日志</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début fonction asynchrone de promise1]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutPromise1));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// asynchronous code</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 异步代码</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin fonction asynchrone de promise1]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutPromise1));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the asynchronous task returns a result with the [resolve] function</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the promise is fulfilled</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 异步任务通过函数返回结果 [resolve]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 此时，该 Promise 成功</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    resolve(</span><span style="color:#a31515">&#x27;</span><span style="font-weight:bold;color:#a31515">[réussite]</span><span style="color:#a31515">&#x27;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we can know the result of the promise [promise1]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// when it has been resolved or rejected</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the following instruction is a subscription to the [resolved] event via the [then] method</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// and to the [rejected] event via the [catch] method</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the [finally] method is executed whether after a then or a catch</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 可以获取该 Promise 的结果 [promise1]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 当该承诺被解析（resolve）或拒绝（reject）时</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 随后的指令是通过方法 [then] 订阅事件 [resolved]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 以及通过方法 [catch] 订阅事件 [rejected]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 无论是在 then 还是 catch 之后，都会执行 [finally] 方法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">promise1.then(result =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// promise success stories [evt resolved]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 承诺成功的情况  [evt resolved]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise1.then]</span><span style="color:#a31515">, %s, result=%s&quot;</span><span style="color:#000000">, heure(débutPromise2), result));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}).catch(result =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// error case [evt rejected]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 错误情况  [evt rejected]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise1.catch]</span><span style="color:#a31515">, %s, result=%s&quot;</span><span style="color:#000000">, heure(débutPromise2), result));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}).finally(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// executed in all cases</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 在所有情况下均执行</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise1.finally]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, heure(débutPromise1));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// definition of an asynchronous task using a promise [Promise]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用 Promise 定义异步任务 [Promise]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutPromise2 = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> promise2 = </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (resolve, reject) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// log</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 日志</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début fonction asynchrone de promise2]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutPromise1));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// asynchronous task</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 异步任务</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin fonction asynchrone de promise2]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutPromise2));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the asynchronous task returns a result with the [reject] function</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the promise is lost</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 异步任务通过函数返回结果 [reject]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 此时该承诺失败</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    reject(</span><span style="color:#a31515">&#x27;</span><span style="font-weight:bold;color:#a31515">[échec]</span><span style="color:#a31515">&#x27;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }, 2000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we can know the result of the promise [promise2]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// when it has been resolved or rejected</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 可以获取 [promise2] 承诺的结果</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 当该承诺被解析（resolve）或拒绝（reject）时</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">promise2.then(result =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// promise success stories [evt resolved]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 承诺成功的情况 [evt resolved]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise2.then]</span><span style="color:#a31515">, %s, result=%s&quot;</span><span style="color:#000000">, heure(débutPromise2), result));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}).catch(result =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// error case [evt rejected]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 发生错误的情况 [evt rejected]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise2.catch]</span><span style="color:#a31515">, %s, result=%s&quot;</span><span style="color:#000000">, heure(débutPromise2), result));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}).finally(() =&gt; {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// executed in all cases</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 在所有情况下均执行</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise2.finally]</span><span style="color:#a31515">, %s&quot;</span><span style="color:#000000">, heure(débutPromise2)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// will be displayed before the msg of asynchronous functions and those of associated events</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将在异步函数的消息和相关事件的消息之前显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin du code principal du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// utility</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 实用程序</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> heure(début) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// current time</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当前时间</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = moment(Date.now());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// time formatting</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 时间格式</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> result = </span><span style="color:#a31515">&quot;heure=&quot;</span><span style="color:#000000"> + now.format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (début) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> durée = now - début;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> milliseconds = durée % 1000;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> seconds = Math.floor(durée / 1000);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// formatting duration</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 时间格式</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    result = result + sprintf(</span><span style="color:#a31515">&quot;, durée= %s seconde(s) et %s millisecondes&quot;</span><span style="color:#000000">, seconds, milliseconds);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> result;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 18–28 行：创建一个 <b>[Promise promise1]</b>。其异步函数将在一秒后通过一个事件返回结果。一旦该异步操作启动（计时器开始运行），我们不会等待其返回结果，而是立即执行第 35 行的代码；
+  <li>第 18-28 行：创建 <b>[Promise promise1]</b>。其异步函数会在 1 秒后通过事件返回结果。一旦启动该异步操作（触发定时器），我们不会等待其返回结果，而是立即跳转至第 35 行的代码；
   </li>
-  <li>第 35–44 行：我们订阅 <b>[promise1] </b>的内部异步函数可能发出的两个事件 <b>[resolved, rejected]</b>；
+  <li>第35-44行：订阅[promise1]内部异步函数可能发出的<b>两个[resolved, rejected]事件</b>；
   </li>
-  <li>第 46–71 行：针对第二个 Promise <b>[promise2]</b>，我们重复了与之前相同的代码序列；
+  <li>第46-71行：针对第二个<b>[promise2]</b>承诺，重复执行与之前相同的代码序列；
   </li>
-  <li>第 74 行：脚本的主体部分已执行完毕，但整个脚本尚未结束，因为有两个异步操作已被启动。我们返回事件循环，在某个时刻，<b>[promise1, promise2]</b> 的<b> [resolved, rejected]</b> 事件之一将会发生。届时该事件将被处理；
+  <li>第 74 行：脚本的主体代码已执行完毕，但整个脚本尚未结束，因为有两个异步操作已被触发。此时返回事件循环，在某个时刻<b>，[promise1, promise2]</b> 承诺中的某个 <b>[resolved, rejected]</b> 事件将会发生。该事件随后将被处理；
   </li>
-  <li>随后我们返回事件循环。在那里，当第二个 <b>[resolved, rejected]</b> 事件发生时，将对其进行处理；
+  <li>随后将返回事件循环。此时，当 <b>[promise1, promise2]</b> 承诺中的第二个事件 <b>[resolved, rejected]</b> 发生时，它将被处理；
   </li>
 </ul>
 
@@ -1406,27 +1411,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin fonction asynchrone de promise2]</span>, heure=09:39:07:976, durée= 2 seconde(s) et 17 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[promise2.catch]</span>, heure=09:39:07:978, durée= 2 seconde(s) et 19 millisecondes, result=<span style="font-weight:bold">[échec]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[promise2.finally]</span>, heure=09:39:07:980, durée= 2 seconde(s) et 21 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">2.589</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 3 行：<b>[promise1] </b>的异步函数被调用，但我们不等待其完成，其完成将通过一个事件来通知；
+  <li>第 3 行：启动 <b>[promise1]</b> 的异步函数，但不等待其结束（结束将由事件通知）；
   </li>
-  <li>第 4 行：<b>[promise2] </b>的异步函数被调用，但我们不等待其完成，其完成将通过一个事件来通知；
+  <li>第 4 行：启动 <b>[promise2]</b> 的异步函数，但不等待其结束（结束将由事件通知）；
   </li>
   <li>第 5 行：主代码结束，返回事件循环；
   </li>
-  <li>第 6 行：处理 <b>[promise1 的异步函数结束]</b> 事件。<b>[promise1] </b>的状态将变为 <b>[resolved]</b>。一个事件会通知这一点；
+  <li>第 6 行：处理事件 <b>[fin fonction asynchrone de promise1]</b>。<b>[promise1]</b> 的状态将变为 <b>[resolved]</b>。一个事件会通知此状态变化；
   </li>
-  <li>第 7 行：由于 <b>[promise2]</b> 尚未完成工作，刚刚加入循环的 <b>[promise1 resolved]</b> 事件将由 <b>[promise1.then]</b> 方法处理，随后由 <b>[promise.finally]</b> 方法处理（第 8 行）；
+  <li>第7行：由于<b>[promise2]</b>尚未完成处理， 刚刚被放入循环的事件 <b>[promise1 resolved] </b>将由方法 <b>[promise1.then]</b> 处理，随后由方法 <b>[promise.finally]</b> 处理（第 8 行）；
   </li>
-  <li>第 9–11 行：当 <b>[promise2] </b>从 <b>[pending]</b> 状态变为 <b>[resolved]</b> 时，也会发生同样的机制；
+  <li>第9-11行：当[promise2]从<b>状态[pending]</b>切换到[resolved]时，同样的机制也会发生；
   </li>
 </ul>
 
-<p><a id="refheadingtoc225384640539168"></a></p>
+<p><span id="refheadingtoc225384640539168" name="refheadingtoc225384640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="115-async-05">11.5. <span style="color: #4f81bd">脚本 [async-05]</span></h2>
 <p>让我们回到 <strong>[Promise]</strong> 对象构造函数的代码：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -1440,14 +1445,14 @@
 <span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span><span class="w"> </span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">promise</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">reject</span><span class="p">){</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1">// an asynchronous task is launched</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1">// 启动一个异步任务</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1">// …</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1">// if successful: call resolve(result) where [result] is the result of the asynchronous task;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1">// if unsuccessful: call reject(error) where [error] is an object encapsulating the error encountered;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1">// 若成功：调用 resolve(result)，其中 [result] 是异步任务的结果；</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1">// 若失败：调用 reject(error)，其中 [error] 是封装所遇错误的对象；</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="c1">// subscribe to events issued by the asynchronous task</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="c1">// 订阅异步任务发出的事件</span>
 </code></pre></div></td></tr></table></div>
-<p>第 2 行：启动 <strong>[Promise]</strong> 的异步任务。它通常需要的参数不止封装它的函数传递的 <strong>[resolve, reject]</strong> 参数。在此情况下，我们将 <strong>[Promise]</strong> 的创建封装在一个函数中，该函数会向其传递异步函数所需的参数：</p>
+<p>第 2 行，<strong>[Promise]</strong> 的异步任务被启动。它通常需要比封装它的函数传递的 <strong>[resolve, reject]</strong> 参数更多的参数。 在这种情况下，我们将 <strong>[Promise]</strong> 的创建封装在一个函数中，该函数会向其传递其异步任务所需的参数：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1463,50 +1468,50 @@
 <span class="normal"><a href="#__codelineno-2-13">13</a></span>
 <span class="normal"><a href="#__codelineno-2-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">// definition of the asynchronous function</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">// 定义异步函数</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">uneFonctionAsynchrone</span><span class="w"> </span><span class="p">(</span><span class="nx">p1</span><span class="p">,</span><span class="w"> </span><span class="nx">p2</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="nx">pn</span><span class="p">){</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">reject</span><span class="p">){</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">     </span><span class="c1">// an asynchronous task is launched with parameters (P1, p2, ..., pn)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">     </span><span class="c1">// 使用参数 (P1, p2, …, pn) 启动一个异步任务</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="c1">// …</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">     </span><span class="c1">// if successful: call resolve(result) where [result] is the result of the asynchronous task;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">     </span><span class="c1">// if unsuccessful: call reject(error) where [error] is an object encapsulating the error encountered;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">     </span><span class="c1">// 若成功：调用 resolve(result)，其中 [result] 是异步任务的结果；</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">     </span><span class="c1">// 若失败：调用 reject(error)，其中 [error] 是封装所遇错误的对象；</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="p">}</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">// subscribe to [resolved, rejected] events to be sent by the asynchronous function [uneFonctionAsynchrone]</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">// 订阅订阅异步函数 [uneFonctionAsynchrone] 将发出的事件 [resolved, rejected]</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="err">…</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1">// some time later, the asynchronous function [uneFonctionAsynchrone] is called</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1">// 稍后，异步函数 [uneFonctionAsynchrone] 被调用</span>
 <a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="nx">uneFonctionAsynchrone</span><span class="p">(</span><span class="nx">e1</span><span class="p">,</span><span class="w"> </span><span class="nx">e2</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="nx">en</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>以下脚本：</p>
 <ul>
-  <li>定义了两个返回 <b>[Promise] </b>的异步函数；
+  <li>定义了两个异步函数，返回一个 <b>[Promise]</b>；
   </li>
-  <li>并行启动它们的执行，并在两者都完成后才执行某项任务；
+  <li>并行启动它们的执行，并在两者都完成后执行某项操作；
   </li>
 </ul>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we can define asynchronous functions that render a [Promise] type</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// they can then be tagged with the keyword [async]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 可以定义返回类型为 [Promise] 的异步函数</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 随后可用关键字 [async] 对其进行标记</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// start</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 开始</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutScript = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an asynchronous function that renders a promise [Promise]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个返回 Promise 的异步函数 [Promise]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> async01(p1) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise((resolve) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début de la tâche asynchrone async01]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the asynchronous task</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 异步任务</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> débutAsync01 = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin de la tâche asynchrone async01]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutAsync01));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the asynchronous task can render a complex result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 异步任务可能返回复杂结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      resolve({</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        prop1: <span style="font-weight:bold">[10, 20, 30]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        prop2: </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">,</span></span></span>
@@ -1515,16 +1520,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  });</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an asynchronous function that renders a promise [Promise]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个返回 Promise 的异步函数 [Promise]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> async02(p1, p2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise(resolve =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début de la tâche asynchrone async02]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// asynchronous task</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 异步任务</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> débutAsync02 = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin de la tâche asynchrone async02]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutAsync02));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the asynchronous task can render a complex result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 异步任务可能返回复杂的结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      resolve({</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        prop1: <span style="font-weight:bold">[11, 21, 31]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        prop2: </span><span style="color:#a31515">&quot;xyzt&quot;</span><span style="color:#000000">,</span></span></span>
@@ -1533,84 +1538,84 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }, 2000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// run the two asynchronous functions in parallel</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// and wait for them both to finish</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the then executes only if both functions have issued the [resolved] event</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the catch is executed as soon as one of the two functions issues the [rejected] event</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 并行调用这两个异步函数</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 并等待它们全部完成</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 只有当两个函数都触发了事件时，then 才会执行 [resolved]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 只要两个函数中的任一个触发了事件，catch 块就会立即执行 [rejected]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Promise.all(<span style="font-weight:bold">[async01(10), async02(10, 20)]</span>)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the result is an array [result1, result2] where [result1] is the result emitted by a [resolve] of [async01]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// and [result2] the result emitted by a [resolve] of [async02]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 结果是一个数组 [result1, result2]，其中 [result1] 是由 [resolve] 发出的结果，该 [resolve] 来自 [async01]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ，而 [result2] 则是 [async02] 中的某个 [resolve] 所输出的结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  .then(result =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise-all success]</span><span style="color:#a31515">, %s, result=%j&quot;</span><span style="color:#000000">, heure(débutScript), result));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  })</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// error is the result emitted by the first [reject] of one of the two asynchronous functions</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// error 是两个异步函数中任一函数的第一个 [reject] 发出的结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  .catch(error =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise-all error]</span><span style="color:#a31515">, %s, erreur=%j&quot;</span><span style="color:#000000">, heure(débutScript), error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  })</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// finally is executed after then or catch</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// finally 将在 then 或 catch 之后执行</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  .finally(() =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[promise-all finally]</span><span style="color:#a31515">, %s&quot;</span><span style="color:#000000">, heure(débutScript)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  });</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// will be displayed before msgs for asynchronous functions and associated events</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将显示在异步函数和相关事件的消息之前</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin du code principal du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// utility</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 实用工具</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> heure(début) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// current time</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当前时间</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = moment(Date.now());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// time formatting</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 时间格式化</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> result = </span><span style="color:#a31515">&quot;heure=&quot;</span><span style="color:#000000"> + now.format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (début) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> durée = now - début;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> milliseconds = durée % 1000;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> seconds = Math.floor(durée / 1000);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// formatting duration</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 时间格式</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    result = result + sprintf(</span><span style="color:#a31515">&quot;, durée= %s seconde(s) et %s millisecondes&quot;</span><span style="color:#000000">, seconds, milliseconds);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> result;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 15–30 行：我们定义了一个函数 <b>[async01]</b>，该函数通过定时器事件在 1 秒后返回结果。函数 <b>[async01] </b>在第 26 行的 result 中被调用；
+  <li>第15-30行：定义了一个函数 [async01]，该函数通过定时器事件在1秒后返回结果。第26行中使用了该函数的返回值；
   </li>
-  <li>第33–47行：我们对函数 <b>[async02]</b> 进行类似操作，该函数通过定时器事件在2秒后返回结果。函数 <b>[async02]</b> 接受两个参数，这些参数在第44行的结果中被使用；
+  <li>第33-47行：对<b>函数[async02]</b>进行类似处理，该函数通过定时器事件在2秒后返回结果。<b>函数[async02]</b>接受两个参数，这些参数在其第44行的结果中被使用；
   </li>
-  <li>当调用 <b>[async01] 和 [async02]</b> 这两个函数时：
+  <li>当调用这两个函数 <b>[async01, async02]</b> 时：
     <ul>
       <li>将被启动；
       </li>
-      <li>将向调用方返回两个 Promise <b>[promise1, promise2]</b>；
+      <li>将向调用方返回两个 <b>[promise1, promise2]</b> 承诺；
       </li>
-      <li>随后执行控制将返回给调用代码，并继续运行；
+      <li>随后执行控制将返回给调用方代码，继续执行后续流程；
       </li>
-      <li>大约 1 秒后，<b>[async01] </b>将触发一个事件，表示其已完成工作。该事件将与 <b>[async01]</b> 传递的结果一同排入与其关联的事件循环中；
+      <li>大约1秒后<b>，[async01]</b>将触发一个事件，表示其已完成工作。该事件将被放入与<b>[async01]传递</b>的结果关联的事件循环中；
       </li>
-      <li>大约 2 秒后，<b>[async02]</b> 也将经历相同的过程；
+      <li>大约2秒后，<b>[async02]</b>也将经历相同的流程；
       </li>
     </ul>
   </li>
-  <li>第 54 行：此时才开始执行异步函数 <b>[async01, async02]</b>（即 async01(10) 和 async02(10,20)）。它们是在作为 <b>[Promise.all]</b> 方法参数传递的数组内执行的。 我们知道 <b>[async01, async02]</b> 都会向调用代码返回一个 Promise。因此，<b>[Promise.all] </b>的参数是一个包含两个 Promise 的数组；
+  <li>第 54 行：直到此时，异步函数 <b>[async01, async02]</b> 才被执行（标记为 async01(10) 和 async02(10,20)）。它们是在作为参数传递给 <b>[Promise.all]</b> 方法的数组中执行的。 已知 <b>[async01, async02]</b> 都会向调用方返回一个 Promise。因此<b>，[Promise.all]</b> 的参数是一个包含两个 Promise 的数组；
   </li>
-  <li><b>[Promise.all([promise1, promise2, …, promiseN]).then(f1).catch(f2).finally(f3)</b>] 是一种事件订阅：
+  <li><b>[Promise.all([promise1, promise2, …, promisen]).then(f1).catch(f2).finally(f3)</b>] 是一个事件订阅：
     <ul>
       <li><b>[Promise.all] </b>的类型为 <b>[Promise]</b>；
       </li>
-      <li>当 <b>[all</b>] 方法参数数组中的<b>所有 Promise [promise1, promise2, …, promisen]</b> 均从 <b>[pending]</b> 状态转为 <b>[resolved]</b> 状态时，<b>[then] 方法</b>中的函数 <b>[f1]</b> 将会被执行。换言之，当数组中的所有 Promise 均成功完成时，<b>[f1]</b> 将会被执行；
+      <li><b>当方法 [all]</b> 的参数数组中所有 <b>[promise1, promise2, …, promisen] 承诺</b>都从状态 <b>[pending]</b> 转换为状态 <b>[resolved] 时，方法 [then] 的函数 [f1]</b> 将会被执行。换言之，当数组中的所有承诺均成功完成时，<b>[f1]</b> 将会被执行；
       </li>
-      <li><b>[catch]</b> 方法中的 <b>[f2]</b> 函数将在数组中的任意一个 Promise 从 <b>[pending]</b> 状态变为 <b>[rejected]</b> 状态时立即执行。换言之，当数组中的任意一个 Promise 失败时，<b>[f2]</b> 就会被执行；
+      <li>只要数组中的任意一个 Promise 从状态 <b>[pending]</b> 切换到状态 <b>[rejected]</b>，方法 <b>[catch]</b> 中的函数 <b>[f2]</b> 就会被执行。 换言之，只要数组中的任一承诺<b>失败，[f2]</b> 就会被执行；
       </li>
-      <li><b>[finally]</b> 方法的 <b>[f3]</b> 函数将在 <b>[then] 或 [catch]</b> 方法中的任一方法执行完毕后执行，因此它总是会被执行；
+      <li>方法 <b>[finally]</b> 中的函数 <b>[f3]</b> 将在方法 <b>[then, catch]</b> 中的任一方法执行之后执行，因此始终会被执行；
       </li>
     </ul>
   </li>
 </ul>
 
-<p>执行代码后将得到以下结果：</p>
+<p>代码执行结果如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-05.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[début du script]</span>, heure=12:17:17:367</span></span>
@@ -1621,150 +1626,151 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin de la tâche asynchrone async02]</span>, heure=12:17:19:389, durée= 2 seconde(s) et 14 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[promise-all success]</span>, heure=12:17:19:390, durée= 2 seconde(s) et 25 millisecondes, result=<span style="font-weight:bold">[{&quot;prop1&quot;:[10,20,30]</span>,&quot;prop2&quot;:&quot;abcd&quot;,&quot;prop3&quot;:10},{&quot;prop1&quot;:<span style="font-weight:bold">[11,21,31]</span>,&quot;prop2&quot;:&quot;xyzt&quot;,&quot;prop3&quot;:30}]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[promise-all finally]</span>, heure=12:17:19:392, durée= 2 seconde(s) et 27 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">2.572</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 6-7 行：启动了两个异步任务 <b>[async01, async02]</b>。它们并行运行。并非它们的代码执行是并行的，而是它们各自等待请求数据的过程同时发生；
+  <li>第 6-7 行：两个异步任务 <b>[async01, async02]</b> 被启动。它们并行运行。并非它们的代码执行是并行的，而是它们各自对所需数据的等待同时发生；
   </li>
-  <li>第 5 行：脚本的主体部分已完成。现在只需等待两个异步任务 <b>[async01, async02]</b> 完成；
+  <li>第 5 行：脚本的主体代码已执行完毕。接下来只需等待两个异步任务 <b>[async01, async02]</b> 结束；
   </li>
-  <li>第 6 行：异步任务 <b>[async01] </b>在启动后约 1 秒完成。它使用 <b>[resolve]</b> 函数返回结果，因此代码第 56 行数组中的该 Promise 状态从 <b>[pending]</b> 变为 <b>[resolved]</b>。但这还不足以触发代码第 59–60 行的 <b>[then]</b> 方法；
+  <li>第 6 行：异步任务 <b>[async01] </b>在启动约 1 秒后结束。 该任务通过函数 <b>[resolve]</b> 返回结果，因此代码第 56 行数组中的其 Promise 状态从 <b>[pending]</b> 变为 <b>[resolved]</b>。 这还不足以触发代码第59-60行的<b>[then]方法</b>；
   </li>
-  <li>第 7 行：异步任务 <b>[async02] </b>在启动后约 2 秒完成。它通过 <b>[resolve]</b> 函数返回结果，因此代码第 56 行数组中的该 Promise 状态从 <b>[pending]</b> 变为 <b>[resolved]</b>。<b>[then]</b> 方法将在事件循环允许时立即执行；
+  <li>第7行：异步任务<b>[async02]</b>在启动后约2秒结束。 该任务通过函数 <b>[resolve]</b> 返回结果，因此代码第 56 行数组中的其 Promise 状态从 <b>[pending]</b> 变为 <b>[resolved]</b>。 一旦事件循环允许，方法 <b>[then]</b> 就会被执行；
   </li>
-  <li>第 8 行：   ，<b>[Promise.all] </b>的 <b>[then]</b> 方法被执行。它接收一个参数数组 <b>[result1, result2]</b>，其中 <b>[result1] </b>是 <b>[async01]</b> 返回的结果，<b>[result2] </b>是 <b>[async02]</b> 返回的结果；
+  <li>第8行：   ，执行<b>了[Promise.all]</b>的<b>[then]方法</b>。 它接收一个<b>名为 [result1, result2]</b> 的数组作为参数，其中 <b>[result1] </b>是 <b>[async01]</b> 发出的结果， 而 <b>[result2]</b> 则是 <b>[async02]</b> 输出的结果；
   </li>
-  <li>第 9 行：执行<b> [Promise.all] </b>的 <b>[finally]</b> 方法；
+  <li>第 9 行：执行 <b>[Promise.all]</b> 中的 <b>[finally]</b> 方法；
   </li>
 </ul>
-<p><a id="refheadingtoc225386640539168"></a></p>
+
+<p><span id="refheadingtoc225386640539168" name="refheadingtoc225386640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="116-async-06">11.6. <span style="color: #4f81bd">脚本 [async-06]</span></h2>
-<p>这个新脚本演示了如何通过结合使用 <strong>[async / await]</strong> 关键字，使<strong>异步</strong>代码看起来像<strong>同步</strong>代码。事件处理被完全隐藏，使得代码更易于理解。</p>
-<p>我们重新审视前面的示例，并进行以下修改：</p>
+<p>这个新脚本展示了如何通过结合使用 <strong>[async / await]</strong> 关键字，<strong>使异步代码</strong>看起来像<strong>同步</strong>代码。事件处理被完全封装，从而简化了代码的理解。</p>
+<p>我们沿用前面的示例，并进行以下修改：</p>
 <ul>
-  <li>我们添加了第三个异步函数 <b>[async03]，</b>该函数通过 <b>[Promise.reject]</b> 方法返回结果，从而向事件循环发出信号，表明其任务“失败”了；
+  <li>添加了第三个异步函数 [async03]，该函数通过方法 <b>[Promise.reject]</b> 返回结果，从而向事件循环发出“任务失败”的信号；
   </li>
-  <li>我们依次执行这三个异步函数 <b>[async01, async02, async03]</b>。在之前的示例中，我们曾并行执行异步函数 <b>[async01, async02]</b>；
+  <li>依次执行三个异步函数 <b>[async01, async02, async03]</b>。在前面的示例中，我们曾并行执行了异步函数 <b>[async01, async02]</b>；
   </li>
-  <li>在引入 <b>[async/await]</b> 关键字之前，异步操作的顺序执行是通过嵌套的 <b>[Promise]</b> 对象实现的。每当需要以这种方式执行多个异步操作时，Promise 的数量就会相应增加，导致代码可读性下降；
+  <li>在出现关键字 <b>[async/await]</b> 之前，异步操作的顺序执行是通过相互嵌套的 <b>[Promise]</b> 实现的。 一旦需要以这种方式执行多个异步操作，承诺的数量就会相应增加，代码的可读性也会降低；
   </li>
-  <li>借助 <b>[async/await]</b> 关键字，异步任务的顺序执行采用了与同步任务执行类似的语法：
+  <li>使用关键字 <b>[async/await]</b> 时，异步任务的顺序执行采用与同步任务执行相同的语法：
   </li>
 </ul>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous function - using async / await</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 异步函数 - async / await 的使用</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// sequential execution of asynchronous tasks</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 异步任务的顺序执行</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execution while waiting for [async01]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 带等待的执行 [async01]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> result1 = </span><span style="color:#0000ff">await</span><span style="color:#000000"> async01(...);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[async01 result]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, result1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execution while waiting for [async02]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 带等待的执行 [async02]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> result2 = </span><span style="color:#0000ff">await</span><span style="color:#000000"> async02(...);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[async02 result]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, result2);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execution while waiting for [async03]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 等待 [async03] 执行</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> result3 = </span><span style="color:#0000ff">await</span><span style="color:#000000"> async03(...);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[async03 result]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, result3);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// one of the asynchronous actions has failed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 其中一项异步操作失败</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[sequential error]</span><span style="color:#a31515">= %j, %s&quot;</span><span style="color:#000000">, error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">finally</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// completed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 已完成</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin exécution séquentielle des tâches asynchrones]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 6 行：启动异步函数 <b>[async01]</b>（使用 <b>await</b> 关键字），并等待其通过 <b>[Promise.resolve, Promise.reject]</b> 中的任一方法返回结果。因此这是一项阻塞操作；
+  <li>第 6 行：启动异步函数 <b>[async01]</b>（使用 <b>await</b> 关键字），并等待其通过 <b>[Promise.resolve, Promise.reject]</b> 方法之一发布结果。因此这是一项<b>阻塞操作</b>；
   </li>
-  <li>第 6 行：<b>[await]</b> 关键字将异步操作 <b>[async01]</b> 转换为阻塞操作。我们知道 <b>[async01]</b> 操作有两种返回结果的方式：
+  <li>第 6 行：关键字 <b>[await] </b>将异步操作 <b>[async01]</b> 转换为阻塞操作。我们知道操作 <b>[async01]</b> 有两种返回结果的方式：
     <ul>
-      <li>它几乎立即向调用代码<b>返回</b>一个 <b>[Promise]</b> 对象；
+      <li>它几乎立即向调用方代码<b>返回</b>一个 <b>[Promise]</b> 对象；
       </li>
-      <li>随后通过 <b>[Promise.resolve, Promise.reject]</b> 方法将结果<b>发布</b>到事件循环中。第 6 行中 <b>[result1]</b> 获取的正是后者。对 <b>[async01]</b> 操作的事件驱动处理已变得不可见；
+      <li>随后通过 <b>[Promise.resolve, Promise.reject]</b> 方法在事件循环中<b>发布</b>结果。第 6 行中的 <b>[result1]</b> 获取的就是后者。<b>[async01]</b> 操作的事件处理已不可见；
       </li>
-      <li>如果 <b>[async01]</b> 的结果 <b>[result] </b>是通过 <b>[Promise.resolve(result)]</b> 发布的，则该结果在第 6 行被赋值给 <b>[result1]</b>，执行继续进行到第 7 行；
+      <li>如果 <b>[Promise.resolve(result)]</b> 发布了 <b>[async01]</b> 的结果 [result]，则该结果会被分配给第 6 行的<b> [result1]</b>，执行流程随后继续到第 7 行；
       </li>
-      <li>如果 <b>[async01] </b>的结果通过 <b>[Promise.reject]</b> 解析，这将触发一个异常，代码执行将跳转至第 14 行，即 <b>catch 代码块</b>。<b>catch</b> 子句的参数是 <b>[async01]</b> 通过表达式 <b>[Promise.reject(error)]</b> 解析得到的错误对象 (error)。 异步任务也可以通过 <b>[throw(error)]</b> 抛出错误。<b>[error]</b> 对象即是在 <b>[catch(error)] </b>中捕获到的那个对象；
+      <li>如果 <b>[async01]</b> 的结果由 <b>[Promise.reject]</b> 发布，这将引发异常，代码执行将跳转至第 14 行，即 <b>catch</b> 语句所在的位置。 <b>[catch]</b> 子句的参数是 <b>[async01]</b> 发布的错误对象（error），其表达式为 <b>[Promise.reject(error)]</b>。 异步任务也可通过 <b>[throw(error)]</b> 发布错误。<b>[error]</b> 对象是在 <b>[catch(error)]</b> 中获取的；
       </li>
-      <li><b>[await]</b> 关键字必须位于以 <b>[async]</b> 关键字开头的函数内部（第 2 行）。该关键字表明 <b>[main]</b> 函数是一个异步函数；
+      <li>关键字 <b>[await]</b> 必须位于第 2 行中以关键字 <b>[async]</b> 开头的函数内。该关键字表明函数 <b>[main]</b> 是一个异步函数；
       </li>
-      <li>在表达式 <b>[await f(…)] </b>中，<b>[f]</b> 必须是一个异步函数，该函数向调用方返回一个 <b>[Promise]</b> 对象；
+      <li>在表达式 <b>[await f(…)] 中，[f]</b> 必须是一个异步函数，该函数向调用方返回对象 <b>[Promise]</b>；
       </li>
     </ul>
   </li>
-  <li>对于第 9 行的异步操作 <b>[async02] </b>和第 12 行的<b> [async03]</b>，我们采用相同的方式处理；
+  <li>对于第 9 行的异步操作 <b>[async02] </b>和第 12 行的 [async03]，也采用同样的处理方式；
   </li>
 </ul>
 
-<p>继续使用 <strong>[async / await]</strong> 关键字，可以通过以下语法并行执行异步任务：</p>
+<p>同样使用关键字 <strong>[async / await]</strong>，可以通过以下语法实现异步任务的并行执行：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// parallel execution of asynchronous tasks</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 并行执行异步任务</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> result = </span><span style="color:#0000ff">await</span><span style="color:#000000"> Promise.all(</span><span style="font-weight:bold;color:#000000">[async01(...), async02(...), async03(...)]</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[parallel success]</span><span style="color:#a31515">, %s, result=%j&quot;</span><span style="color:#000000">, heure(débutParallel), result));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// one of the asynchronous actions has failed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 其中一个异步操作失败</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[parallel error]</span><span style="color:#a31515">, %s, erreur=%j&quot;</span><span style="color:#000000">, heure(débutParallel), error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">finally</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// completed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 已完成</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin exécution parallèle des tâches asynchrones]</span><span style="color:#a31515">,%s&quot;</span><span style="color:#000000">, heure(débutParallel)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 3 行：这里<b>有一个</b>阻塞操作：我们等待数组 <b>[async01(..), async02(..), async03(..)]</b> 中的三个异步任务通过 <b>[Promise.resolve, Promise.reject]</b> 中的任一方法在事件循环中发布其结果；
+  <li>第3行：这是一个<b>阻塞操作</b>：等待<b>数组[async01(..), async02(..), async03(..)]中的</b>三个异步任务<b>通过[Promise.resolve, Promise.reject]中的</b>任一方法在事件循环中发布结果；
   </li>
   <li>如果这三个异步任务使用 <b>[Promise.resolve]</b> 发布结果，则常量 <b>[result]</b> 即为数组 <b>[result1, result2, result3]</b>，其中：
     <ul>
-      <li><b>[result1] </b>是 <b>[async01]</b> 通过表达式 <b>[Promise.resolve(result1)]</b> 发布的结果；
+      <li><b>[result1] </b>是 <b>[async01] </b>使用表达式 <b>[Promise.resolve(result1)]</b> 发布的结果；
       </li>
-      <li><b>[result2] </b>是 <b>[async02]</b> 通过表达式 <b>[Promise.resolve(result2)]</b> 发布的结果；
+      <li><b>[result2] </b>是 <b>[async02] </b>使用表达式 <b>[Promise.resolve(result2)]</b> 发布的结果；
       </li>
-      <li><b>[result3] </b>是 <b>[async03]</b> 通过表达式 <b>[Promise.resolve(result3)]</b> 发布的结果；
+      <li><b>[result3] </b>是 <b>[async03] </b>使用表达式 <b>[Promise.resolve(result3)]</b> 发布的结果；
       </li>
     </ul>
   </li>
   <li>如果这三个任务中的任何一个使用表达式 <b>[Promise.reject(error)]</b> 发布其结果，则会引发异常；
     <ul>
-      <li>第 3 行中的常量 <b>[result]</b> 未被赋值；
+      <li>第 3 行中的常量 <b>[result]</b> 未获得其值；
       </li>
-      <li>执行直接跳转到第 5 行的<b> [catch] 代码块</b>；
+      <li>执行流程直接跳转至第 5 行中的 <b>[catch]</b>；
       </li>
-      <li>catch 块中的 (error) 参数是表达式 <b>[Promise.reject(error)]</b> 发布的 (error) 对象；
+      <li>catch 语句中的 (error) 参数，即为表达式 <b>[Promise.reject(error)]</b> 发布的 (error) 对象；
       </li>
     </ul>
   </li>
 </ul>
 
-<p>通过结合这两种语法，我们可以使用与同步代码类似的语法，以顺序或并行方式执行异步任务。 因此，我们应优先采用这种语法，它比之前的语法更易于阅读。这种 <strong>[async/await]</strong> 语法直到 ECMAScript 6 版本才出现。仍有大量 JavaScript 代码使用 Promise <strong>[Promise]</strong>。这就是为什么理解它们的工作原理同样重要。</p>
-<p><strong>[async-06]</strong> 脚本的完整代码如下：</p>
+<p>通过混合使用这两种语法，可以随心所欲地以顺序或并行方式执行异步任务，且语法与同步代码类似。因此，应优先采用这种比之前语法更易读的写法。 <strong>[async / await]</strong> 语法仅在 ECMAScript 的第 6 版中才可用。目前仍有大量 JavaScript 代码使用 <strong>[Promise]</strong> 式的 Promise。因此，理解后者的工作原理同样至关重要。</p>
+<p><strong>[async-06]</strong>脚本的完整代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// parallel or sequential execution of several asynchronous tasks</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// with the keywords async / await</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 多个异步任务的并行或顺序执行</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用 async / await 关键字</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// start</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 开始</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> débutScript = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début du code principal du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an asynchronous function rendering a [Promise]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 返回 [Promise] 的异步函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> async01(débutAsync01) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (resolve) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début fonction asynchrone async01]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// asynchronous function</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 异步函数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin fonction asynchrone async01]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutAsync01));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// asynchronous action can make a result complex</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// here success</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 异步操作可能返回一个复杂的结果</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 此处成功</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      resolve({</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        prop1: <span style="font-weight:bold">[11, 21, 31]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        prop2: </span><span style="color:#a31515">&quot;abcd&quot;</span></span></span>
@@ -1772,16 +1778,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }, 1000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  });</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an asynchronous function rendering a [Promise]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个返回 [Promise] 的异步函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> async02(débutAsync02) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début fonction asynchrone async02]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (resolve) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// asynchronous function</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 异步函数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin fonction asynchrone async02]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutAsync02));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// asynchronous action can make a result complex</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// here success</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 异步操作可能返回复杂的结果</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 此处成功</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      resolve({</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        prop1: <span style="font-weight:bold">[12, 22, 32]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        prop2: </span><span style="color:#a31515">&quot;xyzt&quot;</span></span></span>
@@ -1789,16 +1795,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }, 2000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an asynchronous function rendering a [Promise]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个返回 [Promise] 的异步函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> async03(débutAsync03) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[début fonction asynchrone async03]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Promise((resolve, reject) =&gt; {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// asynchronous function</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 异步函数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    setTimeout(</span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin fonction asynchrone async03]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutAsync03));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// asynchronous action can make a result complex</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// here failure</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 异步操作可能返回复杂的结果</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 此处失败</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      reject({</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        prop1: <span style="font-weight:bold">[13, 23, 33]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        prop2: </span><span style="color:#a31515">&quot;échec&quot;</span></span></span>
@@ -1806,72 +1812,72 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    }, 3000)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  })</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// asynchronous function - using async / await</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 异步函数 - 使用 async / await</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> débutSequential = moment(Date.now());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// sequential execution of asynchronous tasks</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 异步任务的顺序执行</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;------------ exécution séquentielle des tâches asynchrones lancée ------------------------&quot;</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execution while waiting for [async01]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 带等待的执行 [async01]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> débutAsync01 = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> result1 = </span><span style="color:#0000ff">await</span><span style="color:#000000"> async01(débutAsync01);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[async01 result]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, result1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execution while waiting for [async02]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 带等待的执行 [async02]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> débutAsync02 = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;début async02-------------&quot;</span><span style="color:#000000">, heure());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> result2 = </span><span style="color:#0000ff">await</span><span style="color:#000000"> async02(débutAsync02);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[async02 result]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, result2);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execution while waiting for [async03]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 等待 [async03] 执行</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> débutAsync03 = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;début async03-------------&quot;</span><span style="color:#000000">, heure());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> result3 = </span><span style="color:#0000ff">await</span><span style="color:#000000"> async03(débutAsync03);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[async03 result]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, result3);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// one of the asynchronous actions has failed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 其中一项异步操作失败</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[sequential error]</span><span style="color:#a31515">= %j, %s&quot;</span><span style="color:#000000">, error, heure(débutSequential)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">finally</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// completed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 已完成</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin exécution séquentielle des tâches asynchrones]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutSequential));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> débutParallel = moment(Date.now());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// parallel execution of asynchronous tasks</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 并行执行异步任务</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;------------ exécution parallèle des tâches asynchrones lancée ------------------------&quot;</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> result = </span><span style="color:#0000ff">await</span><span style="color:#000000"> Promise.all(</span><span style="font-weight:bold;color:#000000">[async01(débutParallel), async02(débutParallel), async03(débutParallel)]</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[parallel success]</span><span style="color:#a31515">, %s, result=%j&quot;</span><span style="color:#000000">, heure(débutParallel), result));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// one of the asynchronous actions has failed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 其中一个异步操作失败</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[parallel error]</span><span style="color:#a31515">, %s, erreur=%j&quot;</span><span style="color:#000000">, heure(débutParallel), error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">finally</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// completed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 已完成</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin exécution parallèle des tâches asynchrones]</span><span style="color:#a31515">,%s&quot;</span><span style="color:#000000">, heure(débutParallel)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// completed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 已完成</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin de la fonction main]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutSequential));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// execution asynchronous function main</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 异步函数 main 已执行</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// will be displayed before the various msgs for asynchronous functions and their events</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将显示在各种异步函数及其事件的消息之前</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[fin du code principal du script]</span><span style="color:#a31515">,&quot;</span><span style="color:#000000">, heure(débutScript));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// utility</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 实用程序</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> heure(début) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// current time</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当前时间</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = moment(Date.now());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// time formatting</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 时间格式化</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> result = </span><span style="color:#a31515">&quot;heure=&quot;</span><span style="color:#000000"> + now.format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (début) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> durée = now - début;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> milliseconds = durée % 1000;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> seconds = Math.floor(durée / 1000);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// formatting duration</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 时间格式</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    result = result + sprintf(</span><span style="color:#a31515">&quot;, durée= %s seconde(s) et %s millisecondes&quot;</span><span style="color:#000000">, seconds, milliseconds);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> result;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
@@ -1904,7 +1910,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[parallel error]</span>, heure=15:02:09:298, durée= 3 seconde(s) et 6 millisecondes, erreur={&quot;prop1&quot;:<span style="font-weight:bold">[13,23,33]</span>,&quot;prop2&quot;:&quot;échec&quot;}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin exécution parallèle des tâches asynchrones]</span>,heure=15:02:09:299, durée= 3 seconde(s) et 7 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[fin de la fonction main]</span>, heure=15:02:09:300, durée= 9 seconde(s) et 140 millisecondes</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">9.668</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 

@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/zh-ecmascript6-oct-2019/javascript-http-anhu.html">
+        <link rel="canonical" href="https://stahe.github.io/zh-ecmascript6-oct-2019/javascript-anhu-http.html">
       
       
         <link rel="prev" href="hiianuongianhenguiuanhu.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>12. JavaScript HTTP 函数 - 通过示例了解ECMASCRIPT 6</title>
+        <title>12. JavaScript 函数 HTTP - 通过示例了解ECMASCRIPT 6</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12. JavaScript HTTP 函数
+              12. JavaScript 函数 HTTP
             
           </span>
         </div>
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 工作环境的安装
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iaoe.html" class="md-nav__link">
+      <a href="huu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -616,7 +618,7 @@
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -627,14 +629,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="javascript-http-anhu.html" class="md-nav__link md-nav__link--active">
+      <a href="javascript-anhu-http.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -663,7 +665,7 @@
   <a href="#121-http" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.1. 选择 HTTP 库
+        12.1. 选择库 HTTP
       
     </span>
   </a>
@@ -674,19 +676,19 @@
   <a href="#122" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.2. 搭建开发环境
+        12.2. 搭建工作环境
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="12.2. 搭建开发环境">
+    <nav class="md-nav" aria-label="12.2. 搭建工作环境">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1221" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.2.1. 安装税费计算服务器
+        12.2.1. 安装税务计算服务器
       
     </span>
   </a>
@@ -697,7 +699,7 @@
   <a href="#1222-javascript-http" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.2.2. JavaScript 客户端 HTTP 库的安装
+        12.2.2. 安装客户端 JavaScript 库 HTTP
       
     </span>
   </a>
@@ -817,14 +819,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+      <a href="http-euuan-huieiiuanuue-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 税费计算服务的 JavaScript HTTP 客户端
+    14. HTTP 客户端 税费计算服务的 JavaScript
   
 
     
@@ -857,36 +859,36 @@
   
 
 
-<p><a id="fontionshttp"></a>
-<a id="refheadingtoc2152541731793072"></a></p>
-<h1 id="12-javascript-http">12. <span style="color: #365f91">JavaScript HTTP 函数</span></h1>
-<p><img src="images/10000000000000F90000014488334DE4.png" width="100" height="130" style="width:2.641cm;height:3.436cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F90000014488334DE4.png" /></p>
-<p><a id="refheadingtoc225388640539168"></a></p>
-<h2 id="121-http">12.1. <span style="color: #4f81bd">选择 HTTP 库</span></h2>
-<p>我们在此选择了两个库：</p>
-<p>ECMAScript 6 原生提供了一个名为 <strong>[fetch]</strong> 的 HTTP 函数，但 <strong>[node.js]</strong> 尚未实现该函数（截至 2019 年 9 月）。 有一个名为 <strong>[node-fetch]</strong> 的库，它允许你在 Node 中使用 <strong>[fetch]</strong> 函数。该库使用了某些 <strong>[node.js]</strong> 特有的 API。因此，<strong>[node-fetch]</strong> 的代码可能无法 100% 移植到非 <strong>[node]</strong> 环境，例如浏览器；</p>
-<p>此外，还有一个名为 <strong>[axios]</strong> 的库，专门用于处理 HTTP 请求，且同时兼容 <strong>[node.js]</strong> 和浏览器。这正是我们最终将要使用的库。</p>
-<p>我们将展示使用这两个库编写的相同脚本，以说明其编码方法是相似的。</p>
-<p><a id="refheadingtoc225390640539168"></a></p>
-<h2 id="122">12.2. <span style="color: #4f81bd">搭建开发环境</span></h2>
-<p><a id="refheadingtoc225392640539168"></a></p>
-<h3 id="1221">12.2.1. <span style="color: #4f81bd">安装税费计算服务器</span></h3>
-<p>最终，我们将编写一个具有以下架构的 Web 应用程序：</p>
-<p><img src="images/100000000000055A000001AFF8202431.png" width="548" height="172" style="width:14.499cm;height:4.561cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000055A000001AFF8202431.png" /></p>
+<p><span id="refheadingtoc2152541731793072" name="refheadingtoc2152541731793072" class="odt-bookmark-anchor"></span>
+<span id="fontionshttp" name="fontionshttp" class="odt-bookmark-anchor"></span></p>
+<h1 id="12-javascript-http">12. <span style="color: #365f91">JavaScript 函数 HTTP</span></h1>
+<p><img src="images/10000000000000F90000014488334DE4.png" width="100" height="130" style="width:2.641cm;height:3.433cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F90000014488334DE4.png" /></p>
+<p><span id="refheadingtoc225388640539168" name="refheadingtoc225388640539168" class="odt-bookmark-anchor"></span></p>
+<h2 id="121-http">12.1. <span style="color: #4f81bd">选择库 HTTP</span></h2>
+<p>在此我们选择了两个库：</p>
+<p>EcmaScript 6 原生包含一个名为 <strong>[fetch] 的</strong> HTTP 函数，该函数在 <strong>[node.js]</strong> 中未实现（2019 年 9 月）。 存在一个名为 <strong>[node-fetch]</strong> 的库，它允许在 Node 环境下使用 <strong>[fetch]</strong> 函数。该库使用了某些 API 特有的 <strong>[node.js]</strong> 功能。 因此，<strong>[node-fetch]</strong>代码在<strong>非[node]环境</strong>（例如浏览器中）可能无法完全移植；</p>
+<p>此外，还有一款名为 <strong>[axios]</strong> 的库，专门用于处理 HTTP 请求，既兼容 <strong>[node.js]</strong>，也兼容各类浏览器。最终我们将使用该库。</p>
+<p>我们将展示使用这两个库编写的相同脚本，以说明使用它们进行编码的方法是相似的。</p>
+<p><span id="refheadingtoc225390640539168" name="refheadingtoc225390640539168" class="odt-bookmark-anchor"></span></p>
+<h2 id="122">12.2. <span style="color: #4f81bd">搭建工作环境</span></h2>
+<p><span id="refheadingtoc225392640539168" name="refheadingtoc225392640539168" class="odt-bookmark-anchor"></span></p>
+<h3 id="1221">12.2.1. <span style="color: #4f81bd">安装税务计算服务器</span></h3>
+<p>最终，我们将编写一个具有以下架构的Web应用程序：</p>
+<p><img src="images/100000000000055A000001AFF8202431.png" width="548" height="172" style="width:14.499cm;height:4.56cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000055A000001AFF8202431.png" /></p>
 <p><strong>JS</strong>：JavaScript</p>
 <p>JavaScript 代码位于客户端：</p>
 <ul>
-  <li>来自提供静态页面或片段的服务；
+  <li>静态页面或片段服务；
   </li>
-  <li>一个 JSON 服务；
+  <li>jSON 服务；
   </li>
 </ul>
 
-<p>因此，该 JavaScript 代码是一个 JSON 客户端，因此可以像我们用 PHP 编写的 JSON 客户端一样，划分为 <strong>[UI、业务逻辑、DAO]</strong> 层（UI：用户界面）。</p>
-<p>服务器将采用我们已编写过 13 个版本的税费计算服务器。我们将编写第 14 个版本。因此，我们首先在 NetBeans 中将 version 13 文件夹复制为 version 14 文件夹：</p>
-<p><img src="images/1000000000000390000003D773DFC466.png" width="410" height="442" style="width:10.86cm;height:11.705cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000390000003D773DFC466.png" /></p>
+<p>因此，JavaScript代码是jSON的客户端，并可像我们用<strong>jSON</strong>编写的客户端一样，按层组织 （UI：用户界面），这与我们用PHP编写的jSON客户端的架构方式一致。</p>
+<p>服务器将采用我们已开发过13个版本的税款计算服务器。我们将开发第14个版本。因此，我们首先在NetBeans中将第13个版本的文件夹复制到第14个版本的文件夹中：</p>
+<p><img src="images/1000000000000390000003D773DFC466.png" width="410" height="442" style="width:10.86cm;height:11.702cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000390000003D773DFC466.png" /></p>
 <ul>
-  <li>在 <b>[6] </b>中，我们将第 14 版的 <b>[config.json]</b> 文件修改如下：
+  <li>并<b>将其重命名为 </b>[6]，随后按以下方式修改第 14 版的 <b>[config.json]</b> 文件：
   </li>
 </ul>
 
@@ -895,7 +897,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;databaseFilename&quot;</span><span style="color:#000000">:</span> <span style="font-style:italic;color:#2a00ff">&quot;Config/database.json&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;rootDirectory&quot;</span><span style="color:#000000">:</span> <span style="font-style:italic;color:#2a00ff">&quot;C:/myprograms/laragon-lite/www/php7/scripts-web/impots/version-14&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;relativeDependencies&quot;</span><span style="color:#000000">:</span> <span style="color:#000000">[</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/Entities/BaseEntity.php&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/Entities/Simulation.php&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">...</span></span></span>
@@ -909,102 +911,102 @@
 </code></pre></div>
 
 <ul>
-  <li>在第 3 行，我们将应用程序的根目录更改为；
+  <li>第 3 行，我们更改了应用程序的根目录；
   </li>
 </ul>
 
-<p>要访问此服务器，您必须启动 <strong>[Laragon]</strong> 服务。</p>
-<p>完成上述操作后，我们可以使用 <strong>[Postman]</strong>（<a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">参见</span></u></a>链接文章）来测试这个新版本的服务器——它目前与第 13 版完全相同。我们可以使用之前用于测试税费计算服务器第 12 版的请求集合：</p>
-<p><img src="images/10000000000007FB000004EA33F975D1.png" width="613" height="377" style="width:16.221cm;height:9.987cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007FB000004EA33F975D1.png" /></p>
+<p>要访问该服务器，需启动 <strong>[Laragon]</strong> 服务。</p>
+<p>完成上述操作后，我们可以使用 <strong>[Postman]</strong>（<a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">参见链接文章</span></u></a>）来测试该服务器的新版本，该版本目前与第 13 版完全相同。我们可以使用之前用于测试第 12 版税费计算服务器的请求集合：</p>
+<p><img src="images/10000000000007FB000004EA33F975D1.png" width="613" height="378" style="width:16.221cm;height:9.991cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007FB000004EA33F975D1.png" /></p>
 <ul>
-  <li>在 <b>[1-4] </b>中，使用 <b>[init-session-700]</b> 请求初始化一个 JSON 会话；
+  <li>在 <b>[1-4] </b>中，使用查询 <b>[init-session-700]</b> 初始化会话 jSON；
   </li>
   <li>在 <b>[4-5] </b>中，将 <b>[version-12]</b> 替换为 <b>[version-14] </b>以测试该项目的第 14 版；
   </li>
-  <li>执行后，我们应从服务器收到 JSON 响应 <b>[6]</b>；
+  <li>运行时应收到服务器返回的响应 jS0N <b>[6]</b>；
   </li>
 </ul>
 
-<p>服务器第 14 版现已投入运行。我们需要对其进行一些微调。让我们回顾一下该服务器的 API：</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>操作</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>角色</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>执行上下文</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>init-session</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">用于设置所需响应的类型（json、xml、html）</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>GET</b>请求 <b>main.php?action=init-session&amp;type=x</b></div><div style="margin:0 0 0.5em 0">可随时发送</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>authenticate-user</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">授权或拒绝用户的登录</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>POST</b> 请求 <b>main.php?action=authenticate-user</b></div><div style="margin:0 0 0.5em 0">请求必须包含两个提交参数 <b>[user, password]</b></div><div style="margin:0 0 0.5em 0">仅当已知会话类型（json、xml、html）时才能发出</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>计算税款</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">执行税费计算模拟</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">向 <b>main.php</b> 发送 <b>POST</b> 请求，请求路径为 <b>main.php?action=calculate-tax</b></div><div style="margin:0 0 0.5em 0">请求必须包含三个提交参数 <b>[married, children, salary]</b></div><div style="margin:0 0 0.5em 0">仅当已知会话类型（json、xml、html）且用户已通过身份验证时才能发出</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>list-simulations</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">请求查看自会话开始以来已执行的模拟列表</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>GET</b> 请求 <b>main.php?action=list-simulations</b></div><div style="margin:0 0 0.5em 0">该请求不接受任何其他参数</div><div style="margin:0 0 0.5em 0">只有在已知会话类型（json、xml、html）且用户已通过身份验证的情况下才能发出</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>delete-simulation</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">从模拟列表中删除一个模拟</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>GET</b> 请求 <b>main.php?action=list-simulations&amp;number=x</b></div><div style="margin:0 0 0.5em 0">该请求不接受任何其他参数</div><div style="margin:0 0 0.5em 0">仅在已知会话类型（json、xml、html）且用户已通过身份验证时才能发出</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>end-session</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">结束模拟会话。</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">技术上，旧的 Web 会话将被删除，并创建一个新的会话</div><div style="margin:0 0 0.5em 0">只有在已知会话类型（json、xml、html）且用户已通过身份验证的情况下才能发出</div></td></tr></table>
+<p>服务器第14版现已投入运行。我们将对其进行微调。请注意该服务器的API：</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>操作</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>角色</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>执行上下文</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>init-session</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">用于设定所需响应的类型（json、xml、html）</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">请求 <b>GET main.php?action=init-session&amp;type=x</b></div><div style="margin:0 0 0.5em 0">可随时发出</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>authentifier-utilisateur</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">授权或拒绝用户登录</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">请求 <b>POST main.php?action=authentifier-utilisateur</b></div><div style="margin:0 0 0.5em 0">该请求必须包含两个POST参数 <b>[user, password]</b></div><div style="margin:0 0 0.5em 0">仅当会话类型（json、xml、html）已知时才能发出</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>计算税款</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">进行税额计算模拟</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">请求 <b>POST main.php?action=calculer-impot</b></div><div style="margin:0 0 0.5em 0">该请求必须包含三个POST参数 <b>[marié, enfants, salaire]</b></div><div style="margin:0 0 0.5em 0">仅当已知会话类型（json、xml、html）且用户已通过身份验证时方可发出</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>lister-simulations</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">请求查看自会话开始以来执行的模拟列表</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">请求 <b>GET main.php?action=lister-simulations</b></div><div style="margin:0 0 0.5em 0">该请求不接受任何其他参数</div><div style="margin:0 0 0.5em 0">仅当会话类型（json、xml、html）已知且用户已通过身份验证时，才可发出</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>删除模拟</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">从模拟列表中删除一个模拟</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">请求 <b>GET main.php?action=lister-simulations&amp;numéro=x</b></div><div style="margin:0 0 0.5em 0">该请求不接受任何其他参数</div><div style="margin:0 0 0.5em 0">仅当会话类型（json、xml、html）已知且用户已通过身份验证时，方可发出</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0"><b>结束会话</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">结束模拟会话。</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">从技术上讲，旧的 Web 会话将被删除，并创建一个新的会话</div><div style="margin:0 0 0.5em 0">仅当已知会话类型（json、xml、html）且用户已通过身份验证时，才可发出</div></td></tr></table>
 
-<p><a id="refheadingtoc225394640539168"></a></p>
-<h3 id="1222-javascript-http">12.2.2. <span style="color: #4f81bd">JavaScript 客户端 HTTP 库的安装</span></h3>
-<p>最初，我们将采用以下架构：</p>
+<p><span id="refheadingtoc225394640539168" name="refheadingtoc225394640539168" class="odt-bookmark-anchor"></span></p>
+<h3 id="1222-javascript-http">12.2.2. <span style="color: #4f81bd">安装客户端 JavaScript 库 HTTP</span></h3>
+<p>首先，我们将采用以下架构：</p>
 <p><img src="images/1000000000000548000001AC0F76E799.png" width="541" height="171" style="width:14.31cm;height:4.53cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000548000001AC0F76E799.png" /></p>
 <ul>
-  <li>在 <b>[1] </b>中，一个控制台脚本 <b>[node.js]</b> 向税费计算 JSON 服务器发起 HTTP 请求；
+  <li>在 <b>[1] </b>中，一个 <b>[node.js]</b> 控制台脚本向税费计算服务器 jSON 发出请求 HTTP；
   </li>
-  <li>在<b>[4]</b>中，该脚本接收此响应并在控制台显示；
+  <li>在 <b>[4] </b>中，它接收该响应并将其显示在控制台上；
   </li>
 </ul>
 
-<p>在示例 1 中，我们将使用 <strong>[node-fetch]</strong> 和 <strong>[axios]</strong> 库，随后在接下来的示例中仅保留 <strong>[axios]</strong>。现在，我们将通过 <strong>[VSCode]</strong> 终端安装这两个 JavaScript 库：</p>
+<p>在示例 1 中，我们将使用 <strong>[node-fetch]</strong> 和 <strong>[axios]</strong> 这两个库，随后在接下来的示例中仅保留 <strong>[axios]</strong>。 现在，我们从 <strong>[VSCode]</strong> 终端安装这两个 JavaScript 库：</p>
 <p><img src="images/10000000000005A10000026CFFDAC34F.png" width="576" height="248" style="width:15.251cm;height:6.562cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005A10000026CFFDAC34F.png" /></p>
-<p>我们还将使用 <strong>[qs]</strong> 库，该库支持对字符串进行 URL 编码。请注意，这种编码方式用于对 HTTP GET 或 POST 请求的参数进行编码。</p>
-<p><img src="images/10000000000005BC000002291894F579.png" width="587" height="221" style="width:15.542cm;height:5.854cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BC000002291894F579.png" /></p>
-<p><a id="refheadingtoc225396640539168"></a></p>
+<p>我们还将使用 <strong>[qs]</strong> 库，该库支持对字符串进行 URL 编码。 需要提醒的是，该编码用于编码 HTTP、GET 或 POST 请求的参数。</p>
+<p><img src="images/10000000000005BC000002291894F579.png" width="587" height="221" style="width:15.542cm;height:5.853cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BC000002291894F579.png" /></p>
+<p><span id="refheadingtoc225396640539168" name="refheadingtoc225396640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="123-fetch-01">12.3. <span style="color: #4f81bd">脚本 [fetch-01]</span></h2>
-<p><strong>[fetch-01]</strong> 脚本使用 <strong>[node-fetch]</strong> 库与税费计算服务器初始化一个 JSON 会话。其代码如下：</p>
+<p>脚本 <strong>[fetch-01]</strong> 使用库 <strong>[node-fetch]</strong> 来初始化与税费计算服务器的会话 jSON。其代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> fetch </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;node-fetch&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> qs </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;qs&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// URL base of tax calculation server</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> baseUrl = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// init session</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// URL 基础税务计算服务器</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">const baseUrl = &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 初始化会话</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> initSession() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// query options HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 请求选项 HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    method: </span><span style="color:#a31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    timeout: 2000</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// execute query HTTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 执行请求 HTTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> débutFetch;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// asynchronous request - [fetch] makes a promise</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 异步请求 - [fetch] 返回一个 Promise</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    débutFetch = moment(Date.now());</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> fetch(baseUrl + qs.stringify({</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      action: </span><span style="color:#a31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      type: </span><span style="color:#a31515">&#x27;json&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }), options);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// [response] is the entire HTTP response from the server (HTTP headers + response itself)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// display this answer to see its structure</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// [response] 是服务器响应 HTTP 的完整内容（包含 HTTP 头部信息及响应主体）</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 显示此响应以查看其结构</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;réponse fetch formatée en json,=%j, %s&quot;</span><span style="color:#000000">, response, heure(débutFetch)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;réponse fetch en javascript=&quot;</span><span style="color:#000000">, response);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// you can have HTTP headers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 可获取 HTTP 的头部信息</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;entêtes de la réponse=&quot;</span><span style="color:#000000">, response.headers);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// if application/json response, the server&#x27;s json response is obtained with the asynchronous function [response.json()]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// in which case the calling code obtains a [Promise] object</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// [await] allows you to obtain the server&#x27;s [json] response rather than its promise</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 若响应类型为 application/json，则可通过异步函数 [response.json()] 获取服务器的 JSON 响应</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 在此情况下，调用方将获得一个 [Promise] 对象</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// [await] 允许直接获取服务器的响应 [json]，而非其 Promise</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> débutJson = moment(Date.now());</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> objet = </span><span style="color:#0000ff">await</span><span style="color:#000000"> response.json();</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;réponse json=%j, type=%s, %s&quot;</span><span style="color:#000000">, objet, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (objet), heure(débutJson)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> objet;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// if text / plain, the text response from the server is obtained with [response.text()]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// in which case the calling code obtains a [Promise] object</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// [await] allows you to obtain the server&#x27;s [text] response rather than its promise</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 若响应类型为 text/plain，则通过 [response.text()] 获取服务器的文本响应</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 在此情况下，调用方代码将获得一个 [Promise] 对象</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// [await] 可直接获取服务器的响应 [texte]，而非其 Promise</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// const text = await response.text();</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// console.log(&quot;answer text=&quot;, text);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// console.log(&quot;文本响应=&quot;, text);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// return text;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// we&#x27;re here because the server has sent an error code [404 Not Found, ...] accompanied by an empty body - we display the error to see its structure</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// or because the [fetch] client has thrown an exception (network inaccessible, ...)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the error structure is displayed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 出现此情况是因为服务器发送了一个错误代码 [404 Not Found, ...] 并附带一个空正文——我们显示该错误以查看其结构</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 或者因为客户端 [fetch] 抛出了异常（网络不可用等）</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 显示错误的结构</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(sprintf(</span><span style="color:#a31515">&quot;error fetch en json=%j, %s&quot;</span><span style="color:#000000">, error, heure(débutFetch)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;error fetch en javascript=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error), error);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// launch the error message received</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 触发接收到的错误消息</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">throw</span><span style="color:#000000"> error.message;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the main function executes the asynchronous function [initSession]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// main 函数执行异步函数 [initSession]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;requête HTTP vers le serveur en cours ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1016,89 +1018,89 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;erreur=&quot;</span><span style="color:#000000">, error, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// test</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 测试</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// time and duration display utility</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显示时间和持续时间的工具</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> heure(début) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// current time</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当前时间</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = moment(Date.now());</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// time formatting</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 时间格式化</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> result = </span><span style="color:#a31515">&quot;heure=&quot;</span><span style="color:#000000"> + now.format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// is it necessary to calculate a duration?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 是否需要计算时长？</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (début) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> durée = now - début;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> milliseconds = durée % 1000;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> seconds = Math.floor(durée / 1000);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// format time + duration</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 时间+时长格式化</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    result = result + sprintf(</span><span style="color:#a31515">&quot;, durée= %s seconde(s) et %s millisecondes&quot;</span><span style="color:#000000">, seconds, milliseconds);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// result</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> result;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>JavaScript 的 HTTP 函数是异步函数。这里，我们应用了上一节所学的内容（参见<a href="../../../../../../../st-2020/cours/ecmascript6/masters/02/chap-11.docx#fontions_async"><u><span style="color: #0563c1">链接</span></u></a>）；
+  <li>JavaScript 中的 HTTP 函数是异步函数。此处我们运用了上一节（<a href="../../../../../../st-2020/cours/ecmascript6/masters/02/chap-11.docx#fontions_async"><u><span style="color: #0563c1">参见链接</span></u></a>）所学的内容；
   </li>
-  <li>第 24 行：为了等待异步函数 <b>[fetch] </b>的响应在 <b>[node.js]</b> 事件循环中发布，我们使用关键字 <b>[await]</b>。我们知道，该语句必须位于以关键字 <b>[async]</b> 开头的代码块内（第 13 行）；
+  <li>第 24 行：为了等待异步函数 <b>[fetch]</b> 的响应发布到 <b>[node.js]</b> 的事件循环中，我们使用了关键字 <b>[await]</b>。 我们知道，该语句必须位于以关键字 <b>[async]</b> 为前缀的代码块中（第 13 行）；
   </li>
-  <li>第 13–56 行：我们将 HTTP 代码封装在异步函数 <b>[initSession] </b>中；
+  <li>第13-56行：我们将代码HTTP封装在异步函数[initSession]中；
   </li>
-  <li>第 59–69 行：使用第二个异步函数 <b>[main] </b>以阻塞方式（async/await）调用异步函数 <b>[initSession]</b>；
+  <li>第 59-69 行：使用第二个异步函数 <b>[main] </b>以阻塞方式（async/await）调用异步函数 <b>[initSession]</b>；
   </li>
   <li>第 72 行：调用异步函数 <b>[main]</b>；
   </li>
-  <li>尽管整个代码看起来像同步代码，但这些确实是异步函数，只是以阻塞方式执行；
+  <li>尽管整个代码看起来像同步代码，但实际上执行的确实是异步函数，只是以阻塞方式执行；
   </li>
-  <li>第 19 行：要与税费计算服务器初始化 JSON 会话，必须向其发送 HTTP 请求 <b>[get /main.php?action=init-session&amp;type=json]</b>。第 24–27 行的代码正是执行此操作。 <b>[fetch] </b>的语法如下<b>： [fetch(URL, options)]</b>，其中：
+  <li>第 19 行：要与税费计算服务器初始化 jSON 会话，必须向其发送命令 HTTP <b>[get /main.php?action=init-session&amp;type=json]</b>。第 24-27 行的代码正是执行此操作。 <b>[fetch]的</b>语法如下：[fetch(URL, options)]，其中：
     <ul>
-      <li><b>[URL]</b>：要查询的 URL；
+      <li><b>[URL]</b>：被查询的 URL；
       </li>
-      <li><b>[options]</b>：定义请求选项的对象。此处用于定义要发送给目标服务器的 HTTP 头部；
+      <li><b>[options]</b>：一个定义查询选项的对象。特别是，这里定义了要发送给目标机器的 HTTP 报头；
       </li>
     </ul>
   </li>
-  <li>第 15–18 行：我们定义要发送的请求选项：
+  <li>第15-18行：定义要执行的请求选项：
     <ul>
-      <li><b>[method]</b>：我们希望执行 GET 请求；
+      <li><b>[method]</b>：我们希望执行一个 GET；
       </li>
-      <li><b>[timeout]</b>：要求 <b>[fetch]</b> 客户端等待服务器响应的时间不超过 2 秒。若超时，<b>[fetch] </b>将抛出异常；
+      <li><b>[timeout]</b>：要求客户端 <b>[fetch]</b> 等待服务器响应的时间不超过 2 秒。若超过此<b>时间，[fetch] </b>将抛出异常；
       </li>
     </ul>
   </li>
-  <li>第 24 行：为了获取 URL <b>[/main.php?action=init-session&amp;type=json]</b>，我们使用 <b>[qs]</b> 库来获取 GET 请求中 URL 编码的参数 <b>[action,type]</b>。生成的字符串是 <b>[init-session&amp;type=json]，</b>其实我们也可以自己构造这个字符串。我们只是想演示如何获取一个 URL 编码的字符串；
+  <li>第24行：要获得URL和[/main.php?action=init-session&amp;type=json]， 我们使用库 <b>[qs]</b> 来获取 GET 的参数 <b>[action,type]</b> 的编码 URL。 得到的字符串是 <b>[init-session&amp;type=json]</b>，其实我们完全可以自己构建出来。我们只是想演示如何获取一个经过编码的 URL 字符串；
   </li>
-  <li>第 24 行：关键字 <b>[await]</b> 表示此处正在启动一个异步任务，且我们正在等待该任务在 <b>[node.js]</b> 事件循环中发布其响应；
+  <li>第 24 行：关键字 <b>[await]</b> 表明此处启动了一个异步任务，且该任务的响应将发布到 <b>[node.js]</b> 的事件循环中；
   </li>
-  <li>第 24 行：在 <b>[response] </b>中，我们获取了一个描述整个接收到的 HTTP 响应（包括头部和正文）的复杂对象；
+  <li>第 24 行：在 <b>[response]</b> 中，我们获得了一个复杂对象，该对象描述了接收到的完整 HTTP 响应（包括头部和文档）；
   </li>
-  <li>第 30–31 行：我们打印 <b>[response]</b> 对象以查看其结构，先以字符串形式显示，再以 JavaScript 对象形式显示；
+  <li>第30-31行：显示<b>对象</b>[response]以查看其结构，先以字符串形式显示，再以JavaScript对象形式显示；
   </li>
-  <li>第 33 行：我们显示服务器发送的 HTTP 头部；
+  <li>第 33 行：显示服务器发送的 HTTP 头部；
   </li>
-  <li>第 38 行：我们知道税费计算服务器将发送一个 JSON 字符串。该字符串封装在 <b>[response]</b> 对象中。我们可以使用 <b>[response.json()]</b> 方法获取它。但是，该方法是异步的。 因此，我们编写 <b>[await response.json()]</b> 来获取该 JSON 字符串，该字符串将在 <b>[node.js]</b> 事件循环中发布。实际上，我们获得的并非 JSON 字符串本身，而是由其表示的 JavaScript 对象；
+  <li>第 38 行：已知税费计算服务器将发送字符串 jSON。该字符串封装在对象 <b>[response]</b> 中。可通过方法 <b>[response.json()]</b> 获取该对象。但该方法为异步操作。 因此，我们调用 <b>[await response.json()]</b> 来获取字符串 jSON，该字符串将被发布到 <b>[node.js]</b> 的事件循环中。 实际上，我们获得的并非字符串 jSON，而是由该字符串表示的 JavaScript 对象；
   </li>
-  <li>第 39 行：显示接收到的 JSON 字符串；
+  <li>第 39 行：显示接收到的字符串 jSON；
   </li>
   <li>第 40 行：返回接收到的 JavaScript 对象；
   </li>
-  <li>第 47 行：捕获 <b>[fetch]</b> 语句可能引发的任何错误。该语句仅在 HTTP 操作失败且未收到服务器响应时才会抛出异常。如果收到了响应（即使 HTTP 状态码不是 <b>[200 OK]</b>），<b>[fetch]</b> 也不会抛出异常，此时服务器响应可在第 38 行获取；
+  <li>第 47 行：捕获 <b>[fetch]</b> 语句可能引发的错误。该语句仅在 HTTP 操作未成功且未收到服务器响应时才会抛出异常。 如果已收到响应（即使 HTTP 代码与 <b>[200 OK]</b> 不同），<b>[fetch]</b> 也不会抛出异常，且服务器响应将在第 38 行可用；
   </li>
-  <li>第 51–52 行：显示 <b>[catch]</b> 子句接收到的 <b>[error]</b> 对象，先以 JSON 字符串形式显示，然后以 JavaScript 对象形式显示；
+  <li>第 51-52 行：显示由 <b>[catch]</b> 子句接收的 <b>[error]</b> 对象，首先作为字符串 jSON 显示，随后作为 JavaScript 对象显示；
   </li>
-  <li>第 54 行：来自 <b>[fetch] </b>的错误消息存储在 <b>[error.message] </b>中；
+  <li>第 54 行：<b>[fetch]</b> 的错误消息位于 <b>[error.message]</b> 中；
   </li>
-  <li>第 59–69 行：异步函数 <b>[main] </b>以阻塞方式调用异步函数 <b>[initSession]</b>（第 62 行中的 await）；
+  <li>第59-69行：异步<b>函数</b>[main]以阻塞方式调用异步<b>函数[initSession]</b>（第62行await）；
   </li>
-  <li>第 72 行：启动异步函数 <b>[main]</b>，随后主脚本代码执行完毕。当启动的异步任务将其结果发布到事件循环后，整个脚本即告完成；
+  <li>第 72 行：异步函数 <b>[main]</b> 被调用，此时脚本的主体代码执行完毕。当已调用的异步任务将结果发布到事件循环时，整个脚本才算结束；
   </li>
 </ul>
 
 <p>执行结果如下：</p>
-<p><strong>情况 1</strong>：Laragon 服务器未运行</p>
+<p><strong>情况 1</strong>：Laragon 服务器未启动</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-01.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
@@ -1110,23 +1112,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    at listOnTimeout (timers.js:263:5)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    at Timer.processTimers (timers.js:223:10)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  message:</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">   &#x27;network timeout at: http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">   &#x27;网络超时：http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27;，</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  type: &#x27;request-timeout&#x27; }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur ---------------------------------------------</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">erreur= network timeout at: http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json string</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur= network timeout at: http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json 字符串</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">2.804</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 3 行：由于 HTTP 请求设置了 2 秒超时，该请求在 2 秒 62 毫秒后失败；
+  <li>第 3 行：由于对请求 HTTP 设置了 2 秒超时，请求 HTTP 在 2 秒 62 毫秒后失败；
   </li>
-  <li>第 4–9 行：由 <b>[catch(error)]</b> 子句捕获的 JavaScript <b>[error]</b> 对象。该对象具有两个属性：
+  <li>第4-9行：JavaScript对象[error]被子句[catch(error)]拦截。该对象具有两个属性：
     <ul>
       <li><b>[FetchError]</b>：第 4 行；
       </li>
-      <li><b>[message]</b>：第 10–12 行；
+      <li><b>[message]</b>：第 10-12 行；
       </li>
     </ul>
   </li>
@@ -1134,7 +1136,7 @@
   </li>
 </ul>
 
-<p><strong>情况 2</strong>：Laragon 服务器正在运行</p>
+<p><strong>情况 2</strong>：Laragon 服务器已启动</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-01.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
@@ -1169,49 +1171,49 @@
 <span class="odt-code-line"><span class="odt-code-line-content">   <span style="font-weight:bold">[Object: null prototype]</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     date: <span style="font-weight:bold">[ &#x27;Sat, 14 Sep 2019 08:13:50 GMT&#x27; ]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     server: <span style="font-weight:bold">[ &#x27;Apache/2.4.35 (Win64) OpenSSL/1.1.0i PHP/7.2.11&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;x-powered-by&#x27;: <span style="font-weight:bold">[ &#x27;PHP/7.2.11&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;cache-control&#x27;: <span style="font-weight:bold">[ &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;set-cookie&#x27;: <span style="font-weight:bold">[ &#x27;PHPSESSID=99q2iinusmhl55fa600aie2mmu; path=/&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-length&#x27;: <span style="font-weight:bold">[ &#x27;86&#x27; ]</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;x-powered-by&#x27;: [ &#x27;PHP/7.2.11&#x27; ],<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;cache-control&#x27;: [ &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27; ],<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;set-cookie&#x27;: [ &#x27;PHPSESSID=99q2iinusmhl55fa600aie2mmu; path=/&#x27; ],<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-length&#x27;: [ &#x27;86&#x27; ],<span style="font-weight:bold"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     connection: <span style="font-weight:bold">[ &#x27;close&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-type&#x27;: <span style="font-weight:bold">[ &#x27;application/json&#x27; ]</span> } }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-type&#x27;: [ &#x27;application/json&#x27; ] } }<span style="font-weight:bold"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse json={&quot;action&quot;:&quot;init-session&quot;,&quot;état&quot;:700,&quot;réponse&quot;:&quot;session démarrée avec type <span style="font-weight:bold">[json]</span>&quot;}, type=object, heure=10:13:50:825, durée= 0 seconde(s) et 1 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">succès ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse= { action: &#x27;init-session&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;état&#x27;: 700,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;réponse&#x27;: &#x27;session démarrée avec type <span style="font-weight:bold">[json]</span>&#x27; } object</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;状态&#x27;: 700,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;响应：&#x27;已启动会话，类型为 [json]&#x27; } object<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">1.022</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>第 3 行：<b>[fetch] </b>在 375 毫秒后收到服务器响应；
+  <li>第 3 行：<b>[fetch] </b>在 375 毫秒后收到服务器的响应；
   </li>
-  <li>第 4–39 行：封装服务器响应的 JavaScript 对象 <b>[response] </b>的结构。在其属性中，有些可能值得我们关注：
+  <li>第4-39行：封装服务器响应的JavaScript<b>对象[response]的</b>结构。在其属性中，某些属性可能值得关注：
     <ul>
-      <li><b>[status]</b>（第 25 行）：服务器响应的 HTTP 状态码；
+      <li><b>[status]</b>（第25行）：服务器响应中的代码HTTP；
       </li>
-      <li><b>[statusText]</b>（第 26 行）：与该状态码关联的文本；
+      <li><b>[statusText]</b>（第26行）：与该代码关联的文本；
       </li>
-      <li><b>[headers]</b>（第 27 行）：服务器响应的 HTTP 头部；
+      <li><b>[headers]</b>（第27行）：服务器响应的HTTP头部；
       </li>
-      <li><b>[body]</b>（第 8 行）：表示服务器发送的文档。<b>[fetch]</b> 语句提供了用于处理它的方法；
+      <li><b>[body]</b>（第 8 行）：代表服务器发送的文档。指令 <b>[fetch]</b> 提供了对其进行处理的方法；
       </li>
     </ul>
   </li>
-  <li>第 29–39 行：服务器响应的 HTTP 头部；
+  <li>第29-39行：服务器响应的HTTP头部；
   </li>
   <li>第 40 行：异步函数 <b>[response.json()] </b>在 1 毫秒后返回了响应；
   </li>
-  <li>第 42–44 行：异步函数 <b>[main]</b> 接收到的 JavaScript 对象；
+  <li>第42-44行：异步函数<b>[main]</b>接收的JavaScript对象；
   </li>
 </ul>
 
-<p><strong>情况 3</strong>：Laragon 服务器正在运行，但向其发送了错误的命令：</p>
+<p><strong>情况 3</strong>：Laragon 服务器已启动，但向其发送了错误的命令：</p>
 <p><img src="images/100000000000044A00000111255483E0.png" width="384" height="96" style="width:10.171cm;height:2.529cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044A00000111255483E0.png" /></p>
 <ul>
-  <li>上文第 26 行，向服务器传递了错误的会话类型；
+  <li>上文第26行，向服务器传递了错误类型的会话；
   </li>
 </ul>
 
@@ -1249,58 +1251,59 @@
 <span class="odt-code-line"><span class="odt-code-line-content">   <span style="font-weight:bold">[Object: null prototype]</span> {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     date: <span style="font-weight:bold">[ &#x27;Sat, 14 Sep 2019 08:27:54 GMT&#x27; ]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     server: <span style="font-weight:bold">[ &#x27;Apache/2.4.35 (Win64) OpenSSL/1.1.0i PHP/7.2.11&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;x-powered-by&#x27;: <span style="font-weight:bold">[ &#x27;PHP/7.2.11&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;cache-control&#x27;: <span style="font-weight:bold">[ &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;set-cookie&#x27;: <span style="font-weight:bold">[ &#x27;PHPSESSID=5ku9gfok81ikj98hia0meeum57; path=/&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-length&#x27;: <span style="font-weight:bold">[ &#x27;79&#x27; ]</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;x-powered-by&#x27;: [ &#x27;PHP/7.2.11&#x27; ],<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;cache-control&#x27;: [ &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27; ],<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;set-cookie&#x27;: [ &#x27;PHPSESSID=5ku9gfok81ikj98hia0meeum57; path=/&#x27; ],<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-length&#x27;: [ &#x27;79&#x27; ],<span style="font-weight:bold"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     connection: <span style="font-weight:bold">[ &#x27;close&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-type&#x27;: <span style="font-weight:bold">[ &#x27;application/json&#x27; ]</span> } }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-type&#x27;: [ &#x27;application/json&#x27; ] } }<span style="font-weight:bold"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse json={&quot;action&quot;:&quot;init-session&quot;,&quot;état&quot;:703,&quot;réponse&quot;:&quot;paramètre type=<span style="font-weight:bold">[x]</span> invalide&quot;}, type=object, heure=10:27:54:127, durée= 0 seconde(s) et 2 millisecondes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">succès ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse= { action: &#x27;init-session&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;état&#x27;: 703,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;réponse&#x27;: &#x27;paramètre type=<span style="font-weight:bold">[x]</span> invalide&#x27; } object</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;状态&#x27;: 703,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;响应：&#x27;type=[x] 参数无效&#x27; } 对象<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.712</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>服务器响应在第 2 行接收；
+  <li>第 2 行接收到了服务器的响应；
   </li>
-  <li>第 24 行：我们可以看到服务器响应的 HTTP 状态码为 400，这是一个错误码。然而，<b>[fetch]</b> 并未抛出异常。只要 <b>[fetch]</b> 接收到服务器的响应，它就会进行处理，而不会抛出异常；
+  <li>第24行：可以看到服务器响应中的代码HTTP为400，这是一个错误代码。然而，<b>[fetch]</b>并未抛出异常。 只要 <b>[fetch]</b> 收到服务器响应，它就会处理该响应且不会抛出异常；
   </li>
-  <li>第 41–43 行：异步函数 <b>[main]</b> 获取的响应；
+  <li>第 41-43 行：异步函数 <b>[main]</b> 获取的响应；
   </li>
 </ul>
-<p><a id="refheadingtoc225398640539168"></a></p>
-<h2 id="124-fetch-02">12.4. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">脚本 [fetch-02]</span></strong></span></h2>
-<p>以下脚本复用了 <strong>[fetch-01]</strong> 脚本，同时去除了所有不必要的细节：</p>
+
+<p><span id="refheadingtoc225398640539168" name="refheadingtoc225398640539168" class="odt-bookmark-anchor"></span></p>
+<h2 id="124-fetch-02">12.4. <span style="color: #4f81bd">脚本 [fetch-02]</span></h2>
+<p>以下脚本基于脚本 [fetch-01]，并去除了所有不必要的细节：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> fetch </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;node-fetch&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> qs </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;qs&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// URL base of tax calculation server</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> baseUrl = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// init session</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// URL 税费计算服务器基础</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">const baseUrl = &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 初始化会话</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> initSession() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// query options HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 请求选项 HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    method: </span><span style="color:#a31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    timeout: 2000</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// execute query HTTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 执行请求 HTTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> fetch(baseUrl + qs.stringify({</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    action: </span><span style="color:#a31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    type: </span><span style="color:#a31515">&#x27;json&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }), options);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// result received in jSON</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 在 jSON 中收到结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">await</span><span style="color:#000000"> response.json();</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the main function executes the asynchronous function [initSession]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// main 函数调用异步函数 [initSession]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;requête HTTP vers le serveur en cours ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1312,8 +1315,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;erreur=&quot;</span><span style="color:#000000">, error.message);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// test</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 测试</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
 </code></pre></div>
 
@@ -1323,80 +1326,80 @@
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">succès ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse= { action: &#x27;init-session&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;état&#x27;: 700,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;réponse&#x27;: &#x27;session démarrée avec type <span style="font-weight:bold">[json]</span>&#x27; }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;状态：700,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;响应：&#x27;已启动类型为 [json] 的会话&#x27; }<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.56</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p>发生异常的执行结果（停止 Laragon 服务器）：</p>
+<p>发生异常时的执行结果（停止 Laragon 服务器）：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-02.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur= network timeout at: http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">2.701</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225400640539168"></a></p>
+<p><span id="refheadingtoc225400640539168" name="refheadingtoc225400640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="125-axios-01">12.5. <span style="color: #4f81bd">脚本 [axios-01]</span></h2>
-<p>在此，我们将重新审视 <strong>[fetch-01]</strong> 脚本，并使用 <strong>[axios]</strong> 库对其进行重写。需要提醒的是，我们之所以关注该库，是因为它能在 <strong>[node.js]</strong> 环境和常见浏览器之间实现跨平台兼容。这使得我们可以：</p>
+<p>这里我们重新编写脚本 [fetch-01]，并使用库 <strong>[axios]</strong> 进行重构。需要说明的是，我们关注该库的原因在于它能在 <strong>[node.js]</strong> 环境与常用浏览器环境之间实现移植。这使得：</p>
 <ul>
-  <li>在第一阶段，在 <b>[Node.js]</b> 环境中测试脚本；
+  <li>在第一阶段，在 <b>[node.js]</b> 环境中测试脚本；
   </li>
-  <li>在第二阶段，将其移植到浏览器中；
+  <li>在第二阶段，将其移植到浏览器上；
   </li>
 </ul>
 
-<p><strong>[axios-01]</strong> 脚本遵循了 <strong>[fetch-01]</strong> 脚本的结构：</p>
+<p>脚本 <strong>[axios-01]</strong> 沿用了脚本 <strong>[fetch-01]</strong> 的结构：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// axios default configuration</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.timeout = 2000;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">axios.defaults.baseURL = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// init session</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// axios 的默认配置</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.timeout = 2000;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.baseURL = &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 初始化会话</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> initSession(axios) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// query options HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 请求选项 HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    method: </span><span style="color:#a31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL的参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    params: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      action: </span><span style="color:#a31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      type: </span><span style="color:#a31515">&#x27;json&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// execute query HTTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 执行请求 HTTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// asynchronous request</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 异步请求</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> axios.request(</span><span style="color:#a31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// response is the entire HTTP response from the server (HTTP headers + response itself)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// display this answer to see its structure</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// response 是服务器 HTTP 请求的完整响应（包含 HTTP 请求头 + 响应正文）</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 显示此响应以查看其结构</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;réponse axios=&quot;</span><span style="color:#000000">, response);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the server response is in [response.data]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 服务器的响应位于 [response.data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> response.data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// we&#x27;re here because the server has sent an error code [404 Not Found, 500 Internal Server Error, ...]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the [error] parameter is an exception instance - it can take various forms</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// display it to see its structure</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 我们之所以在此，是因为服务器发送了错误代码 [404 Not Found, 500 Internal Server Error, ...]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 参数 [error] 是一个异常实例——它可能有各种形式</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 显示该参数以查看其结构</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;axios error=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error), error);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.response) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the server reported an error in status HTTP but also sent a response</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// then it is found in [error.response.data]</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// we know that the server sends jSON responses with structure {action, status, response}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// and that in the event of an error, the error msg is in [reply]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 服务器在状态 HTTP 中报告了错误，但同时也发送了响应</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 因此该响应位于 [error.response.data] 中</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 已知服务器发送的响应 jSON 采用 {操作, 状态, 响应} 的结构</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 且发生错误时，错误消息位于 [réponse]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> error.response.data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// we launch the error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 触发错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">throw</span><span style="color:#000000"> error;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the main function executes the asynchronous function [initSession]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// main 函数执行异步函数 [initSession]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;requête HTTP vers le serveur en cours ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1408,57 +1411,57 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;erreur=&quot;</span><span style="color:#000000">, error.message);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// test</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 测试</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 2 行：我们导入了 <b>[axios]</b> 库；
+  <li>第 2 行：导入 <b>[axios]</b> 库；
   </li>
-  <li>第 5-6 行：HTTP 请求的默认配置。<b>[axios.defaults]</b> 选项适用于 <b>[axios]</b> 对象发送的所有 HTTP 请求，无需为每个新请求单独指定；
+  <li>第 5-6 行：HTTP 请求的默认配置。 <b>[axios.defaults]</b> 选项适用于由对象 <b>[axios]</b> 发出的所有 HTTP 请求，无需在每次新请求时重新调用；
   </li>
   <li>第 5 行：所有请求的超时时间为 2 秒；
   </li>
-  <li>第 6 行：所有 URL 均相对于基础 URL；
+  <li>第6行：所有URL请求均以基础URL为基准；
   </li>
-  <li>第 9 行：异步 <b>[initSession]</b> 函数；
+  <li>第 9 行：异步函数 <b>[initSession]</b>；
   </li>
-  <li>第 11–18 行：待发送的 HTTP 请求的选项（除第 5–6 行已定义的默认选项外）；
+  <li>第11-18行：即将发出的HTTP请求的选项（除第5-6行已定义的默认选项外）；
   </li>
-  <li>第 14–17 行：URL 参数 <b>[action=init-session&amp;type=json]</b>。<b>[params]</b> 对象将自动转换为 URL 编码字符串；
+  <li>第 14-17 行：URL 的参数 <b>[action=init-session&amp;type=json]</b>。对象 <b>[params] </b>将自动转换为编码字符串 URL；
   </li>
-  <li>第 22 行：对异步函数 <b>[axios.request] </b>的阻塞调用。第一个参数是目标 URL，由第 6 行定义的基准 URL 后接<b> [main.php]</b> 构成。第二个参数是第 11–18 行中的 <b>[options]</b> 对象；
+  <li>第22行：对异步函数[axios.request]的阻塞调用。 第一个参数是目标对象 URL，其构造方式为 <b>[main.php]</b> 加上第 6 行定义的基础对象 URL。 第二个参数是第11-18行中的<b>[options]</b>对象；
   </li>
-  <li>第 25 行：<b>[response]</b> 是一个 JavaScript 对象，封装了来自服务器的完整 HTTP 响应（HTTP 头部 + 响应正文）。我们将其显示出来以查看其 JavaScript 结构；
+  <li>第25行：[response]是一个JavaScript对象，封装了服务器响应HTTP的全部内容（HTTP头部信息 + 响应文档）。将其显示出来以便查看其JavaScript结构；
   </li>
-  <li>第 27 行：如果服务器发送了文档，则可在 <b>[response.data] </b>中找到。这里我们知道服务器发送的 JSON 响应附带了 HTTP 头部 <b>[Content-type: application/json]</b>。该头部的存在会导致 <b>[axios]</b> 自动将 <b>[response.data]</b> 反序列化为 JavaScript 对象；
+  <li>第27行：如果服务器发送了文档，则该文档位于<b>[response.data]</b>中。 在此我们得知，服务器发送的响应为 jSON，并附带 HTTP 和 <b>[Content-type : application/json]</b> 这两个头部。 该头部的存在导致 <b>[axios]</b> 会自动将 <b>[response.data]</b> 反序列化为一个 JavaScript 对象；
   </li>
-  <li>第 28 行：<b>[axios]</b> 函数可能抛出异常。这是 <b>[axios]</b> 与 <b>[fetch] </b>的区别所在。在以下情况下会抛出异常：
+  <li>第 28 行：函数 <b>[axios]</b> 可能抛出异常。这正是 <b>[axios]</b> 与 <b>[fetch]</b> 的区别所在。在以下情况下会抛出异常：
     <ul>
-      <li>无法发送 HTTP 请求（客户端错误）；
+      <li>无法发出 HTTP 请求（客户端错误）；
       </li>
-      <li>服务器返回了 HTTP 错误代码（400、404、500 等）（此行为实际上是可配置的）。请注意，如果该 HTTP 状态码附带响应数据，<b>[fetch]</b> 不会抛出异常，而 <b>[axios]</b> 会。但是，如果 HTTP 错误代码附带文档，该文档会被存放在 <b>[error.response] </b>中；
+      <li>服务器返回了错误代码 HTTP（400、404、500 等）（此项实际上是可以配置的）。 需要指出的是，如果该 HTTP 错误代码附带响应<b>，[fetch]</b> 不会触发异常，而 <b>[axios]</b> 则会触发异常。 然而，如果错误代码 HTTP 附带文档，该文档会被放入 <b>[error.response]</b> 中；
       </li>
     </ul>
   </li>
-  <li>第 32 行：我们展示了 <b>[error]</b> 对象的 JavaScript 结构；
+  <li>第 32 行：显示对象 <b>[error]</b> 的 JavaScript 结构；
   </li>
-  <li>第 33–38 行：如果 <b>[error]</b> 对象包含一个 <b>[response]</b> 对象，则将此响应返回给调用代码；
+  <li>第33-38行：如果<b>对象</b>[error]包含对象[response]，则将此响应返回给调用代码；
   </li>
-  <li>第 39–42 行：在所有其他情况下，将 <b>[error]</b> 对象传递回调用代码；
+  <li>第39-42行：在其他情况下，将对象<b>[error]</b>返回给调用方；
   </li>
-  <li>第 47–57 行：异步函数 <b>[main]</b>；
+  <li>第 47-57 行：异步函数 <b>[main]</b>；
   </li>
-  <li>第 50 行：对异步函数 <b>[initSession] </b>的阻塞调用。从服务器获取的 JSON 响应被作为 JavaScript 对象返回；
+  <li>第 50 行：对异步函数 <b>[initSession]</b> 进行阻塞调用。将服务器返回的响应 jSON 作为 JavaScript 对象获取；
   </li>
-  <li>第 53–56 行：处理任何错误。错误消息存储在 <b>[error.message] </b>中；
+  <li>第 53-56 行：捕获可能出现的错误。错误消息位于 <b>[error.message]</b> 中；
   </li>
 </ul>
 
 <p>执行结果如下：</p>
-<p><strong>情况 1</strong>：Laragon 服务器未运行</p>
+<p><strong>情况 1</strong>：Laragon 服务器未启动</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
@@ -1476,7 +1479,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">     params: { action: &#x27;init-session&#x27;, type: &#x27;json&#x27; },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     headers:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      { Accept: &#x27;application/json, text/plain, */*&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;User-Agent&#x27;: &#x27;axios/0.19.0&#x27; },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;User-Agent&#x27;: &#x27;axios/0.19.0&#x27; },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     baseURL: &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     transformRequest: <span style="font-weight:bold">[ [Function: transformRequest]</span> ],</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     transformResponse: <span style="font-weight:bold">[ [Function: transformResponse]</span> ],</span></span>
@@ -1573,7 +1576,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        socket: <span style="font-weight:bold">[Socket]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        connection: <span style="font-weight:bold">[Socket]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        _header:</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         &#x27;GET /php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nUser-Agent: axios/0.19.0\r\nHost: localhost\r\nConnection: close\r\n\r\n&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">         &#x27;GET /php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nUser-Agent: axios/0.19.0\r\nHost: localhost\r\nConnection: close\r\n\r\n&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        _onPendingData: <span style="font-weight:bold">[Function: noopPendingOutput]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        agent: <span style="font-weight:bold">[Agent]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        socketPath: undefined,</span></span>
@@ -1592,49 +1595,49 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold">[Symbol(isCorked)]</span>: false,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold">[Symbol(outHeadersKey)]</span>: <span style="font-weight:bold">[Object]</span> },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     _currentUrl:</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27; },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27; },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  response: undefined,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  isAxiosError: true,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  toJSON: <span style="font-weight:bold">[Function]</span> }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">erreur= timeout of 2000ms exceeded</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">2.784</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>第 33-136 行：<b>[error]</b> 对象包含大量信息；
+  <li>第 33-136 行：对象 <b>[error]</b> 包含大量信息；
     <ul>
-      <li><b>[Error]</b>，第 3-9 行：对所发生错误的描述；
+      <li>[Error]，第 3-9 行：对所发生错误的描述；
       </li>
-      <li><b>[config]</b>，第 10–27 行：导致此错误的 HTTP 请求配置；
+      <li><b>[config]</b>，第 10-27 行：导致此错误的 HTTP 请求的配置；
       </li>
-      <li><b>[config.url]</b>，第 11–12 行：目标 URL；
+      <li><b>[config.url]</b>，第 11-12 行：目标 URL；
       </li>
       <li><b>[config.method]</b>，第 13 行：请求方法；
       </li>
-      <li><b>[config.params]</b>，第 14 行：URL 参数；
+      <li><b>[config.params]</b>，第 14 行：URL 的参数；
       </li>
-      <li><b>[config.headers]</b>，第 16–17 行：请求的 HTTP 头部；
+      <li><b>[config.headers]</b>，<b>第</b> 16-17 行：请求的 HTTP 头部；
       </li>
-      <li><b>[config.baseURL]</b>，第 18 行：目标 URL 的基准 URL；
+      <li><b>[config.baseURL]</b>，第 18 行：目标 URL 的基础 URL；
       </li>
       <li><b>[config.timeout]</b>，第 21 行：请求超时；
       </li>
-      <li><b>[code]</b>，第 28 行：错误代码；
+      <li><b>[code]</b>，第 28 行：一个错误代码；
       </li>
-      <li><b>[request]</b>，第 29–133 行：HTTP 请求的详细描述。请注意，大多数属性名前缀为下划线 (_)，这表示它们是 <b>[request]</b> 对象的内部属性，不供开发人员直接使用；
+      <li><b>[request]</b>，<b>第</b> 29-133 行：对请求 HTTP 的详细描述。 值得注意的是，大多数属性前缀为下划线 _，这表明它们是 <b>[request]</b> 对象的内部属性，不供开发人员直接使用；
       </li>
-      <li><b>[response]</b>，第 134 行：服务器响应，此处为空；
+      <li><b>[response]</b>，第 134 行：服务器的响应，此处为空；
       </li>
     </ul>
   </li>
-  <li>第 138 行：由 <b>[main]</b> 函数显示的错误消息；
+  <li>第 138 行：由函数 <b>[main]</b> 显示的错误信息；
   </li>
 </ul>
 
-<p><strong>情况 2</strong>：Laragon 服务器正在运行</p>
+<p><strong>情况 2</strong>：已启动 Laragon 服务器</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">requête HTTP vers le serveur en cours ---------------------------------------------</span></span>
@@ -1643,12 +1646,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  headers:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   { date: &#x27;Sun, 15 Sep 2019 07:09:26 GMT&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     server: &#x27;Apache/2.4.35 (Win64) OpenSSL/1.1.0i PHP/7.2.11&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;x-powered-by&#x27;: &#x27;PHP/7.2.11&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;set-cookie&#x27;: <span style="font-weight:bold">[ &#x27;PHPSESSID=uas6lugtblstktcifpd8e5irm6; path=/&#x27; ]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-length&#x27;: &#x27;86&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;x-powered-by&#x27;: &#x27;PHP/7.2.11&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;set-cookie&#x27;: [ &#x27;PHPSESSID=uas6lugtblstktcifpd8e5irm6; path=/&#x27; ],<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-length&#x27;: &#x27;86&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     connection: &#x27;close&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-type&#x27;: &#x27;application/json&#x27; },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;content-type&#x27;: &#x27;application/json&#x27; },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  config:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   { url:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php&#x27;,</span></span>
@@ -1656,7 +1659,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">     params: { action: &#x27;init-session&#x27;, type: &#x27;json&#x27; },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     headers:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      { Accept: &#x27;application/json, text/plain, */*&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;User-Agent&#x27;: &#x27;axios/0.19.0&#x27; },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;User-Agent&#x27;: &#x27;axios/0.19.0&#x27; },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     baseURL: &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     transformRequest: <span style="font-weight:bold">[ [Function: transformRequest]</span> ],</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     transformResponse: <span style="font-weight:bold">[ [Function: transformResponse]</span> ],</span></span>
@@ -1755,7 +1758,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold">[Symbol(kBytesRead)]</span>: 0,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold">[Symbol(kBytesWritten)]</span>: 0 },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     _header:</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      &#x27;GET /php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nUser-Agent: axios/0.19.0\r\nHost: localhost\r\nConnection: close\r\n\r\n&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      &#x27;GET /php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nUser-Agent: axios/0.19.0\r\nHost: localhost\r\nConnection: close\r\n\r\n&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     _onPendingData: <span style="font-weight:bold">[Function: noopPendingOutput]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     agent:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      Agent {</span></span>
@@ -1831,31 +1834,31 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        _onNativeResponse: <span style="font-weight:bold">[Function]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        _currentRequest: <span style="font-weight:bold">[Circular]</span>,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        _currentUrl:</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">         &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27; },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">         &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php?action=init-session&amp;type=json&#x27; },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     <span style="font-weight:bold">[Symbol(isCorked)]</span>: false,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     <span style="font-weight:bold">[Symbol(outHeadersKey)]</span>:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="font-weight:bold">[Object: null prototype]</span> { accept: <span style="font-weight:bold">[Array]</span>, &#x27;user-agent&#x27;: <span style="font-weight:bold">[Array]</span>, host: <span style="font-weight:bold">[Array]</span> } },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  data:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   { action: &#x27;init-session&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;état&#x27;: 700,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;réponse&#x27;: &#x27;session démarrée avec type <span style="font-weight:bold">[json]</span>&#x27; } }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;状态&#x27;: 700,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     &#x27;响应：&#x27;已启动会话，类型为 [json]&#x27; } }<span style="font-weight:bold"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">succès ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse= { action: &#x27;init-session&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;état&#x27;: 700,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;réponse&#x27;: &#x27;session démarrée avec type <span style="font-weight:bold">[json]</span>&#x27; } object</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;状态&#x27;: 700,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;响应：&#x27;已启动类型为 [json] 的会话&#x27; } 对象<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">1.115</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p><strong>评论</strong></p>
+<p><strong>注释</strong></p>
 <ul>
-  <li>第 3–203 行：封装服务器 HTTP 响应的 JavaScript 对象 <b>[response]</b>；
+  <li>第 3-203 行：封装服务器响应 HTTP 的 JavaScript 对象 <b>[response]</b>；
   </li>
-  <li>第 3 行，<b>[status]</b>：响应的 HTTP 状态码；
+  <li>第 3<b> 行，[status]</b>：响应的代码 HTTP；
   </li>
-  <li>第 4 行，<b>[statusText]</b>：与前面的 HTTP 状态码关联的文本；
+  <li>第 4<b> 行，[statusText]</b>：与前面的代码 HTTP 关联的文本；
   </li>
-  <li>第 5–13 行，<b>[headers]</b>：响应的 HTTP 头部：
+  <li><b>第5-13行，[headers]</b>：响应的HTTP标头：
     <ul>
       <li>第 10 行，<b>[Set-Cookie]</b>：会话 Cookie；
       </li>
@@ -1863,18 +1866,18 @@
       </li>
     </ul>
   </li>
-  <li>第 14–31 行，<b>[config]</b>：发送的 HTTP 请求的配置；
+  <li>第 14-31 行<b>，[config]</b>：已发送的 HTTP 请求的配置；
   </li>
-  <li>第 32–199 行，<b>[request]</b>：详细描述所发送 HTTP 请求的 JavaScript 对象；
+  <li>第 32-199 行<b>，[request]</b>：详细描述已发送请求 HTTP 的 JavaScript 对象；
   </li>
-  <li>第 200–203 行，<b>[request.data]</b>：封装服务器 JSON 响应的 JavaScript 对象；
+  <li>第 200-203 行<b>，[request.data]</b>：封装服务器响应 jSON 的 JavaScript 对象；
   </li>
-  <li>第 205–207 行：由异步函数 <b>[main]</b> 获取的响应；
+  <li>第 205-207 行：由异步函数 <b>[main]</b> 获取的响应；
   </li>
 </ul>
 
-<p><strong>情况 3</strong>：向 Laragon 服务器发送了错误的 <strong>[init-session]</strong> 请求；</p>
-<p><img src="images/10000000000002B3000001A03BB03E73.png" width="242" height="146" style="width:6.399cm;height:3.852cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002B3000001A03BB03E73.png" /></p>
+<p><strong>情况 3</strong>：向 Laragon 服务器发送了一个错误的 <strong>[init-session]</strong> 请求；</p>
+<p><img src="images/10000000000002B3000001A03BB03E73.png" width="242" height="146" style="width:6.399cm;height:3.851cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002B3000001A03BB03E73.png" /></p>
 <p>执行结果如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span></span>
@@ -1896,12 +1899,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content">     headers:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      { date: &#x27;Sun, 15 Sep 2019 07:25:58 GMT&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        server: &#x27;Apache/2.4.35 (Win64) OpenSSL/1.1.0i PHP/7.2.11&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;x-powered-by&#x27;: &#x27;PHP/7.2.11&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;set-cookie&#x27;: <span style="font-weight:bold">[Array]</span>,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;content-length&#x27;: &#x27;79&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;x-powered-by&#x27;: &#x27;PHP/7.2.11&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate, no-cache, private&#x27;,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;set-cookie&#x27;: [Array],<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;content-length&#x27;: &#x27;79&#x27;,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        connection: &#x27;close&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;content-type&#x27;: &#x27;application/json&#x27; },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;content-type&#x27;: &#x27;application/json&#x27; },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     config:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      { url:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">         &#x27;http://localhost/php7/scripts-web/impots/version-14/main.php&#x27;,</span></span>
@@ -1912,59 +1915,59 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold">[Symbol(outHeadersKey)]</span>: <span style="font-weight:bold">[Object]</span> },</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     data:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      { action: &#x27;init-session&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;état&#x27;: 703,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;réponse&#x27;: &#x27;paramètre type=<span style="font-weight:bold">[x]</span> invalide&#x27; } },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;状态&#x27;: 703,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &#x27;响应：&#x27;type=[x] 参数无效&#x27; } },<span style="font-weight:bold"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  isAxiosError: true,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  toJSON: <span style="font-weight:bold">[Function]</span> }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">succès ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse= { action: &#x27;init-session&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;état&#x27;: 703,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;réponse&#x27;: &#x27;paramètre type=<span style="font-weight:bold">[x]</span> invalide&#x27; } object</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;状态&#x27;: 703,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;响应：&#x27;type=[x] 参数无效&#x27; } 对象<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.69</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
-<p>由于服务器返回了 HTTP 400 状态码（第 15 行），<strong>[axios]</strong> 抛出了异常（同样，此行为可通过配置调整）。尽管 <strong>[axios]</strong> 抛出了异常，我们仍可在 <strong>[error.response]</strong>（第 14 行）中获取来自服务器的 HTTP 响应，<strong>并在 [error.response.data]</strong>（第 34 行）<strong>中获取</strong>发送的 JSON 文档。 第 41–43 行：<strong>[main]</strong> 函数正确地从服务器获取了 JSON 响应。</p>
-<p><a id="refheadingtoc225402640539168"></a></p>
+<p>由于服务器返回了状态码 HTTP 400（第 15 行），<strong>[axios]</strong> 抛出了异常（同样，此行为可通过配置调整）。尽管 <strong>[axios]</strong> 抛出了异常， 但在 <strong>[error.response]</strong>（第 14 行）中确实收到了服务器的 HTTP 响应，并且 jSON 文档已发送至 <strong>[error.response.data]</strong>（第 34 行）。 第 41-43 行：函数 <strong>[main]</strong> 正确地从服务器获取了响应 jSON。</p>
+<p><span id="refheadingtoc225402640539168" name="refheadingtoc225402640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="126-axios-02">12.6. <span style="color: #4f81bd">脚本 [axios-02]</span></h2>
-<p>既然我们已经详细介绍了 <strong>[axios]</strong> 库在 HTTP 请求过程中处理的对象，现在可以将 <strong>[axios-01]</strong> 脚本重写为如下形式：</p>
+<p>现在我们已经详细说明了 <strong>[axios]</strong> 库在处理 HTTP 请求时所操作的对象，因此可以将 <strong>[axios-01]</strong> 脚本重写为如下形式：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// axios default configuration</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// axios 的默认配置</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.timeout = 2000;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">axios.defaults.baseURL = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// init session</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.baseURL = &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 初始化会话</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> initSession(axios) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// query options HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 请求选项 HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    method: </span><span style="color:#a31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL 的参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    params: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      action: </span><span style="color:#a31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      type: </span><span style="color:#a31515">&#x27;json&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execute query HTTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 执行请求 HTTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> axios.request(</span><span style="color:#a31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the server response is in [response.data]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 服务器响应位于 [response.data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> response.data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// server response</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 服务器响应</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.response) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the answer jSON is in [error.response.data]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 响应 jSON 位于 [error.response.data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> error.response.data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// error restart</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 重新抛出错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">throw</span><span style="color:#000000"> error;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the main function executes the asynchronous function [initSession]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// main 函数执行异步函数 [initSession]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;requête HTTP vers le serveur en cours ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1976,95 +1979,95 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;erreur=&quot;</span><span style="color:#000000">, error.message);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// test</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 测试</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225404640539168"></a></p>
+<p><span id="refheadingtoc225404640539168" name="refheadingtoc225404640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="127-axios-03">12.7. <span style="color: #4f81bd">脚本 [axios-03]</span></h2>
-<p><strong>[axios-03]</strong> 脚本采用与 <strong>[axios-02]</strong> 脚本相同的方法。这次，我们向服务器添加了 <strong>[authenticate-user]</strong> HTTP 请求，该请求使用 POST 方法发送：</p>
+<p>脚本 <strong>[axios-03]</strong> 沿用了脚本 <strong>[axios-02]</strong> 的方法。 此次向服务器添加了 HTTP <strong>和 [authentifier-utilisateur]</strong> 请求，该操作通过 POST 实现：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> qs </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;qs&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// axios configuration</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// axios 配置</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.timeout = 2000;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">axios.defaults.baseURL = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// init session</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.baseURL = &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 初始化会话</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> initSession(axios) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// query options HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 请求选项 HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    method: </span><span style="color:#a31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL的参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    params: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      action: </span><span style="color:#a31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      type: </span><span style="color:#a31515">&#x27;json&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execute query HTTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 执行请求 HTTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> axios.request(</span><span style="color:#a31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the server response is in [response.data]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 服务器响应位于 [response.data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> response.data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// server response</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 服务器响应</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.response) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the answer jSON is in [error.response.data]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 响应 jSON 位于 [error.response.data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> error.response.data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// error restart</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 重新触发错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">throw</span><span style="color:#000000"> error;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> authentifierUtilisateur(axios, user, password) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// query options HHTP [POST /main.php?action=authenticate-user]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 请求选项 HHTP [POST /main.php?action=authentifier-utilisateur]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    method: </span><span style="color:#a31515">&quot;POST&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    headers: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&#x27;Content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// body of POST</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// POST 的正文</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    data: qs.stringify({</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      user: user,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      password: password</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }),</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL的参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    params: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      action: </span><span style="color:#a31515">&#x27;authentifier-utilisateur&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// execute query HTTP [post /main.php?action=authenticate-user]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 请求执行 HTTP [post /main.php?action=authentifier-utilisateur]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> axios.request(</span><span style="color:#a31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the server response is in [response.data]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 服务器响应位于 [response.data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> response.data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// server response</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 服务器响应</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.response) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the answer jSON is in [error.response.data]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 响应 jSON 位于 [error.response.data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> error.response.data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// error restart</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 重新抛出错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">throw</span><span style="color:#000000"> error;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the main function executes asynchronous functions one by one</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// main 函数依次执行异步函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// init-session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 初始化会话</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;action init-session en cours ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> response1 = </span><span style="color:#0000ff">await</span><span style="color:#000000"> initSession(axios);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;succès ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;réponse=&quot;</span><span style="color:#000000">, response1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// authenticate-user</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 用户认证</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;action authentifier-utilisateur en cours ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> response2 = </span><span style="color:#0000ff">await</span><span style="color:#000000"> authentifierUtilisateur(axios, </span><span style="color:#a31515">&#x27;admin&#x27;</span><span style="color:#000000">, </span><span style="color:#a31515">&#x27;admin&#x27;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;succès ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
@@ -2074,30 +2077,30 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;erreur=&quot;</span><span style="color:#000000">, error);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// test</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 测试</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 38-70 行：异步函数 <b>[authenticateUser]</b>；
+  <li>第 38-70 行：异步函数 <b>[authentifierUtilisateur]</b>；
   </li>
-  <li>第 39 行：必须发出 <b>[POST /main.php?action=authenticate-user]</b> 请求；
+  <li>第 39 行：需执行 <b>[POST /main.php?action=authentifier-utilisateur]</b> 请求；
   </li>
-  <li>第 40–54 行：HTTP 请求选项；
+  <li>第40-54行：HTTP请求的选项；
   </li>
-  <li>第 41 行：这是一个 POST 请求；
+  <li>第41行：这是一个POST；
   </li>
-  <li>第 42–44 行：POST 参数将通过 URL 编码封装在客户端随请求发送的文档中；
+  <li>第42-44行：POST的参数将被编码为URL，并包含在客户端随请求发送的文档中；
   </li>
-  <li>第 46–49 行：<b>[data]</b> 属性必须包含 URL 编码后的 POST 字符串。为此，我们使用第 3 行导入的 <b>[qs]</b> 库；
+  <li>第46-49行：<b>该</b>属性必须包含已编码的字符串。 为此，此处使用了第3行导入的<b>[qs]</b>库；
   </li>
-  <li>第 55–69 行：为执行请求，我们使用与 <b>[initSession]</b> 方法中相同的代码；
+  <li>第55-69行：执行查询时，代码与方法[initSession]中的相同；
   </li>
-  <li>第 73–89 行：<b>[asynchrone]</b> 方法以阻塞方式依次调用 <b>[initSession] </b>和 <b>[authentifierUtilisateur]</b> 方法（第 77 行和第 82 行）；
+  <li>第73-89行：方法[asynchrone]以阻塞方式依次<b>调用方法[initSession, authentifierUtilisateur]</b>（第77行和第82行）；
   </li>
-  <li>第 82 行：使用 (admin, admin) 作为登录凭据。我们知道服务器会识别这些凭据；
+  <li>第82行：使用(admin, admin)作为登录凭据。已知服务器能够识别该凭据；
   </li>
 </ul>
 
@@ -2107,131 +2110,132 @@
 <span class="odt-code-line"><span class="odt-code-line-content">action init-session en cours ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">succès ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse= { action: &#x27;init-session&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;état&#x27;: 700,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;réponse&#x27;: &#x27;session démarrée avec type <span style="font-weight:bold">[json]</span>&#x27; }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;状态：700,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;响应：&#x27;已启动会话，类型为 [json]&#x27; }<span style="font-weight:bold"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">action authentifier-utilisateur en cours ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">succès ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse= { action: &#x27;authentifier-utilisateur&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;état&#x27;: 103,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;réponse&#x27;:</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;状态：103,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;响应&#x27;:</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   <span style="font-weight:bold">[ &#x27;pas de session en cours. Commencer par action [init-session]</span>&#x27; ] }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.834</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 9-12 行：用户认证失败：服务器未保留已初始化 JSON 会话的事实。这是因为对第一个 <b>[init-session]</b> 请求的响应中未发送会话 Cookie；
+  <li>第9-12行：用户身份验证失败：服务器未记录我们已启动jSON会话的事实。 这是因为未返回对第一个请求 <b>[init-session]</b> 的响应中发送的会话 Cookie；
   </li>
 </ul>
-<p><a id="axios04"></a>
-<a id="refheadingtoc2152561731793072"></a></p>
+
+<p><span id="refheadingtoc2152561731793072" name="refheadingtoc2152561731793072" class="odt-bookmark-anchor"></span>
+<span id="axios04" name="axios04" class="odt-bookmark-anchor"></span></p>
 <h2 id="128-axios-04">12.8. <span style="color: #4f81bd">脚本 [axios-04]</span></h2>
-<p><strong>[axios-04]</strong>脚本对<strong>[axios-03]</strong>脚本进行了两项改进：</p>
+<p>脚本 <strong>[axios-04]</strong> 对脚本 <strong>[axios-03]</strong> 进行了两项改进：</p>
 <ul>
-  <li>它处理了会话 Cookie；
+  <li>它管理会话 Cookie；
   </li>
-  <li>将 <b>[initSession] </b>和 <b>[authenticateUser]</b> 函数中的公共部分提取到 <b>[getRemoteData]</b> 函数中；
+  <li>将函数 <b>[initSession] </b>和 <b>[authentifierUtilisateur]</b> 中的公共部分提取到函数 <b>[getRemoteData]</b> 中；
   </li>
 </ul>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> qs </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;qs&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// axios configuration</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// axios 配置</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.timeout = 2000;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">axios.defaults.baseURL = </span><span style="color:#a31515">&#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// session cookie</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">axios.defaults.baseURL = &#x27;http://localhost/php7/scripts-web/impots/version-14&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 会话cookie</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> sessionCookieName = </span><span style="color:#a31515">&quot;PHPSESSID&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> sessionCookie = </span><span style="color:#a31515">&#x27;&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// init session</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 初始化会话</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> initSession(axios) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// query options HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 请求选项 HHTP [get /main.php?action=init-session&amp;type=json]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    method: </span><span style="color:#a31515">&quot;GET&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL的参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    params: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      action: </span><span style="color:#a31515">&#x27;init-session&#x27;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      type: </span><span style="color:#a31515">&#x27;json&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// execute query HTTP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 执行查询 HTTP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">await</span><span style="color:#000000"> getRemoteData(axios, options);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> authentifierUtilisateur(axios, user, password) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// query options HHTP [post /main.php?action=authenticate-user]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 请求选项 HHTP [post /main.php?action=authentifier-utilisateur]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> options = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    method: </span><span style="color:#a31515">&quot;POST&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    headers: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&#x27;Content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// body of POST</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// POST 的正文</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    data: qs.stringify({</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      user: user,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      password: password</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }),</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL parameters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// URL的参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    params: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      action: </span><span style="color:#a31515">&#x27;authentifier-utilisateur&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// execute query HTTP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// HTTP 请求的执行</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">await</span><span style="color:#000000"> getRemoteData(axios, options);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> getRemoteData(axios, options) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// for the session cookie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 用于会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (!options.headers) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    options.headers = {};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  options.headers.Cookie = sessionCookie;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// execute query HTTP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 执行请求 HTTP</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> response;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// asynchronous request</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 异步请求</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    response = </span><span style="color:#0000ff">await</span><span style="color:#000000"> axios.request(</span><span style="color:#a31515">&#x27;main.php&#x27;</span><span style="color:#000000">, options);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// the [error] parameter is an exception instance - it can take various forms</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 参数 [error] 是一个异常实例——它可能有各种形式</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.response) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the server response is in [error.response]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 服务器响应位于 [error.response]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      response = error.response;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// error restart</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 重新抛出该错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">throw</span><span style="color:#000000"> error;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// response is the entire HTTP response from the server (HTTP headers + response itself)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// retrieve the session cookie if it exists</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// response 包含服务器响应的全部内容（HTTP 头部信息 + 响应正文）</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 若存在，则获取会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> setCookie = response.headers</span><span style="font-weight:bold;color:#000000">[&#x27;set-cookie&#x27;]</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (setCookie) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// setCookie is an array</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// look for the session cookie in this table</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// setCookie 是一个数组</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 在此数组中查找会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">let</span><span style="color:#000000"> trouvé = </span><span style="color:#0000ff">false</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">while</span><span style="color:#000000"> (!trouvé &amp;&amp; i &lt; setCookie.length) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// look for the session cookie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 查找会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">const</span><span style="color:#000000"> results = RegExp(</span><span style="color:#a31515">&#x27;^(&#x27;</span><span style="color:#000000"> + sessionCookieName + </span><span style="color:#a31515">&#x27;.+?);&#x27;</span><span style="color:#000000">).exec(setCookie</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (results) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// the session cookie is stored</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 保存会话cookie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// eslint-disable-next-line require-atomic-updates</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        sessionCookie = results<span style="font-weight:bold">[1]</span>;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// we found</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 已找到</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        trouvé = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// next item</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// 下一个元素</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        i++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the server response is in [response.data]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 服务器响应位于 [response.data]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> response.data;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the main function executes asynchronous functions one by one</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// main 函数依次执行异步函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// init-session</span></span></span>
@@ -2239,7 +2243,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> response1 = </span><span style="color:#0000ff">await</span><span style="color:#000000"> initSession(axios);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;succès ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;réponse=&quot;</span><span style="color:#000000">, response1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// authenticate-user</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 用户认证</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;action authentifier-utilisateur en cours ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> response2 = </span><span style="color:#0000ff">await</span><span style="color:#000000"> authentifierUtilisateur(axios, </span><span style="color:#a31515">&#x27;admin&#x27;</span><span style="color:#000000">, </span><span style="color:#a31515">&#x27;admin&#x27;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;succès ---------------------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
@@ -2249,56 +2253,56 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;erreur=&quot;</span><span style="color:#000000">, error.message);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// test</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 测试</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">main();</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 14–26 行：<b>[initSession]</b> 函数。它现在仅负责准备要发送至服务器的 HTTP 请求，但不会直接执行该请求。该任务由第 49–95 行的 <b>[getRemoteDate]</b> 方法负责；
+  <li>第 14-26 行：函数 <b>[initSession]</b>。 该函数现仅负责准备要发送至服务器的 HTTP 查询，但不执行该查询。它将此任务交由第 49-95 行中的 <b>[getRemoteDate]</b> 方法处理；
   </li>
-  <li>第 28–47 行：<b>[authentifierUtilisateur]</b> 函数遵循相同的流程；
+  <li>第28-47行：函数[authentifierUtilisateur]遵循相同流程；
   </li>
-  <li>第 49 行：<b>[getRemoteData]</b> 函数接收了执行 HTTP 请求所需的两项信息：
+  <li>第49行：<b>函数</b>[getRemoteData]接收两项信息，从而能够执行请求HTTP：
     <ul>
-      <li><b>[axios]</b>，负责发送请求和接收响应的对象；
+      <li><b>[axios]</b>，负责发送请求并接收响应的对象；
       </li>
-      <li><b>[options]</b>，即发送给服务器的请求配置选项；
+      <li><b>[options]</b>，即发送至服务器的请求配置选项；
       </li>
     </ul>
   </li>
-  <li>第 59 行：执行请求并等待其 JSON 响应；
+  <li>第 59 行：执行请求并阻塞等待其响应 jSON；
   </li>
-  <li>第 60–68 行：处理任何异常；
+  <li>第 60-68 行：处理可能出现的异常；
   </li>
-  <li>第 64 行：获取响应，该响应可能封装在 error 对象中；
+  <li>第 64 行：获取响应，该响应可能封装在错误对象中；
   </li>
-  <li>第 67 行：如果服务器抛出异常且未包含服务器响应，则将接收到的错误传播给调用代码；
+  <li>第 67 行：如果服务器抛出的异常中未包含服务器响应，则将接收到的错误上报给调用方；
   </li>
-  <li><b>[getRemoteData]</b> 函数负责管理会话 Cookie：
+  <li>函数 <b>[getRemoteData]</b> 负责管理会话 Cookie：
     <ul>
-      <li>首次接收到 Cookie 时，将其存储在 <b>[sessionCookie]</b> 变量中（第 11 行）；
+      <li>当它第一次接收到该数据时，将其存储在变量 <b>[sessionCookie]</b> 中（第 11 行）；
       </li>
-      <li>随后在每次新的 HTTP 请求中返回该 Cookie；
+      <li>随后在每次新的请求中将其返回给 HTTP；
       </li>
     </ul>
   </li>
-  <li>第 72–92 行：<b>[getRemoteData]</b> 会分析每个服务器响应，以确定其是否发送了 <b>[Set-Cookie] </b>HTTP 头。我们知道服务器会发送一个名为 <b>[PHPSESSID] </b>的会话 Cookie（第 10 行）。因此，这就是我们要查找的 Cookie（第 10 行）；
+  <li>第72-92行：[getRemoteData]会分析服务器的每次响应，以确认其是否发送了<b>HTTP和[Set-Cookie]</b>这两个头部。 已知服务器会发送一个名为 <b>[PHPSESSID]</b> 的会话 Cookie（第 10 行）。因此，我们要查找的就是这个 Cookie（第 10 行）；
   </li>
-  <li>第 72 行：若存在 <b>[Set-Cookie] </b>HTTP 头（不区分大小写），则将其检索出来。实际上可能存在多个 <b>[Set-Cookie]</b> 头，因此我们检索一个数组；
+  <li>第72行：若存在，则获取HTTP和<b>[Set-Cookie]</b>这两个头部（区分大小写）。 实际上可能存在多个 <b>[Set-Cookie]</b> 头部，因此我们获取的是一个数组；
   </li>
-  <li>第 73 行：如果已获取到 Cookie 数组；
+  <li>第 73 行：如果获取到了一个 Cookie 数组；
   </li>
-  <li>第 78–90 行：我们在数组中的所有 Cookie 中搜索会话 Cookie；
+  <li>第78-90行：在数组中的所有Cookie中查找会话Cookie；
   </li>
-  <li>第 80 行：用于在第 i 个 Cookie 中搜索会话 Cookie 的关系表达式；
+  <li>第 80 行：用于在第 i 个 Cookie 中查找会话 Cookie 的关系表达式；
   </li>
   <li>第 81 行：如果比较返回了结果；
   </li>
-  <li>第 84 行：结果数组 results<b>[1] </b>中包含关系表达式模式的第一个括号，即 (PHPSESSID=xxxx)，直至结束会话 Cookie 的闭合括号（不包含该括号）；
+  <li>第84行：<b>在results[1]</b>中，包含关系表达式模式的第一个括号，即(PHPSESSID=xxxx)直至结束会话cookie的(不包含)；
   </li>
-  <li>第 50–54 行：每次请求时，会话 Cookie 都会包含在请求的 HTTP 头部中。首次请求时，该 Cookie 为空，因此将被服务器忽略；
+  <li>第50-54行：每次请求时，会话cookie都会包含在请求的HTTP头部中。第一次发送时，该cookie为空，因此将被服务器忽略；
   </li>
 </ul>
 
@@ -2308,14 +2312,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content">action init-session en cours ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">succès ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse= { action: &#x27;init-session&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;état&#x27;: 700,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;réponse&#x27;: &#x27;session démarrée avec type <span style="font-weight:bold">[json]</span>&#x27; }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;状态：700,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;响应：&#x27;已启动会话，类型为 [json]&#x27; }<span style="font-weight:bold"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">action authentifier-utilisateur en cours ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">succès ---------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">réponse= { action: &#x27;authentifier-utilisateur&#x27;,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;état&#x27;: 200,</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;réponse&#x27;: &#x27;Authentification réussie <span style="font-weight:bold">[admin, admin]</span>&#x27; }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;状态：200,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  &#x27;响应&#x27;: &#x27;认证成功 [admin, admin]&#x27; }<span style="font-weight:bold"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.982</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 

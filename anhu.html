@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 工作环境的安装
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iaoe.html" class="md-nav__link">
+      <a href="huu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -702,14 +704,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-anhu.html" class="md-nav__link">
+      <a href="javascript-anhu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -756,14 +758,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+      <a href="http-euuan-huieiiuanuue-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 税费计算服务的 JavaScript HTTP 客户端
+    14. HTTP 客户端 税费计算服务的 JavaScript
   
 
     
@@ -796,79 +798,79 @@
   
 
 
-<p><a id="refheadingtoc2042413980233556"></a></p>
+<p><span id="refheadingtoc2042413980233556" name="refheadingtoc2042413980233556" class="odt-bookmark-anchor"></span></p>
 <h1 id="8">8. <span style="color: #365f91">函数</span></h1>
-<p><img src="images/10000000000000E0000000E3B1A0C324.png" width="90" height="91" style="width:2.371cm;height:2.402cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E0000000E3B1A0C324.png" /></p>
-<p><a id="refheadingtoc2042433980233556"></a></p>
+<p><img src="images/10000000000000E0000000E3B1A0C324.png" width="90" height="91" style="width:2.371cm;height:2.401cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E0000000E3B1A0C324.png" /></p>
+<p><span id="refheadingtoc2042433980233556" name="refheadingtoc2042433980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="81-func-01">8.1. <span style="color: #4f81bd">脚本 [func-01]</span></h2>
-<p>该脚本演示了参数如何传递给函数：</p>
+<p>该脚本关注函数参数的传递方式：</p>
 <ul>
-  <li>对于数字、字符串和布尔值，采用值传递；
+  <li>数值、字符串和布尔值采用值传递；
   </li>
   <li>数组、字面量对象和函数采用引用传递；
   </li>
 </ul>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// how to pass function parameters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// -----------------------nombre - passing by value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数参数传递模式</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// -----------------------参数个数 - 按值传递</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithNumber(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  param++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === count);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 调用代码</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> count = 10;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithNumber(count);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[count outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, count);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- chain - passing by value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- 字符串 - 按值传递</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithString(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  param += </span><span style="color:#a31515">&quot; xyz&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === text);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 调用代码</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> text = </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithString(text);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[text outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, text);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- Boolean - passing by value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- 布尔值 - 按值传递</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithBoolean(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  param = !param;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === bool);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 调用码</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> bool = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithBoolean(bool);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;bool </span><span style="font-weight:bold;color:#a31515">[outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, bool);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- table - passage by reference</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- 数组 - 按引用传递</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithArray(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  param.push(1000);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 调用码</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = </span><span style="font-weight:bold;color:#000000">[10, 20, 30]</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithArray(tab);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[tab outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- object - passing by reference</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- 对象 - 按引用传递</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithObject(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  param.unePropriétéNouvelle = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === obj);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 调用代码</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> obj = </span><span style="font-weight:bold;color:#000000">[10, 20, 30]</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithObject(obj);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[obj outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, obj);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- function - pass by reference</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// --------------------- 函数 - 按引用传递</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithFunction(param) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// a rather bizarre thing that works</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 虽然有点奇怪，但确实有效</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  param.unePropriétéNouvelle = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === f);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call code</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 调用代码</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> f = x =&gt; x + 4;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomethingWithFunction(f);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[f outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, f, f.unePropriétéNouvelle, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (f));</span></span></span>
@@ -891,11 +893,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[f outside function]</span>= x =&gt; x + 4 xyz function</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042453980233556"></a></p>
+<p><span id="refheadingtoc2042453980233556" name="refheadingtoc2042453980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="82-func-02">8.2. <span style="color: #4f81bd">脚本 [func-02]</span></h2>
-<p>以下脚本展示了 <strong>[function]</strong> 类型与其他数据类型无异，且变量可以采用该类型。它还展示了定义函数的两种方法：</p>
+<p>以下脚本表明，类型 <strong>[function]</strong> 与其他数据类型一样，变量可以采用该类型。它还展示了定义函数的两种方法：</p>
 <ul>
-  <li>一种使用 <b>[function]</b> 关键字；
+  <li>一种使用关键字 <b>[function]</b>；
   </li>
   <li>另一种使用“箭头”语法 =&gt;；
   </li>
@@ -903,20 +905,20 @@
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you can assign a function to a variable</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 可以将函数赋值给变量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span> variable1 = <span style="color:#0000ff">function</span> (a, b) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  return</span> a + b;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(&quot;typeof(variable1)=&quot;, <span style="color:#0000ff">typeof</span> (variable1));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the variable can then be used as a function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 该变量随后可作为函数使用</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(&quot;variable1(10,12)=&quot;, variable1(10, 12));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the function can be defined using the notation =&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数定义可以使用 =&gt; 语法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span> variable2 = (a, b, c) =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  return</span> a - b + c;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(&quot;variable2(10,12,14)=&quot;, variable2(10, 12, 14));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// braces can be omitted if there is only one expression in the function code</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// this expression is then the return value of the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 如果函数体内只有一个表达式，可以省略大括号</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 此时该表达式即为函数的返回值</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span> variable3 = (a, b, c) =&gt; a + b + c;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(&quot;variable3(10,12,14)=&quot;, variable3(10, 12, 14));</span></span>
 </code></pre></div>
@@ -930,33 +932,33 @@
 <span class="odt-code-line"><span class="odt-code-line-content">variable3(10,12,14)= 36</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042473980233556"></a></p>
+<p><span id="refheadingtoc2042473980233556" name="refheadingtoc2042473980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="83-func-03">8.3. <span style="color: #4f81bd">脚本 [func-03]</span></h2>
-<p>本脚本演示了将一个函数作为参数传递给另一个函数的功能。这种技术在 JavaScript 框架中被广泛使用。</p>
+<p>本脚本探讨了将一个函数作为参数传递给另一个函数的可能性。这种方法在JavaScript框架中被广泛使用。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function parameters can be of type [function]</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function f1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数的参数可以是 [fonction] 类型</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数 f1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f1(param1, param2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 10;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function f2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数 f2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f2(param1, param2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 20;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function g with a function f as parameter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数 g 带函数 f 作为参数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> g(param1, param2, f) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> f(param1, param2) + 100;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// uses of g</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// g 的调用</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(g(0, 10, f1));</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(g(0, 10, f2));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the function-type effective parameter can be passed directly - form 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数类型的实际参数可以直接传递 - 形式 1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(g(0, 10, (param1, param2) =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 30;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}));</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the function-type effective parameter can be passed directly - form 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数类型的实际参数可以直接传递 - 形式 2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(g(0, 10, </span><span style="color:#0000ff">function</span><span style="color:#000000"> (param1, param2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 40;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}));</span></span>
@@ -971,47 +973,47 @@
 <span class="odt-code-line"><span class="odt-code-line-content">150</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc259303196815120"></a></p>
+<p><span id="refheadingtoc259303196815120" name="refheadingtoc259303196815120" class="odt-bookmark-anchor"></span></p>
 <h2 id="84-func-04">8.4. <span style="color: #4f81bd">脚本 [func-04]</span></h2>
-<p>以下脚本演示了 JavaScript 函数可以像类一样工作：</p>
+<p>以下脚本展示了 JavaScript 函数可以像类一样工作：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a function can be used as an object</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an empty shell</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数可作为对象使用</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个空壳</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// to which external properties are attributed</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 其属性由外部赋值</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">f.prop1 = </span><span style="color:#a31515">&quot;val1&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">f.show = </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use of f</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用 f</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">f.show();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a function g operating as a class</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个作为类运行的函数 g</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> g() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2 = </span><span style="color:#a31515">&quot;val2&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.show = </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// instantiate the function with [new]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用 [new] 实例化该函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> g().show();</span></span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 5–7 行：函数 f 的主体未定义任何属性；
+  <li>第 5-7 行：函数 f 的主体未定义任何属性；
   </li>
-  <li>第9–12行：属性是从外部赋值给函数f的；
+  <li>第 9-12 行：从外部为函数 f 赋予属性；
   </li>
-  <li>第14行：使用函数（对象）f。请注意，我们不写<b>[f()]</b>，而是直接写<b>[f]</b>。这是对象的表示法；
+  <li>第 14 行：调用函数（对象）f。请注意，这里不是写 <b>[f()]，</b>而是简单地写 <b>[f]</b>。这是一种对象的表示法；
   </li>
-  <li>第 17–22 行：我们将函数 <b>[g]</b> 定义为一个具有属性和方法的类；
+  <li>第 17-22 行：定义函数 <b>[g]</b>，如同定义一个带有属性和方法的类；
   </li>
-  <li>第 24 行：通过 <b>[new g()] </b>对函数 <b>[g]</b> 进行实例化；
+  <li>第 24 行：函数 <b>[g]</b> 由 <b>[new g()]</b> 实例化；
   </li>
 </ul>
 
@@ -1022,40 +1024,40 @@
 <span class="odt-code-line"><span class="odt-code-line-content">val2</span></span>
 </code></pre></div>
 
-<p>ES6 引入了类（class）的概念，这使得我们现在无需使用函数来创建类。</p>
-<p><a id="refheadingtoc5458671626043720"></a></p>
+<p>ES6引入了类概念，这使我们今后无需通过函数即可直接使用类。</p>
+<p><span id="refheadingtoc5458671626043720" name="refheadingtoc5458671626043720" class="odt-bookmark-anchor"></span></p>
 <h2 id="85-func-05">8.5. <span style="color: #4f81bd">脚本 [func-05]</span></h2>
-<p>脚本 [func-05] 演示了名为 [余项运算符] 的运算符的使用：</p>
+<p>脚本 [func-05] 展示了名为 [rest operator] 的运算符的使用方法：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// rest operator</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// rest 运算符</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> f(arg1, ...otherArgs) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 1st argument</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 第一个参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;arg1=&quot;</span><span style="color:#000000">, arg1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// other arguments</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 其余参数</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  otherArgs.forEach(element =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;otherArguments[&quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;]=&quot;</span><span style="color:#000000">, element);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    i++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  });</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 调用</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">f(1, </span><span style="color:#a31515">&quot;deux&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;trois&quot;</span><span style="color:#000000">, { x: 2, y: 3 })</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 3 行：[...otherArgs] 语法表示，当调用形式为 f(param1, param2, param3) 时，我们将得到第 3 行：
+  <li>第 3 行：[...otherArgs] 的语法使得当调用 f(param1, param2, param3) 时，第 3 行将变为：
     <ul>
       <li>arg1=param1
       </li>
-      <li>otherArgs = [param2, param3]。因此，[otherArgs] 是一个数组，用于收集 [param1] 之后传递的所有实际参数；
+      <li>otherArgs=[param2, param3]。因此，[otherArgs]是一个数组，它汇集了传递给[param1]的所有有效参数；
       </li>
     </ul>
   </li>
 </ul>
 
-<p>应用结果如下：</p>
+<p>应用程序的结果如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>

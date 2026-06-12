@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 工作环境的安装
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iaoe.html" class="md-nav__link">
+      <a href="huu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -669,14 +671,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-anhu.html" class="md-nav__link">
+      <a href="javascript-anhu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -723,14 +725,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+      <a href="http-euuan-huieiiuanuue-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 税费计算服务的 JavaScript HTTP 客户端
+    14. HTTP 客户端 税费计算服务的 JavaScript
   
 
     
@@ -763,43 +765,43 @@
   
 
 
-<p><a id="refheadingtoc2042393980233556"></a></p>
+<p><span id="refheadingtoc2042393980233556" name="refheadingtoc2042393980233556" class="odt-bookmark-anchor"></span></p>
 <h1 id="7">7. <span style="color: #365f91">正则表达式</span></h1>
-<p><img src="images/1000000000000111000000913AD7CFA8.png" width="109" height="58" style="width:2.889cm;height:1.535cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000111000000913AD7CFA8.png" /></p>
-<p><a id="refheadingtoc259299196815120"></a></p>
+<p><img src="images/1000000000000111000000913AD7CFA8.png" width="109" height="58" style="width:2.889cm;height:1.529cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000111000000913AD7CFA8.png" /></p>
+<p><span id="refheadingtoc259299196815120" name="refheadingtoc259299196815120" class="odt-bookmark-anchor"></span></p>
 <h2 id="71-regex-01">7.1. <span style="color: #4f81bd">脚本 [regex-01]</span></h2>
-<p>在 PHP 课程中，我们使用以下代码来演示 PHP 7 的正则表达式：</p>
+<p>在课程 PHP 中，我们曾使用以下代码来说明 PHP 7 中的正则表达式：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// strict type for function parameters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数参数的严格类型</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">declare</span><span style="color:#008080"> </span><span style="color:#000000">(strict_types=</span><span style="color:#000080">1</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// regular expressions in php</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// retrieve the various fields of a string</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you only want to retrieve the sequence of digits</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// PHP 正则表达式</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 提取字符串中的各个字段</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式：由任意字符包围的一串数字</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 我们只想提取数字序列</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$modèle</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;/(\d+)/&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将字符串与模式进行比对</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we want the sequence of numbers and the fields that follow and precede them</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式：由任意字符包围的一串数字</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 需要提取数字序列及其前后相邻的字段</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$modèle</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;/^(.*?)(\d+)(.*?)$/&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the model</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将字符串与模式进行匹配</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the template - a date in dd/mm/yy format</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式 - 日期格式为 dd/mm/yy</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$modèle</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model - a decimal number</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式——一个十进制数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$modèle</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;/^\s*(</span><span style="font-weight:bold;color:#008000">[+|-]</span><span style="color:#008000">?)\s*(\d+\.\d*|\.\d+|\d+)\s*/&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;187.8&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span></span>
@@ -807,17 +809,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;.6&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;4.&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModele2Chaine(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot; + 4&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// end</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 结束</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// --------------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">compareModele2Chaine(</span><span style="font-weight:bold;color:#000000">string</span><span style="color:#008080"> </span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">string</span><span style="color:#008080"> </span><span style="color:#0000ff">$chaîne</span><span style="color:#000000">):</span><span style="color:#008080"> </span><span style="color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// compares the $chaîne string with the $modèle model</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// the chain is compared with the model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// 将字符串 $chaîne 与模板 $modèle 进行比较</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// 将字符串与模板进行比对</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$champs</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">[];</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$correspond</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">preg_match(</span><span style="color:#0000ff">$modèle</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$chaîne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// displaying results</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// 显示结果</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\nRésultats(</span><span style="color:#0000ff">$modèle</span><span style="color:#008000">,</span><span style="color:#0000ff">$chaîne</span><span style="color:#008000">)\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$correspond</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">for</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">&lt;</span><span style="color:#008080"> </span><span style="color:#000000">count(</span><span style="color:#0000ff">$champs</span><span style="color:#000000">);</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#000000">++)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
@@ -829,35 +831,35 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>我们将此代码转换为 JavaScript 如下：</p>
+<p>我们将该代码转换为 JavaScript 代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">/// regular expressions in javascript</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// retrieve the various fields of a string</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you only want to retrieve the sequence of digits</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">/// JavaScript 正则表达式</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 提取字符串中的各个字段</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式：由任意字符包围的一串数字</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 我们只想提取数字序列</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> modèle =</span><span style="color:#a31515"> /(\d+)/</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将字符串与模式进行比对</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we want the sequence of numbers and the fields that follow and precede them</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 格式：由任意字符包围的一串数字</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 需要提取该数字序列及其前后相邻的字段</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^(.*?)(\d+)(.*?)$/</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将字符串与模式进行比对</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the template - a date in dd/mm/yy format</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式 - 日期格式为 dd/mm/yy</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model - a decimal number</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式——一个十进制数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^\s*(</span><span style="font-weight:bold;color:#a31515">[+|-]</span><span style="color:#a31515">?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;187.8&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span></span>
@@ -865,15 +867,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;.6&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;4.&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot; + 4&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// --------------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> compareModèleToChaîne(modèle, chaîne) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// compares the string [string] with the model [model]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 将字符串 [chaîne] 与模板 [modèle] 进行比对</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">`----------- chaîne=</span><span style="color:#0000ff">${</span><span style="color:#000000">chaîne</span><span style="color:#0000ff">}</span><span style="color:#a31515">, modèle=</span><span style="color:#0000ff">${</span><span style="color:#000000">modèle</span><span style="color:#0000ff">}</span><span style="color:#a31515">`</span><span style="color:#000000">)</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// the chain is compared with the</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 将字符串与模板进行比对</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> result1 = modèle.exec(chaîne);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">`comparaison avec exec=`</span><span style="color:#000000">, result1);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// another way of doing things</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 另一种实现方式</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> result2 = chaîne.match(modèle);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">`comparaison avec match=`</span><span style="color:#000000">, result2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -881,11 +883,11 @@
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>PHP 和 JavaScript 代码非常相似；
+  <li>PHP 代码与 JavaScript 代码非常接近；
   </li>
-  <li>第 7 行：请注意，在 JavaScript 中，正则表达式不是字符串，而是一个对象。请勿在表达式周围添加引号或撇号；
+  <li>第 7 行：需注意在 JavaScript 中，正则表达式不是字符串，而是一个对象。因此不需要在表达式周围添加引号或单引号；
   </li>
-  <li>第 41 行和第 44 行：有两种方法可以实现相同的结果；
+  <li>第41行和第44行：有两种方法可以得到相同的结果；
   </li>
 </ul>
 
@@ -1006,57 +1008,58 @@
 <span class="odt-code-line"><span class="odt-code-line-content">comparaison avec match= <span style="font-weight:bold">[ &#x27; + 4&#x27;, &#x27;+&#x27;, &#x27;4&#x27;, index: 0, input: &#x27; + 4&#x27;, groups: undefined ]</span></span></span>
 </code></pre></div>
 
-<p><strong>[regexp.exec]</strong> 和 <strong>[string.match]</strong> 方法返回相同的结果：</p>
+<p>方法 <strong>[regexp.exec]</strong> 和 <strong>[string.match]</strong> 返回相同的结果：</p>
 <ul>
-  <li><b>[null]</b>，如果字符串与正则表达式模式之间没有匹配；
+  <li><b>[null]</b>：若字符串与其模板之间不存在匹配；
   </li>
-  <li>若存在匹配，则返回数组 t，其中：
+  <li>若存在匹配，则返回数组 t：
     <ul>
-      <li>t<b>[0]</b>：与模式匹配的字符串；
+      <li><b>t[0]</b>：与模板对应的字符串；
       </li>
-      <li>t<b>[1]</b>：与模式中第一个括号匹配的字符串；
+      <li><b>t[1]</b>：与模式中第一个括号对应的字符串；
       </li>
-      <li>t<b>[2]</b>：与模式中第二个括号匹配的字符串；
+      <li><b>t[2]</b>：与模板的第二个括号对应的字符串；
       </li>
-      <li>…
+      <li>……
       </li>
-      <li>t<b>[input]</b>：包含该模式的整个字符串；
+      <li><b>t[input]</b>：包含该模式的完整字符串；
       </li>
     </ul>
   </li>
 </ul>
-<p><a id="refheadingtoc259301196815120"></a></p>
+
+<p><span id="refheadingtoc259301196815120" name="refheadingtoc259301196815120" class="odt-bookmark-anchor"></span></p>
 <h2 id="72-regexp-02">7.2. <span style="color: #4f81bd">脚本 [regexp-02]</span></h2>
-<p>有时你并不想从被测试的字符串中提取元素，而只想知道它是否与模式匹配：</p>
+<p>有时我们并不希望提取待测试字符串中的元素，而仅需判断其是否符合模式：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">/// regular expressions in javascript</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// retrieve the various fields of a string</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you only want to retrieve the sequence of digits</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">/// JavaScript 正则表达式</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 提取字符串中的各个字段</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式：由任意字符包围的一串数字</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 我们只想提取数字序列</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> modèle =</span><span style="color:#a31515"> /\d+/</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;type d&#x27;une expression régulière : &quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (modèle));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将字符串与模式进行匹配</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model: a sequence of numbers surrounded by any characters</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// we want the sequence of numbers and the fields that follow and precede them</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式：由任意字符包围的一串数字</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 需要提取数字序列及其前后相邻的字段</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^.*?\d+.*?$/</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the chain is compared with the</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将字符串与模式进行匹配</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;xyz1234abcd&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the template - a date in dd/mm/yy format</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式：日期格式为 dd/mm/yy</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^\s*\d\d\/\d\d\/\d\d\s*$/</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;10/05/97&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;  04/04/01  &quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;5/1/01&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the model - a decimal number</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 模式——一个十进制数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">modèle =</span><span style="color:#a31515"> /^\s*</span><span style="font-weight:bold;color:#a31515">[+|-]</span><span style="color:#a31515">?\s*\d+\.\d*|\.\d+|\d+\s*$/</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;187.8&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;-0.6&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1064,23 +1067,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;.6&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot;4.&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">compareModèleToChaîne(modèle, </span><span style="color:#a31515">&quot; + 4&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// --------------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> compareModèleToChaîne(modèle, chaîne) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// test</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 测试</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> correspond = modèle.test(chaîne);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// compares the string [string] with the model [model]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 将字符串 [chaîne] 与模板 [modèle] 进行比较</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">`----------- chaîne=</span><span style="color:#0000ff">${</span><span style="color:#000000">chaîne</span><span style="color:#0000ff">}</span><span style="color:#a31515">, modèle=</span><span style="color:#0000ff">${</span><span style="color:#000000">modèle</span><span style="color:#0000ff">}</span><span style="color:#a31515">, correspond=</span><span style="color:#0000ff">${</span><span style="color:#000000">correspond</span><span style="color:#0000ff">}</span><span style="color:#a31515">`</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li><b>[regexp-02]</b> 使用了 <b>[regexp-01]</b> 中的代码，但有以下区别：
+  <li><b>[regexp-02]</b> 沿用了 <b>[regexp-01]</b> 的代码，但有以下区别：
     <ul>
-      <li>我们不希望从待测试的字符串中提取元素。因此，我们移除了所用正则表达式中的括号；
+      <li>我们不希望提取待测试字符串中的元素。因此，我们去除了所用正则表达式中的括号；
       </li>
-      <li>第 40 行：我们使用 <b>[Regexp.test]</b> 方法来判断字符串是否与正则表达式匹配；
+      <li>第 40 行：使用 <b>[Regexp.test]</b> 方法来判断字符串是否符合正则表达式；
       </li>
     </ul>
   </li>
@@ -1105,7 +1108,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=.6, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne=4., modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">----------- chaîne= + 4, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Done]</span><span style="color:#a31515"> exited with </span><span style="color:#800080">code=0</span><span style="color:#a31515"> in </span><span style="color:#09885a">0.269</span><span style="color:#a31515"> seconds</span></span></span>
 </code></pre></div>
 

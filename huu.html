@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/zh-ecmascript6-oct-2019/iaoe.html">
+        <link rel="canonical" href="https://stahe.github.io/zh-ecmascript6-oct-2019/huu.html">
       
       
         <link rel="prev" href="javascript-ihu.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>4. 表格 - 通过示例了解ECMASCRIPT 6</title>
+        <title>4. 数组 - 通过示例了解ECMASCRIPT 6</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4. 表格
+              4. 数组
             
           </span>
         </div>
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 工作环境的安装
   
 
     
@@ -400,7 +402,7 @@
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -411,14 +413,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="iaoe.html" class="md-nav__link md-nav__link--active">
+      <a href="huu.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -691,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-anhu.html" class="md-nav__link">
+      <a href="javascript-anhu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -745,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+      <a href="http-euuan-huieiiuanuue-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 税费计算服务的 JavaScript HTTP 客户端
+    14. HTTP 客户端 税费计算服务的 JavaScript
   
 
     
@@ -785,22 +787,22 @@
   
 
 
-<p><a id="refheadingtoc2041993980233556"></a></p>
-<h1 id="4">4. <span style="color: #365f91">表格</span></h1>
-<p><img src="images/10000000000000F7000000DA0354C5DC.png" width="99" height="87" style="width:2.611cm;height:2.304cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000DA0354C5DC.png" /></p>
-<p><a id="refheadingtoc2042013980233556"></a></p>
+<p><span id="refheadingtoc2041993980233556" name="refheadingtoc2041993980233556" class="odt-bookmark-anchor"></span></p>
+<h1 id="4">4. <span style="color: #365f91">数组</span></h1>
+<p><img src="images/10000000000000F7000000DA0354C5DC.png" width="99" height="87" style="width:2.611cm;height:2.311cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000DA0354C5DC.png" /></p>
+<p><span id="refheadingtoc2042013980233556" name="refheadingtoc2042013980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="41-tab-01">4.1. <span style="color: #4f81bd"><strong>脚本</strong> [tab-01]</span></h2>
-<p>以下脚本演示了 JavaScript 数组的一些特性。这些数组与 PHP 数组相似，但有一个主要区别：它们通过指针进行操作，并且被视为对象。</p>
+<p>以下脚本展示了 JavaScript 数组的一些特性。它们与 PHP 数组相似，但有一个显著区别：它们通过指针进行操作，并且被视为对象。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an array is an object manipulated via its address</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 数组是通过其地址操作的对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab1 = </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// address copying</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 地址复制</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab2 = tab1;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// tab1 and tab2 point to the same table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// tab1 和 tab2 指向同一个数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1===tab2 :&quot;</span><span style="color:#000000">, tab1 === tab2);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the table can be modified using either tab1 or tab2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 可以通过 tab1 或 tab2 任意一个来修改数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab2<span style="font-weight:bold">[1]</span> = 10;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1=&quot;</span><span style="color:#000000">, tab1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span></span>
@@ -821,31 +823,32 @@
   <li>结果的第 4 行和第 5 行显示，这两个指针指向同一个数组；
   </li>
 </ul>
-<p><a id="refheadingtoc2042033980233556"></a></p>
+
+<p><span id="refheadingtoc2042033980233556" name="refheadingtoc2042033980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="42-tab-02">4.2. <span style="color: #4f81bd"><strong>脚本</strong> [tab-02]</span></h2>
-<p>此脚本演示了 JavaScript 数组与编译型语言中的数组存在差异。</p>
+<p>该脚本表明，JavaScript 数组与编译型语言中的数组有所不同。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = [];</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, longueur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.length, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// element initialization</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 初始化一个元素</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab<span style="font-weight:bold">[3]</span> = 100;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">tab</span><span style="font-weight:bold;color:#000000">[1]</span><span style="color:#000000"> = </span><span style="color:#a31515">&quot;huit&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, longueur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.length, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// toString</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab.toString=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.toString(), &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// the keys to the picture are its indices</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 数组的键即其索引</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> key </span><span style="color:#0000ff">of</span><span style="color:#000000"> tab.keys()) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;clé=</span><span style="font-weight:bold;color:#a31515">[&quot;, key, &quot;]</span><span style="color:#a31515">, valeur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab[key]</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;]&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// table values</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 数组的值</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> value </span><span style="color:#0000ff">of</span><span style="color:#000000"> tab.values()) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;valeur=</span><span style="font-weight:bold;color:#a31515">[&quot;, value, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -854,9 +857,9 @@
 <ul>
   <li>第 4 行：一个空数组；
   </li>
-  <li>第 8 行：数组没有固定大小。它仅仅是一系列通过数字索引的元素。即使元素 <b>[0, 1, 2]</b> 尚未定义，你也可以初始化第 3 个元素；
+  <li>第8行：数组没有固定大小。它仅仅是一系列通过编号索引的元素。即使<b>其他</b>元素尚未定义，也可以初始化第3个元素；
   </li>
-  <li>第 16–24 行：JavaScript 数组的行为与 PHP 数组类似；
+  <li>第16-24行：JavaScript数组的行为与PHP数组类似；
   </li>
 </ul>
 
@@ -880,62 +883,62 @@
 <span class="odt-code-line"><span class="odt-code-line-content">valeur=<span style="font-weight:bold">[ 100 ]</span></span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042053980233556"></a></p>
+<p><span id="refheadingtoc2042053980233556" name="refheadingtoc2042053980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="43-tab-03">4.3. <span style="color: #4f81bd"><strong>脚本</strong> [tab-03]</span></h2>
-<p>本脚本演示了 <strong>[array]</strong> 对象的各种方法。</p>
+<p>该脚本演示了 <strong>[tableau]</strong> 对象的各种方法。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a table can contain different types of data</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 数组可以包含不同类型的数据</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = </span><span style="font-weight:bold;color:#000000">[1, 2, &quot;un&quot;, &quot;deux&quot;, true, [10, 20]</span><span style="color:#000000">, { prop1: 10, prop2: </span><span style="color:#a31515">&quot;abc&quot;</span><span style="color:#000000"> }];</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// console.log can display the contents of an array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// console.log 能够显示数组的内容</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(1);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(2);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// table path with foreach</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用 foreach 遍历数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab.forEach(element =&gt; {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (element));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">show(</span><span style="color:#a31515">&quot;2b&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// another script to do the same thing</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 实现相同功能的另一种写法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">tab.forEach(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (element) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (element));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(3);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// table route with for</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用 for 循环遍历数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; tab.length; i++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;i=&quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;tab</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(4);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// change tab[i]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 修改 tab[i]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab<span style="font-weight:bold">[5]</span> = [];</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(5);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// remove the last element</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 删除最后一个元素</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> element = tab.pop(tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(6);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// add an element to the end of the array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 在数组末尾添加一个元素</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">tab.push(</span><span style="color:#a31515">&#x27;xyz&#x27;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(7);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// add an element at the beginning of the array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 在数组开头添加一个元素</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">tab.unshift(1000);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(8);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// remove the 1st element from the array</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 从数组中移除第一个元素</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">element = tab.shift();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(9);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// remove element no. 2 from the table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 从数组中移除第2个元素</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">element = tab.splice(2, 1);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">show(10);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// remove two elements from the table, starting with element no. 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 从数组中移除从第 1 个元素开始的两个元素</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">element = tab.splice(1, 2);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> show(param) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[&quot;, param, &quot;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -947,17 +950,17 @@
     <ul>
       <li>第 3 行将变量 <b>[tab]</b> 声明为常量；
       </li>
-      <li>第 24 行修改了元素 tab<b>[5]</b>；
+      <li>第24行修改了元素<b>tab[5]</b>；
       </li>
     </ul>
   </li>
 </ul>
 
-<p>在第 3 行中，被声明为常量的只是指向数组的指针，而非数组本身。数组本身是可以被修改的。</p>
+<p>第 3 行，被声明为常量的只是指向该数组的指针，而不是数组本身。数组本身是可以被修改的。</p>
 <ul>
-  <li>第 14–16 行：使用 <b>[tab]</b> 数组的 <b>[forEach]</b> 方法对 <b>[tab]</b> 数组进行遍历。该方法将函数定义作为参数，这种函数可称为字面量函数。该函数接受一个参数：<b>[tab]</b> 数组的当前元素。对于数组的每个元素，都会调用该函数。这种语法在 JavaScript 中很常见；
+  <li>第14-16行：通过数<b>组[tab]中的</b>方法<b>[forEach]</b>遍历数<b>组[tab]</b>。 该方法接收一个函数定义作为参数，可称为字面量函数。该参数函数接收一个参数：数组 <b>[tab]</b> 的当前元素。该函数会针对数组的每个元素被调用。这种写法在 JavaScript 中很常见；
   </li>
-  <li>第 9–10 行：我们使用不同的语法来定义函数。而不是这样写：
+  <li>第 9-10 行：这里使用另一种语法来定义参数函数。与通常的写法：
     <ul>
       <li>function(p1, p2, …, pn){….}
       </li>
@@ -965,61 +968,62 @@
   </li>
 </ul>
 
-<p>我们写：</p>
+<p>而是写成：</p>
 <ul>
   <li>（续）
     <ul>
-      <li><b>(p1, p2, …, pn) =&gt; {…}</b>。这被称为“箭头”表示法；
+      <li><b>(p1,p2, ..,pn)=&gt;{.…}</b>。这被称为“箭头”语法；
       </li>
     </ul>
   </li>
-  <li>其余代码由注释说明；
+  <li>其余代码通过注释进行说明；
   </li>
 </ul>
 
-<p>从这个脚本中，请注意：</p>
+<p>关于此脚本，需注意：</p>
 <ul>
   <li>数组是一个由指针引用的对象；
   </li>
-  <li>该对象具有 <b>[forEach, pop, push, shift, unshift] </b>等方法；
+  <li>该对象具有 <b>[forEach, pop, push, shift, unshift]</b> 方法；
   </li>
 </ul>
-<p><a id="refheadingtoc2042073980233556"></a></p>
+
+<p><span id="refheadingtoc2042073980233556" name="refheadingtoc2042073980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="44-tab-04">4.4. <span style="color: #4f81bd"><strong>脚本</strong> [tab-04]</span></h2>
-<p>本脚本介绍了数组对象的其他方法。</p>
+<p>该脚本展示了数组对象的其他方法。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// table manipulation method</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a picture</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 数组操作方法</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个数组</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = [];</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  tab<span style="font-weight:bold">[i]</span> = i * 10;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// map</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 映射</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab2 = tab.map(element =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> { prop1: element, prop2: element * element }</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// display</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 显示</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// reduce without initial value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 无初始值的 reduce</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> somme = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme tab=&quot;</span><span style="color:#000000">, somme);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// reduce with initial value</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 带初始值的 reduce</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> somme2 = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue, 10);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme2 tab=&quot;</span><span style="color:#000000">, somme2);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// filter</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 过滤</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab4 = tab.filter((element) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (element &gt; 50) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> element;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">});</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab4=&quot;</span><span style="color:#000000">, tab4);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// find</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 查找</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> element1 = tab.find((element) =&gt; (element &gt; 20));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément1=&quot;</span><span style="color:#000000">, element1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// findIndex</span></span>
@@ -1033,10 +1037,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// lastIndexOf</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> index4 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.lastIndexOf(4);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index4 4=&quot;</span><span style="color:#000000">, index4);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// spell</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 排序</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab5 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort();</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab5=&quot;</span><span style="color:#000000">, tab5);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// reverse spell</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 反向排序</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> tab6 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort((e1, e2) =&gt; {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (e1 &gt; e2) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> -1;</span></span></span>
@@ -1052,7 +1056,7 @@
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 13–15 行：<b>[map]</b> 方法接受一个转换函数作为参数。该函数会对数组中的每个元素反复调用。它负责将元素转换为其他形式——在本例中，是具有 <b>[prop1, prop2]</b> 属性的对象。<b>[map]</b> 方法返回一个新的数组。原始数组保持不变：
+  <li>第 13-15 行：方法 <b>[map]</b> 接受一个转换函数作为参数。该函数会针对数组的每个元素被反复调用。其作用是将该元素转换为其他形式，此处为具有属性 <b>[prop1, prop2]</b> 的对象。 方法 <b>[map]</b> 返回一个新数组。原数组保持不变：
   </li>
 </ul>
 
@@ -1071,53 +1075,53 @@
 </code></pre></div>
 
 <ul>
-  <li>第 20 行：<b>[reduce]</b> 方法接受一个双参数函数作为参数，该函数会针对数组的每个元素反复调用。该函数接受两个参数：
+  <li>第 20 行：方法 <b>[reduce]</b> 接受一个双参数函数作为参数，该函数会针对数组的每个元素被反复调用。该函数接受两个参数：
     <ul>
-      <li><b>[currentValue] </b>是数组的当前元素；
+      <li><b>[currentValue] </b>是数组中的当前元素；
       </li>
-      <li><b>[accumulator] </b>是该函数上次计算得到的结果。如果未为该累加器提供初始值，则其初始值为 0；
+      <li><b>[accumulator] </b>是该函数获得的最新结果。如果未为该累加器指定初始值，则其值为 0；
       </li>
-      <li>累加函数首次被调用时，返回 <b>[0+tab[0]</b>]。该值被赋给累加器；
+      <li>首次调用累加函数时，它返回 <b>[0+tab[0]</b>]。累加器被赋值为该值；
       </li>
-      <li>第二次调用时，它返回 accumulator+tab<b>[1]</b>，即 tab<b>[0]</b>+tab<b>[1]</b>；
+      <li>第二次调用时，它返回累加器+tab[1]，即 <b>tab[0]+tab[1]</b>；
       </li>
-      <li>第三次调用时，它返回 accumulator + tab<b>[2]</b>，即 tab<b>[0] </b>+ tab<b>[1] </b>+ tab<b>[2]</b>；
+      <li>第三次，它返回累加器+tab[2]，即 <b>tab[0]+tab[1]+tab[2]</b>；
       </li>
-      <li>以此类推。最终，累加器将表示数组 <b>[tab] </b>中所有元素的和；
+      <li>等等。最终，累加器将表示数组中所有元素的和 <b>[tab]</b>；
       </li>
     </ul>
   </li>
-  <li>第 26 行：<b>[filter]</b> 方法接受一个过滤函数作为参数。该函数会针对数组的每个元素反复被调用，并接收该元素作为参数。它必须返回：
+  <li>第26行：<b>方法</b>[filter]的参数是一个筛选函数。该函数针对数组中的每个元素被反复调用，并接收该元素作为参数。如果该元素需要保留，则该函数应返回：
     <ul>
-      <li><b>[true]</b> 表示应保留该元素；
+      <li><b>[true]</b>（若需保留该元素）；
       </li>
       <li>否则返回 <b>[false]</b>；
       </li>
     </ul>
   </li>
-  <li>第 33 行：<b>[find]</b> 方法接受一个搜索函数作为参数。该函数会对数组的每个元素反复调用，并接收该元素作为参数。如果接收到的元素满足搜索条件，则必须返回 <b>[true]</b>。搜索随即停止。因此，<b>[find]</b> 方法返回 0 或 1 个元素；
+  <li>第 33 行：方法 <b>[find] </b>的参数是一个搜索函数。该函数会针对数组中的每个元素反复被调用，并接收该元素作为参数。如果接收到的元素满足搜索条件，则该函数应返回 <b>[true]</b>。此时，该过程即告结束。 因此，方法 <b>[find]</b> 返回 0 或 1 个元素；
   </li>
-  <li>第 36 行：<b>[findIndex]</b> 方法的工作原理与 <b>[find]</b> 方法类似，但它不返回找到的元素，而是返回该元素在数组中的索引；
+  <li>第 36 行：方法 <b>[findIndex] </b>的工作原理与方法 <b>[find]</b> 相同，但它不返回找到的元素，而是返回该元素在数组中的索引；
   </li>
-  <li>第 39 行、第 41 行：<b>[indexOf(value)]</b> 方法在数组中搜索 <b>[value]</b>，并返回其索引；若未找到，则返回 -1；
+  <li>第39、41行：方法 <b>[indexOf(valeur)] </b>在数组中搜索 <b>[valeur]</b> 并返回其索引，若未找到则返回 -1；
   </li>
-  <li>第 44 行：<b>[lastIndexOf(value)]</b> 方法的工作原理与 <b>[indexOf(value)]</b> 方法相同，但从数组的末尾开始搜索；
+  <li>第 44 行：方法 <b>[lastIndexOf(valeur)] </b>的工作原理与方法 <b>[indexOf(valeur)]</b> 相同，但从数组的末尾开始搜索；
   </li>
-  <li>第 47 行：不带参数的 <b>[sort]</b> 方法返回按自然顺序（数字、字符串）排序的数组；
+  <li>第 47 行：无参数的 <b>[sort]</b> 方法返回按自然顺序（数字、字符串）排序的数组；
   </li>
-  <li>第 50 行：当自然排序不适用时，必须向 <b>[sort]</b> 方法传入一个带有两个参数 (e1, e2) 的函数，该函数返回：
+  <li>第50行：当自然排序不适用时，需向<b>方法[sort]</b>传递一个包含两个参数（e1,e2）的函数，该函数返回：
     <ul>
-      <li>+1 表示 e1 应排在 e2 之后；
+      <li>若 e1 应排在 e2 之后，则返回 +1；
       </li>
       <li>-1 表示 e1 应排在 e2 之前；
       </li>
-      <li>0 表示两个元素应具有相同的排序顺序；
+      <li>0 表示两个元素应具有相同的排序位置；
       </li>
     </ul>
   </li>
 </ul>
 
-<p><strong>[sort]</strong> 方法会反复调用作为参数传入的函数，以比较数组中的两个元素；</p>
+<p>方法 <strong>[sort]</strong> 会反复调用作为参数传递的该函数，以比较数组中的两个元素；</p>
 
 
 

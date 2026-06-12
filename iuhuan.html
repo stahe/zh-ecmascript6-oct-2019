@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 工作环境的安装
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iaoe.html" class="md-nav__link">
+      <a href="huu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -556,7 +558,7 @@
   <a href="#66-str-06" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.6. 脚本 [str-06]
+        6.6. [str-06] 脚本
       
     </span>
   </a>
@@ -713,14 +715,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-anhu.html" class="md-nav__link">
+      <a href="javascript-anhu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -767,14 +769,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+      <a href="http-euuan-huieiiuanuue-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 税费计算服务的 JavaScript HTTP 客户端
+    14. HTTP 客户端 税费计算服务的 JavaScript
   
 
     
@@ -807,32 +809,32 @@
   
 
 
-<p><a id="refheadingtoc2042253980233556"></a></p>
+<p><span id="refheadingtoc2042253980233556" name="refheadingtoc2042253980233556" class="odt-bookmark-anchor"></span></p>
 <h1 id="6">6. <span style="color: #365f91">字符串</span></h1>
-<p>JavaScript 字符串与 PHP 中的字符串非常相似。</p>
-<p><img src="images/10000000000000C9000001318D77205E.png" width="81" height="122" style="width:2.133cm;height:3.237cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C9000001318D77205E.png" /></p>
-<p><a id="refheadingtoc2042273980233556"></a></p>
+<p>JavaScript 的字符串与 PHP 的字符串非常相似。</p>
+<p><img src="images/10000000000000C9000001318D77205E.png" width="81" height="122" style="width:2.133cm;height:3.23cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C9000001318D77205E.png" /></p>
+<p><span id="refheadingtoc2042273980233556" name="refheadingtoc2042273980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="61-str-01">6.1. <span style="color: #4f81bd"><strong>脚本</strong> [str-01]</span></h2>
-<p>首先需要理解的是，一旦字符串创建完成，就无法再对其进行修改。虽然有许多方法可以基于原始字符串创建新的字符串，但原始字符串本身保持不变。此外，字符串有两种类型：</p>
+<p>首先需要理解的是，字符串一旦创建，就无法再进行修改。虽然有许多方法可以基于原始字符串生成新的字符串，但原始字符串始终保持不变。此外，字符串有两种类型：</p>
 <ul>
-  <li><b>[string]</b>：当使用字符串字面量初始化时；
+  <li><b>[string]</b>（当使用字符串字面量初始化时）；
   </li>
-  <li><b>[object] </b>当其作为 <b>[String]</b> 类的实例创建时；
+  <li><b>[object] </b>当作为 <b>[String]</b> 类的实例创建时；
   </li>
 </ul>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// strings are read-only (cannot be modified)</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字符串为只读（无法修改）</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 一个字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne1 = </span><span style="color:#a31515">&quot;abcd &quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 类型</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(chaîne1)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne1));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// character n° 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 第2个字符</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;chaîne1</span><span style="font-weight:bold;color:#a31515">[2]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, chaîne1</span><span style="font-weight:bold;color:#000000">[2]</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// causes an error</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 引发错误</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">chaîne1</span><span style="font-weight:bold;color:#000000">[2]</span><span style="color:#000000"> = </span><span style="color:#a31515">&quot;0&quot;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
@@ -847,36 +849,36 @@
 <span class="odt-code-line"><span class="odt-code-line-content">at Generator.next (&lt;anonymous&gt;)</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042293980233556"></a></p>
+<p><span id="refheadingtoc2042293980233556" name="refheadingtoc2042293980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="62-str-02">6.2. <span style="color: #4f81bd"><strong>脚本</strong> [str-02]</span></h2>
-<p>本脚本演示了字符串可以通过两种方式构建。</p>
+<p>该脚本展示了构建字符串的两种方法。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// strings can be of two types</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a literal string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字符串可分为两类</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字符串常量</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne1 = </span><span style="color:#a31515">&quot;abcd &quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 类型</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(chaîne1)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne1));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// string instance</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// String 实例</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne2 = </span><span style="color:#0000ff">new</span><span style="color:#000000"> String(</span><span style="color:#a31515">&quot;xyzt&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 类型</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(chaîne2)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne2));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// other entry (without new) - type [string] not [object]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 其他写法（不带 new）——类型为 [string]，而非 [object]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne3 = String(</span><span style="color:#a31515">&quot;12 34&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 类型</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;typeof(chaîne3)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (chaîne3));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// type [string] and type [object] offer the same methods, those of the String class</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 类型 [string] 和类型 [object] 提供相同的方法，即 String 类的方法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;chaîne1.length=&quot;</span><span style="color:#000000">, chaîne1.length);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;chaîne2.length=&quot;</span><span style="color:#000000">, chaîne2.length);</span></span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 6 行：定义字符串的标准方法。<b>[string1] </b>的类型为 <b>[string]</b>；
+  <li>第 6 行：定义字符串的常规方法。<b>[chaîne1] </b>的类型为 <b>[string]</b>；
   </li>
-  <li>第 10 行：可以使用 <b>[String]</b> 类的构造函数来构建字符串。<b>[string2] </b>的类型将是 <b>[object]</b>；
+  <li>第10行：可以使用<b>[String]类的</b>构造函数来构建字符串。<b>[chaîne2]</b>的类型<b>为[object]</b>；
   </li>
 </ul>
 
@@ -890,23 +892,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content">chaîne2.length= 4</span></span>
 </code></pre></div>
 
-<p><strong>[string]</strong> 类型继承了 <strong>[String]</strong> 类的所有方法。</p>
-<p><a id="refheadingtoc2042313980233556"></a></p>
+<p>类型 <strong>[string]</strong> 继承了类 <strong>[String]</strong> 的方法。</p>
+<p><span id="refheadingtoc2042313980233556" name="refheadingtoc2042313980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="63-str-03">6.3. <span style="color: #4f81bd"><strong>脚本</strong> [str-03]</span></h2>
-<p>此脚本通过变量插值显示特定字符串。</p>
+<p>该脚本展示了一个包含变量插值的特定字符串。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;Introduction à Javascript par l&#x27;exemple&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// chain with variable interpolation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 带变量插值的字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> str = </span><span style="color:#a31515">`</span><span style="font-weight:bold;color:#a31515">[${chaîne}]</span><span style="color:#a31515">.substr(3, 2)=`</span><span style="color:#000000"> + chaîne.substr(3, 2)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(str);</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 6 行：字符串中可以包含 ${变量} 表达式，这些表达式会被替换为变量的值。这与 PHP 字符串中的 $ 变量遵循相同的逻辑。请注意此类字符串的语法：它必须用反引号（法语键盘上的 AltGr-7）括起来；
+  <li>第 6 行：字符串中可以包含 ${variable} 表达式，这些表达式将被变量的值替换。这与 PHP 字符串中的 $ 变量遵循相同的逻辑。 需注意此类字符串的书写格式：其两端需用“反引号”（法语键盘上的 AltGr-7）包围；
   </li>
 </ul>
 
@@ -916,85 +918,85 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Introduction à Javascript par l&#x27;exemple]</span>.substr(3, 2)=ro</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042333980233556"></a></p>
+<p><span id="refheadingtoc2042333980233556" name="refheadingtoc2042333980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="64-str-04">6.4. <span style="color: #4f81bd"><strong>脚本</strong> [str-04]</span></h2>
-<p>带变量插值的字符串仍显不足。无法在 ${variable} 表达式中用表达式替换变量。对于有 C 语言编程经验的人来说，没有什么能比得上 <strong>[printf, sprintf]</strong> 函数来编写或构造格式化字符串。成百上千的开发者创建了数千个 JavaScript 包，形成了庞大的生态系统。 当 JavaScript 原生功能无法满足您的需求时，就该寻找能实现该功能的包了。为此，我们使用包管理器 <strong>[npm]</strong>。它提供了一个 <strong>[搜索]</strong> 选项，允许您在包描述中搜索特定字符串。 <strong>[npm]</strong> 会返回符合搜索条件的包列表。因此，我们将搜索包描述中是否包含字符串 <strong>[sprintf]</strong>：</p>
-<p><img src="images/10000000000008B9000002C23DAD22B5.png" width="670" height="212" style="width:17.722cm;height:5.604cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008B9000002C23DAD22B5.png" /></p>
+<p>带变量插值的字符串仍显不足。事实上，无法在 ${variable} 表达式中用一个表达式替换变量。对于有 C 语言编程经验的人来说，没有什么能比 <strong>[printf, sprintf]</strong> 这类函数更适合编写或构建格式化字符串了。 数百名开发者开发了数千个 JavaScript 包，构成了一个庞大的生态系统。当 JavaScript 本身无法满足某种需求时，就该寻找能满足该需求的包了。为此，我们使用包管理器 <strong>[npm]</strong>。 该管理器提供了一个 <strong>[search]</strong> 选项，可用于在包描述中搜索字符串。<strong>[npm]</strong> 会返回符合搜索条件的包列表。因此，我们将搜索包描述中是否包含字符串 <strong>[sprintf]</strong>：</p>
+<p><img src="images/10000000000008B9000002C23DAD22B5.png" width="670" height="212" style="width:17.722cm;height:5.6cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008B9000002C23DAD22B5.png" /></p>
 <ul>
-  <li>第 <b>[4]</b> 列为第 <b>[3]</b> 列中包的关键词；
+  <li>在 <b>[4]</b> 列中，显示 <b>[3]</b> 列中包的关键词；
   </li>
-  <li>在第 <b>[5]</b> 列中，显示第 <b>[3]</b> 列中包的描述；
+  <li>在 <b>[5]</b> 列中，显示 <b>[3]</b> 列中软件包的描述；
   </li>
 </ul>
 
-<p>下一步是访问 <strong>[npm]</strong> 网站 <strong>[https://www.npmjs.com/]</strong>，并阅读包的描述：</p>
+<p>下一步是访问 <strong>[npm]</strong>、<strong>[https://www.npmjs.com/]</strong> 工具的网站，并阅读软件包的描述：</p>
 <p><img src="images/100000000000069700000427F84A598B.png" width="422" height="266" style="width:11.16cm;height:7.033cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000069700000427F84A598B.png" /></p>
-<p>在 <strong>[3]</strong> 中，我们查看包列表并选择一个。</p>
-<p><img src="images/1000000000000485000002026D3D5A42.png" width="347" height="154" style="width:9.179cm;height:4.078cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000485000002026D3D5A42.png" /></p>
-<p>在包的描述中，你会找到安装和使用的说明：</p>
-<p><img src="images/10000000000004970000034CF10EC898.png" width="294" height="211" style="width:7.772cm;height:5.583cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004970000034CF10EC898.png" /></p>
-<p>我们在 <strong>[VSCode]</strong> 终端中安装 <strong>[sprintf-js]</strong> 包：</p>
-<p><img src="images/1000000000000558000001CE1C9B1593.png" width="410" height="139" style="width:10.86cm;height:3.667cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000558000001CE1C9B1593.png" /></p>
-<p>此安装操作将修改位于 <strong>[javascript]</strong> 文件夹根目录下的 <strong>[package.json]</strong> 文件 <strong>[2]</strong>：</p>
-<p><img src="images/100000000000026B000001AB5E547E08.png" width="248" height="171" style="width:6.549cm;height:4.517cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026B000001AB5E547E08.png" /></p>
-<p>如上所示，该包已安装在 <strong>[dependencies]</strong> 中，即运行项目所需的包。请记住，仅在项目开发期间需要的包会被放置在 <strong>[devDependencies]</strong> 中。这些包在运行时不会被使用。在创建项目最终版本以进行生产部署时，这一区别至关重要。有工具可用于：</p>
+<p>在 <strong>[3]</strong> 中，查看包列表并选择其中一个。</p>
+<p><img src="images/1000000000000485000002026D3D5A42.png" width="347" height="154" style="width:9.179cm;height:4.082cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000485000002026D3D5A42.png" /></p>
+<p>在软件包描述中，可查阅安装和使用说明：</p>
+<p><img src="images/10000000000004970000034CF10EC898.png" width="294" height="211" style="width:7.772cm;height:5.579cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004970000034CF10EC898.png" /></p>
+<p>我们在 <strong>[VSCode]</strong> 终端中安装 <strong>[sprintf-js]</strong> 软件包：</p>
+<p><img src="images/1000000000000558000001CE1C9B1593.png" width="410" height="139" style="width:10.86cm;height:3.671cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000558000001CE1C9B1593.png" /></p>
+<p>此次安装将修改位于 <strong>[javascript] [2]</strong> 文件夹根目录下的 <strong>[package.json]</strong> 文件：</p>
+<p><img src="images/100000000000026B000001AB5E547E08.png" width="248" height="171" style="width:6.549cm;height:4.523cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026B000001AB5E547E08.png" /></p>
+<p>上文可见，该包已安装在 <strong>[dependencies]</strong> 中，即安装在项目运行所需的包中。 需要提醒的是，仅在项目开发期间才将所需包放入 <strong>[devDependencies]</strong> 中。这些包在运行时不会被使用。当需要创建项目的最终版本以投入生产环境时，这一区别至关重要。现有工具可用于：</p>
 <ul>
-  <li>将执行所需的所有 JavaScript 文件合并为一个文件。因此，<b>[devDependencies]</b> 中的包不会包含在此最终文件中；
+  <li>将所有运行所需的 jS 文件合并为一个文件。因此<b>，[devDependencies]</b> 中的包不会包含在此最终文件中；
   </li>
-  <li>对其进行压缩，即尽可能减小文件大小。例如，此过程会移除所有注释；
+  <li>对该文件进行压缩，即尽可能减小其体积。例如，为此会删除所有注释；
   </li>
-  <li>“混淆”代码以增加其可读性难度。例如，变量 rate、salary 和 tax 将被替换为变量 a、b 和 c；
+  <li>“混淆”代码，使其难以理解。例如，变量 taux、salaire、impôt 将被替换为变量 a、b、c；
   </li>
-  <li>执行其他优化操作；
+  <li>进行其他优化；
   </li>
 </ul>
 
-<p>这种对 JavaScript 项目最终文件的优化在 Web 编程中被广泛应用。一个 Web 应用程序可能依赖于大量 JavaScript 文件。在浏览器中加载这些文件可能会减慢应用程序首页的显示速度。上述优化旨在缩短这种加载时间。如果用户觉得加载时间过长，他们将不会使用该应用程序。</p>
-<p>既然我们已经有了 <strong>[sprintf-js]</strong> 包，就需要使用它。以下是 <strong>[str-04]</strong> 脚本：</p>
+<p>对项目 jS 的最终文件进行此类优化，主要应用于 Web 编程。一个 Web 应用程序可能依赖于大量 JavaScript 文件。浏览器加载这些文件可能会延缓应用程序首页的显示速度。 上述优化旨在缩短加载时间。如果用户认为加载时间过长，将不会使用该应用程序。</p>
+<p>既然我们已经拥有了 <strong>[sprintf-js]</strong> 包，接下来就需要使用它。这就是 <strong>[str-04]</strong> 脚本：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用外部包来调用 sprintf 函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;Introduction à Javascript par l&#x27;exemple&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// method</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 方法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(3,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.substr(3, 2)));</span></span></span>
 </code></pre></div>
 
-<p>在 ECMAScript 6 中，我们使用 <strong>[import]</strong> 关键字<strong>来</strong>导入包导出的对象。要了解包导出了什么，可以查看其代码：</p>
-<p><img src="images/100000000000060D0000015281E8D3FA.png" width="620" height="135" style="width:16.392cm;height:3.577cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000060D0000015281E8D3FA.png" /></p>
+<p>在 ECMAScript 6 中，我们使用关键字 <strong>[import] 来导入</strong>由包导出的对象。要了解该包导出了什么，可以查看其代码：</p>
+<p><img src="images/100000000000060D0000015281E8D3FA.png" width="620" height="135" style="width:16.392cm;height:3.581cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000060D0000015281E8D3FA.png" /></p>
 <ul>
   <li>在 <b>[1] </b>中，右键单击导入的包；
   </li>
-  <li>在 <b>[2] </b>中，我们希望查看其定义；
+  <li>在 <b>[2] </b>中，若想查看其定义；
   </li>
-  <li>在 <b>[3-4] </b>中，我们可以看到该包导出了一个名为 <b>[sprintf] </b>的函数；
+  <li>在 <b>[3-4] </b>中，可以看到该包导出了一个名为 <b>[sprintf]</b> 的函数；
   </li>
 </ul>
 
-<p>通过以下语句导入来自 <strong>[sprintf-js]</strong> 包的 <strong>[sprintf]</strong> 函数：</p>
+<p><strong>[sprintf-js]</strong> 包中的 <strong>[sprintf]</strong> 函数通过以下语句导入：</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
 <p>完整代码：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用外部包以获取 sprintf 函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;Introduction à Javascript par l&#x27;exemple&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// method</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 方法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(3,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.substr(3, 2)));</span></span></span>
 </code></pre></div>
 
-<p>产生以下结果：</p>
+<p>生成以下结果：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\strings\str-04.js&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">c:\Temp\19-09-01\javascript\strings\str-04.js:3</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">import { sprintf } from &#x27;sprintf-js&#x27;;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">^</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">SyntaxError: Unexpected token {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">at new Script (vm.js:79:7)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">at createScript (vm.js:251:10)</span></span>
@@ -1002,30 +1004,30 @@
 <span class="odt-code-line"><span class="odt-code-line-content">at Module._compile (internal/modules/cjs/loader.js:657:28)</span></span>
 </code></pre></div>
 
-<p>第 3 行：无法识别 <strong>[import]</strong> 语句。这是因为本课程使用的 <strong>[node.js]</strong> 10.15.1 版本（2019 年 9 月）尚未支持名为 modules 的 ECMAScript 包导入标准。 2019 年，<strong>[node.js]</strong> 支持名为 CommonJS 的模块标准。<strong>[node.js]</strong> 计划于 2020 年集成 ECMAScript 模块。开发者们再次挺身而出，创建了允许在 <strong>[node.js]</strong> 中立即（2019 年）使用 ES6 模块的包。</p>
-<p>我们将使用一个名为 <strong>[esm]</strong>（ECMAScript Modules）的包。我们在终端中为 <strong>[javascript]</strong> 项目安装它：</p>
-<p><img src="images/10000000000005560000017C3D85E466.png" width="547" height="152" style="width:14.46cm;height:4.023cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005560000017C3D85E466.png" /></p>
-<p>在 <strong>[4]</strong> 中，我们可以看到安装 <strong>[esm]</strong> 包 <strong>[1-3]</strong> 已修改了 <strong>[javascript/package.json]</strong> 文件。</p>
-<p>我们还没完成。为了让 <strong>[node.js]</strong> 能够使用 <strong>[esm]</strong> 模块，我们需要使用 <strong>[-r esm]</strong> 参数来运行它。</p>
-<p>因此，我们需要修改 <strong>[VSCode]</strong> 中 <strong>[Code Runner]</strong> 扩展的配置：</p>
-<p><img src="images/1000000000000623000003283CBE44C5.png" width="629" height="323" style="width:16.632cm;height:8.555cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000623000003283CBE44C5.png" /></p>
-<p><img src="images/1000000000000674000001DF96DD6E5D.png" width="578" height="168" style="width:15.289cm;height:4.433cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000674000001DF96DD6E5D.png" /></p>
-<p>在 <strong>[11]</strong> 处，我们添加 <strong>[-r esm]</strong> 参数，并保存（Ctrl-S）配置。</p>
-<p>现在我们可以运行 <strong>[str-04]</strong> 脚本：</p>
+<p>第3行，无法识别指令 <strong>[import]</strong>。 这是因为本课程（2019年9月）使用的 <strong>[node.js]</strong> 版本 10.15.1 尚未遵循 ECMAScript 标准，该标准用于导入称为模块的包。 2019年<strong>，[node.js]</strong>遵循名为CommonJS的模块标准。<strong>ECMAScript</strong><strong>对[node.js]</strong>模块的集成预计于2020年实现。 在此背景下，开发者们已着手开发相关软件包，使得 ES6 模块与 <strong>[node.js]</strong> 模块可在当前（2019年）立即协同使用。</p>
+<p>我们将使用一个名为 <strong>[esm]</strong>（<strong>ECMAScript</strong> 模块）的软件包。将其安装到 <strong>[javascript]</strong> 项目的终端中：</p>
+<p><img src="images/10000000000005560000017C3D85E466.png" width="547" height="152" style="width:14.46cm;height:4.022cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005560000017C3D85E466.png" /></p>
+<p>在 <strong>[4]</strong> 中，我们可以看到 <strong>[esm]</strong> 和 <strong>[1-3]</strong> 包的安装已修改了 <strong>[javascript/package.json]</strong> 文件。</p>
+<p>我们还没完成。为了让 <strong>[esm]</strong> 模块被 <strong>[node.js]</strong> 使用，必须使用 <strong>[-r esm]</strong> 参数来启动它。</p>
+<p>因此，我们将修改 <strong>[VSCode]</strong> 扩展 <strong>[Code Runner]</strong> 的配置：</p>
+<p><img src="images/1000000000000623000003283CBE44C5.png" width="629" height="323" style="width:16.632cm;height:8.55cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000623000003283CBE44C5.png" /></p>
+<p><img src="images/1000000000000674000001DF96DD6E5D.png" width="578" height="167" style="width:15.289cm;height:4.429cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000674000001DF96DD6E5D.png" /></p>
+<p>在 <strong>[11]</strong> 中，添加参数 <strong>[-r esm]</strong>，并保存（Ctrl-S）配置。</p>
+<p>现在，我们可以运行脚本 <strong>[str-04]</strong>：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用外部包以获取 sprintf 函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;Introduction à Javascript par l&#x27;exemple&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// substr method</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// substr 方法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(3,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.substr(3, 2)));</span></span></span>
 </code></pre></div>
 
-<p><img src="images/10000000000007E30000010E2282F9EF.png" width="606" height="81" style="width:16.03cm;height:2.143cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007E30000010E2282F9EF.png" /></p>
-<p><a id="refheadingtoc2042353980233556"></a></p>
+<p><img src="images/10000000000007E30000010E2282F9EF.png" width="606" height="81" style="width:16.03cm;height:2.14cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007E30000010E2282F9EF.png" /></p>
+<p><span id="refheadingtoc2042353980233556" name="refheadingtoc2042353980233556" class="odt-bookmark-anchor"></span></p>
 <h2 id="65-str-05">6.5. <span style="color: #4f81bd"><strong>脚本</strong> [str-05]</span></h2>
-<p>以下是文档中关于 <strong>[sprintf]</strong> 函数的说明：</p>
+<p>以下是关于函数 <strong>[sprintf]</strong> 的文档说明：</p>
 <p><em>格式字符串中的占位符以 % 开头，后跟一个或多个以下元素，顺序如下：</em></p>
 <ul>
   <li>一个可选的数字，后跟 $ 符号，用于指定从哪个参数索引获取值。如果未指定，参数将按与输入字符串中占位符相同的顺序放置。
@@ -1036,31 +1038,31 @@
   </li>
   <li>一个可选的 - 符号，用于使 sprintf 将此占位符的结果左对齐。默认情况下，结果为右对齐。
   </li>
-  <li>一个可选数字，指定结果应包含的字符数。如果要返回的值短于此数字，结果将被补齐。当与 j（JSON）类型指定符一起使用时，补齐长度指定用于缩进的制表符大小。
+  <li>一个可选的数字，用于指定结果应包含多少个字符。如果要返回的值短于该数字，结果将被补齐。当与 j (JSON) 类型指定符一起使用时，补齐长度指定用于缩进的制表符大小。
   </li>
-  <li>一个可选的精度修饰符，由 .（点）后跟一个数字组成，用于指定浮点数应显示的位数。当与 g 类型指定符一起使用时，它指定有效位数。当用于字符串时，会导致结果被截断。
+  <li>一个可选的精度修饰符，由一个 .（点）后跟一个数字组成，用于指定浮点数应显示的位数。当与 g 类型指定符一起使用时，它指定有效位数。当用于字符串时，它会导致结果被截断。
   </li>
-  <li>类型指定符，可以是以下任意一种：
+  <li>一种类型限定符，可以是以下任意一种：
     <ul>
-      <li>% — 生成字符 %
+      <li>% — 返回字符 %
       </li>
-      <li>b — 返回一个二进制整数
+      <li>b — 生成一个二进制整数
       </li>
-      <li><i>c — 返回一个整数，表示具有该 ASCII 值的字符</i>
+      <li>c — 生成一个整数，作为具有该 ASCII 值的字符
       </li>
       <li>d 或 i — 返回一个带符号的十进制整数
       </li>
-      <li>e — 返回采用科学记数法的浮点数
+      <li>e — 生成采用科学记数法的浮点数
       </li>
       <li>u — 返回一个无符号十进制整数
       </li>
-      <li>f — 直接返回浮点数；参见上文关于精度的说明
+      <li>f — 直接返回浮点数；请参阅上文关于精度的说明
       </li>
-      <li>g — 原样返回浮点数；参见上文关于精度的说明
+      <li><i>g — 直接返回浮点数；参见上文关于精度的说明</i>
       </li>
       <li>o — 返回一个八进制整数
       </li>
-      <li>s — 原样返回字符串
+      <li>s — 直接返回字符串
       </li>
       <li>t — 返回 true 或 false
       </li>
@@ -1068,42 +1070,42 @@
       </li>
       <li>v — 返回指定参数的原始值
       </li>
-      <li>x — 将整数以十六进制形式返回（小写）
+      <li>x — 返回一个十六进制整数（小写）
       </li>
-      <li>X — 返回一个十六进制数（大写）
+      <li>X — 返回一个十六进制整数（大写）
       </li>
-      <li>j — 返回一个 JavaScript 对象或数组，以 JSON 编码的字符串形式呈现
+      <li>j — 返回一个 JavaScript 对象或数组，作为 JSON 编码的字符串
       </li>
     </ul>
   </li>
 </ul>
 
-<p>脚本 <strong>[script-05]</strong> 实现了其中部分格式：</p>
+<p><strong>[script-05]</strong> 脚本实现了其中几种格式：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用外部包以获取 sprintf 函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;Javascript&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// character strings</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s, %%s]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s, %%20s]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%20s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s, %%-20s]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%-20s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// integers</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 整数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%d, %%d]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%d]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, 10, 10));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%d, %%4d]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%4d]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, 10, 10));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%d, %%-4d]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%-4d]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, 10, 10));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%d, %%04d]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%04d]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, 10, 10));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// real</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 实数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%f, %%f]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%f]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, -10.5, -10.5));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%f, %%10.2f]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%10.2f]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, -10.5, -10.5));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%f, %%-10.2f]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%-10.2f]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, -10.5, -10.5));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%f, %%010.3f]</span><span style="color:#a31515">=&gt;</span><span style="font-weight:bold;color:#a31515">[%010.3f]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, -10.5, -10.5));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// json</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;personne (%%j)=%j&quot;</span><span style="color:#000000">, { nom: </span><span style="color:#a31515">&quot;mathieu&quot;</span><span style="color:#000000">, âge: 34 }));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// type</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 类型</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;type personne (%%T)=%T&quot;</span><span style="color:#000000">, { nom: </span><span style="color:#a31515">&quot;mathieu&quot;</span><span style="color:#000000">, âge: 34 }));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// boolean</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 布尔值</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;booléen (%%t)=%t&quot;</span><span style="color:#000000">, 4 === 4));</span></span></span>
 </code></pre></div>
 
@@ -1126,48 +1128,48 @@
 <span class="odt-code-line"><span class="odt-code-line-content">booléen (%t)=true</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2042373980233556"></a></p>
-<h2 id="66-str-06">6.6. <span style="color: #4f81bd"><strong>脚本</strong> [str-06]</span></h2>
-<p><strong>[str-06]</strong> 脚本演示了 <strong>[String]</strong> 类的某些方法，这些方法也可用于 <strong>[string]</strong> 类型：</p>
+<p><span id="refheadingtoc2042373980233556" name="refheadingtoc2042373980233556" class="odt-bookmark-anchor"></span></p>
+<h2 id="66-str-06">6.6. <span style="color: #4f81bd">[str-06] <strong>脚本</strong></span></h2>
+<p>脚本 <strong>[str-06]</strong> 展示了 <strong>[String]</strong> 类中的若干方法，这些方法也可用于类型 <strong>[string]</strong>：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// use of an external package to provide the sprintf function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用外部包来获取 sprintf 函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// chain</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> chaîne = </span><span style="color:#a31515">&quot;  Introduction à Javascript &quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// a few methods</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// substr(10,2): 2 characters starting from number 10</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 若干方法</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// substr(10,2)：从第10个字符开始截取2个字符</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(10,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.substr(10, 2)));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// trim: eliminates blanks at the beginning and end of a chain (blank=b \t \r \n \f)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// trim：去除字符串首尾的空格（空格=\b \t \r \n \f）</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.trim()=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.trim()));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// toLowerCase: transformation to lower case</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// toLowerCase：转换为小写</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.toLowerCase=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.toLowerCase()));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// toUpperCase: transformation into uppercase letters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// toUpperCase：转换为大写</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.toUpperCase=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.toUpperCase()));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// indexOf: position of a searched  string within the string, -1 if the substring doesn&#x27;t exist</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// indexOf：目标字符串在字符串中的位置，若子字符串不存在则返 回 -1</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.indexOf(&#x27;Java&#x27;)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.indexOf(</span><span style="color:#a31515">&#x27;Java&#x27;</span><span style="color:#000000">)));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.trim().indexOf(&#x27;abcd&#x27;)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.indexOf(</span><span style="color:#a31515">&#x27;abcd&#x27;</span><span style="color:#000000">)));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// includes: true if the string searched for is in the string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// includes：若被查找的字符串存在于字符串中，则返回 true</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.includes(&#x27;Java&#x27;)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.includes(</span><span style="color:#a31515">&#x27;Java&#x27;</span><span style="color:#000000">)));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// length: string length - not a method but a property</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// length：字符串长度 - 不是方法而是属性</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.length=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.length));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// slice (7,10): strings of characters 7 to 9</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// slice (7,10)：第 7 至 9 个字符的字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.slice(7,10)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.slice(7, 10)));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// match: searches for an expression in the string - this expression can be a regular expression</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// /intro/i: regular expression designating the string [intro] in upper or lower case</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// returns the string found</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// match：在字符串中搜索一个表达式——该表达式可以是正则表达式</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// /intro/i：正则表达式，匹配字符串 [intro]（不区分大小写）</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 返回找到的字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.match(/intro/i)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.match(</span><span style="color:#a31515">/intro/</span><span style="color:#0000ff">i</span><span style="color:#000000">)));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// replace: replaces string1 with string2 in string</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// replaces the 1st occurrence of i with x</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// replace：将字符串1替换为字符串2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将字符串中的第一个 i 替换为 x</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.replace(&#x27;i&#x27;,&#x27;x&#x27;)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.replace(</span><span style="color:#a31515">&#x27;i&#x27;</span><span style="color:#000000">, </span><span style="color:#a31515">&#x27;x&#x27;</span><span style="color:#000000">)));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// replaces all occurrences of i with x</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// /i/g is a regular expression designating all (g) occurrences of i</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将所有 i 替换为 x</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// /i/g 是一个正则表达式，表示所有 (g) 出现 i 的位置</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.replace(/i/g,&#x27;x&#x27;)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.replace(</span><span style="color:#a31515">/i/</span><span style="color:#0000ff">g</span><span style="color:#000000">, </span><span style="color:#a31515">&#x27;x&#x27;</span><span style="color:#000000">)));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// split: splits the string into words separated by the split parameter</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// renders the table of these words</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// /\s*/ : words separated by 0 or more spaces</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// split：将字符串按 split 参数分隔为单词</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 返回这些单词的数组</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// /\s*/：由零个或多个空格分隔的单词</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.split(/\\s*/)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.split(</span><span style="color:#a31515">/\s*/</span><span style="color:#000000">)));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// /\s+/ : words separated by one or more spaces</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// /\s+/：由一个或多个空格分隔的单词</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.split(/\\s+/)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.split(</span><span style="color:#a31515">/\s+/</span><span style="color:#000000">)));</span></span></span>
 </code></pre></div>
 

@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 工作环境的安装
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iaoe.html" class="md-nav__link">
+      <a href="huu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -680,14 +682,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-anhu.html" class="md-nav__link">
+      <a href="javascript-anhu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -734,14 +736,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+      <a href="http-euuan-huieiiuanuue-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 税费计算服务的 JavaScript HTTP 客户端
+    14. HTTP 客户端 税费计算服务的 JavaScript
   
 
     
@@ -774,15 +776,15 @@
   
 
 
-<p><a id="refheadingtoc225368640539168"></a></p>
+<p><span id="refheadingtoc225368640539168" name="refheadingtoc225368640539168" class="odt-bookmark-anchor"></span></p>
 <h1 id="10-es6">10. <span style="color: #365f91">ES6 模块</span></h1>
-<p><img src="images/10000000000000FC0000013E566BAA86.png" width="101" height="127" style="width:2.671cm;height:3.371cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FC0000013E566BAA86.png" /></p>
-<p>ES6 模块允许您构建由独立、可重用的模块组成的 JavaScript 应用程序。</p>
-<p><a id="refheadingtoc225370640539168"></a></p>
+<p><img src="images/10000000000000FC0000013E566BAA86.png" width="101" height="127" style="width:2.671cm;height:3.373cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FC0000013E566BAA86.png" /></p>
+<p>ES6 模块可用于构建结构化、独立且可重用的 JavaScript 应用程序。</p>
+<p><span id="refheadingtoc225370640539168" name="refheadingtoc225370640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="101-import-01-export-01">10.1. <span style="color: #4f81bd">脚本 [import-01, export-01]</span></h2>
-<p>脚本 <strong>[import-01]</strong> 将使用模块 <strong>[export-01]</strong>。其定义如下：</p>
+<p>脚本 <strong>[import-01]</strong> 将使用模块 <strong>[export-01]</strong>。该模块定义如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">// export par défaut d&#x27;un objet non nommé</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 默认导出未命名的对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  data: 2,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  do() {</span></span>
@@ -793,29 +795,29 @@
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 <b>[2–7]</b> 行定义了一个名为 <b>[data, do] </b>的无名对象；
+  <li><b>[2-7]</b> 行定义了一个具有 <b>[data, do]</b> 属性的无名对象；
   </li>
-  <li>第 2 行：<b>[export default]</b> 语句导出了该对象。因此，该对象可以被导入；
+  <li>第 2 行：指令 <b>[export default]</b> 导出了该对象。因此，该对象可以被导入；
   </li>
 </ul>
 
-<p><strong>[import-01]</strong> 脚本使用 <strong>[export-01]</strong> 模块的方式如下：</p>
+<p>模块 <strong>[export-01]</strong> 由脚本 <strong>[import-01]</strong> 以如下方式使用：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// import d&#x27;un objet exporté par défaut</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入默认导出的对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> export01 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// utilisation de cet objet</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用该对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">export01.do();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// on peut importer un export par défaut sous n&#x27;importe quel nom</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 可以以任意名称导入默认导出的对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> data </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(data.data);</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 3 行和第 7 行分别以两个不同的名称导入了 <b>[export-01]</b> 模块中默认导出的对象；
+  <li>第 3 行和第 7 行将模块 <b>[export-01]</b> 默认导出的对象以两个不同的名称导入；
   </li>
-  <li>一旦对象被导入，即可像在脚本中本地定义的一样使用它；
+  <li>导入对象后，即可像在脚本中本地定义一样使用它；
   </li>
 </ul>
 
@@ -826,35 +828,35 @@
 <span class="odt-code-line"><span class="odt-code-line-content">2</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225372640539168"></a></p>
+<p><span id="refheadingtoc225372640539168" name="refheadingtoc225372640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="102-import-02-export-02">10.2. <span style="color: #4f81bd">脚本 [import-02, export-02]</span></h2>
-<p>这些脚本演示了命名对象的导出。</p>
-<p><strong>[export-02]</strong> 脚本如下：</p>
+<p>这些脚本展示了对一个命名对象的导出。</p>
+<p>脚本 <strong>[export-02]</strong> 如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">// export par défaut d&#x27;un objet nommé</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 命名对象的默认导出</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  data: 2,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  do() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// export</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导出</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> data;</span></span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 9 行：我们导出 <b>[data]</b> 对象；
+  <li>第 9 行：导出对象 <b>[data]</b>；
   </li>
 </ul>
 
-<p>导出的对象是否命名并不影响导入操作。<strong>[import-02]</strong> 脚本如下：</p>
+<p>无论导出的对象是否命名，都不会影响导入操作。脚本 <strong>[import-02]</strong> 如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// import d&#x27;un objet exporté par défaut</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入默认导出的对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> module1 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// utilisation de cet objet</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 使用该对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">module1.do();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// on peut importer un export par défaut sous n&#x27;importe quel nom</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 可以以任意名称导入默认导出</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> module2 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(module2.data);</span></span>
 </code></pre></div>
@@ -866,20 +868,20 @@
 <span class="odt-code-line"><span class="odt-code-line-content">2</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225374640539168"></a></p>
+<p><span id="refheadingtoc225374640539168" name="refheadingtoc225374640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="103-import-03-export-03">10.3. <span style="color: #4f81bd">脚本 [import-03, export-03]</span></h2>
 <p>一个模块可以导出多个元素。</p>
-<p><strong>[export-03]</strong> 脚本如下：</p>
+<p>脚本 <strong>[export-03]</strong> 如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content">// multi-exports</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// object export</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 多重导出</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 对象导出</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  data: 2,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  do() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// export function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导出函数</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> { data };</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomething() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;doSomething&quot;</span><span style="color:#000000">);</span></span></span>
@@ -889,29 +891,29 @@
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 10 行和第 14 行：导出两个元素。使用 <b>[export {element}]</b> 语法导出元素；
+  <li>第 10 行和第 14 行：导出两个元素。导出单个元素使用语法 <b>[export {élément}]</b>；
   </li>
 </ul>
 
-<p><strong>[import-03]</strong> 脚本使用 <strong>[export-03]</strong> 模块的方式如下：</p>
+<p>脚本 <strong>[import-03]</strong> 以如下方式使用模块 <strong>[export-03]</strong>：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// import d&#x27;un module [export03]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入模块 [export03]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> {data, doSomething} </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// utilisation des imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入的使用</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">data.do();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">doSomething();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// autre écriture</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 另一种写法</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> * </span><span style="color:#0000ff">as</span><span style="color:#000000"> module </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// utilisation de l&#x27;import</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 导入的使用</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">console.log(module.data);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">module.doSomething();</span></span>
 </code></pre></div>
 
 <ul>
-  <li>第 3 行：<b>[导入]</b> 需使用导出对象的确切名称；
+  <li>第 3 行：<b>[imports]</b> 脚本需使用被导出对象的确切名称；
   </li>
-  <li>第 8 行：您可以将所有导出的对象导入到一个命名对象中（此处为 <b>[module]</b>）；
+  <li>第 8 行：可将所有导出的对象导入到一个命名对象中（此处为 <b>[module]</b>）；
   </li>
 </ul>
 

@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="aianaiauaning.html" class="md-nav__link">
+      <a href="onguouaningenhuang.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. 搭建开发环境
+    2. 工作环境的安装
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="iaoe.html" class="md-nav__link">
+      <a href="huu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. 表格
+    4. 数组
   
 
     
@@ -680,14 +682,14 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript-http-anhu.html" class="md-nav__link">
+      <a href="javascript-anhu-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. JavaScript HTTP 函数
+    12. JavaScript 函数 HTTP
   
 
     
@@ -734,14 +736,14 @@
   
   
     <li class="md-nav__item">
-      <a href="huieiiuanuue-javascript-http-euuan.html" class="md-nav__link">
+      <a href="http-euuan-huieiiuanuue-javascript.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. 税费计算服务的 JavaScript HTTP 客户端
+    14. HTTP 客户端 税费计算服务的 JavaScript
   
 
     
@@ -774,34 +776,34 @@
   
 
 
-<p><a id="refheadingtoc2042493980233556"></a></p>
+<p><span id="refheadingtoc2042493980233556" name="refheadingtoc2042493980233556" class="odt-bookmark-anchor"></span></p>
 <h1 id="9">9. <span style="color: #365f91">错误与异常</span></h1>
-<p><img src="images/10000000000000ED000000BDBBC75AB1.png" width="95" height="76" style="width:2.512cm;height:2.004cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000ED000000BDBBC75AB1.png" /></p>
-<p>JavaScript 并没有一个非常复杂的异常处理系统。不过，它确实提供了 <strong>[throw]</strong> 语句，允许你触发错误，同时也提供了 try/catch/finally 结构，允许你捕获这些错误。</p>
-<p><a id="refheadingtoc2042513980233556"></a></p>
-<h2 id="91-excep-01">9.1. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">脚本 [excep-01]</span></strong></span></h2>
-<p>在下面的脚本中，我们将以 <strong>[小时:分钟:秒:毫秒]</strong> 的格式显示当前日期。为此，我们将使用一个名为 <strong>[moment.js] 的</strong> JavaScript 库。我们像往常一样，使用 <strong>[npm]</strong> 工具进行安装：</p>
-<p><img src="images/1000000000000580000001BB195119DB.png" width="563" height="177" style="width:14.9cm;height:4.688cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
+<p><img src="images/10000000000000ED000000BDBBC75AB1.png" width="95" height="76" style="width:2.512cm;height:2cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000ED000000BDBBC75AB1.png" /></p>
+<p>JavaScript 的异常处理机制并不十分完善。不过，它提供了 <strong>[throw]</strong> 语句用于报告错误，以及 try / catch / finally 结构用于捕获这些错误。</p>
+<p><span id="refheadingtoc2042513980233556" name="refheadingtoc2042513980233556" class="odt-bookmark-anchor"></span></p>
+<h2 id="91-excep-01">9.1. <span style="color: #4f81bd">脚本 [excep-01]</span></h2>
+<p>在下面的脚本中，我们将以 <strong>[heures:minutes:secondes:millisecondes]</strong> 的形式显示当前日期。为此，我们将使用一个名为 <strong>jS</strong> 的库。 我们像往常一样，使用 <strong>[npm]</strong> 工具进行安装：</p>
+<p><img src="images/1000000000000580000001BB195119DB.png" width="563" height="177" style="width:14.9cm;height:4.69cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
 <p>脚本代码如下：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// package moment</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// moment 包</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 </code></pre></div>
 
-<p>要理解第 4 行中 <strong>[import]</strong> 语句的写法，我们可以查看 <strong>[moment]</strong> 模块的定义：</p>
-<p><img src="images/1000000000000580000001BB195119DB.png" width="563" height="177" style="width:14.9cm;height:4.688cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
+<p>要了解第 4 行中 <strong>[import]</strong> 这一行的写法，可以查看模块 <strong>[moment]</strong> 的定义：</p>
+<p><img src="images/1000000000000580000001BB195119DB.png" width="563" height="177" style="width:14.9cm;height:4.69cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
 <ul>
-  <li>在 <b>[1-2] </b>中，我们跳转到了模块定义；
+  <li>在 <b>[1-2] </b>中，我们跳转到模块的定义；
   </li>
-  <li>在 <b>[3] </b>中，我们看到的是一个 TypeScript 文件，而非 JavaScript 文件。运行时，该 TypeScript 文件会被编译成 JavaScript 文件后才被使用；
+  <li>在 <b>[3] </b>中，我们看到的是一个 TypeScript 文件，而非 JavaScript。运行时，该 TypeScript 文件会被编译为 JavaScript 文件后才被使用；
   </li>
-  <li>在 <b>[4] </b>中，我们搜索 <b>[export]</b> 语句（Ctrl-F）；
+  <li>在 <b>[4] </b>中，搜索指令 <b>[export]</b>（Ctrl-F）；
   </li>
-  <li>在 <b>[5] </b>中，该语句导出了 <b>[moment]</b> 对象。在 ES6 中，可以按以下方式导入它：
+  <li>在 <b>[5]</b> 中，该语句导出了对象 <b>[moment]</b>。该对象可通过以下方式导入到 ES6 中：
   </li>
 </ul>
 
@@ -809,42 +811,42 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>您可以使用任意名称来导入 <strong>[moment]</strong> 对象，例如：</p>
+<p>导入对象 <strong>[moment]</strong> 时可以使用任意名称，例如：</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> m </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
 <p>让我们回到脚本代码：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// package moment</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// moment 包</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// try / catch / finally principle</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// try / catch / finally 原理</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// date - current time</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当前时间</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = Date.now();</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// format time to get milliseconds</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 时间格式化以获取毫秒</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> time = moment(now).format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// milliseconds</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 毫秒</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> milli = Number(time.substr(time.length - 3));</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// display</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 显示</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;--------------------itération n° &quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;à&quot;</span><span style="color:#000000">, time);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// number varies according to time of day</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 根据当前时间变化的数字</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> nbre = milli % 2;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (nbre === 0) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// launch an error msg</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// 触发错误消息</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;erreur&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// if we&#x27;ve arrived here, there&#x27;s been no mistake</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 如果到达此处，说明没有发生错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;pas d&#x27;erreur&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// if we get here, it&#x27;s because there&#x27;s been a mistake</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 如果到达此处，说明发生了错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;erreur1=&quot;</span><span style="color:#000000">, error);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">finally</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// executed in all cases error or not</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 无论是否出错，此代码都会执行</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;finally&quot;</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -852,13 +854,13 @@
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 4 行：导入 <b>[moment]</b> 库；
+  <li>第4行：导入[moment]库；
   </li>
-  <li>脚本循环执行10次（第7行）。每次循环迭代中，都会以 <b>[小时:分钟:秒:毫秒] </b>的格式获取当前时间（第8–13行）；
+  <li>脚本的工作原理是循环10次（第7行）。每次循环时，获取当前时间并以<b>[heures:minutes:secondes:millisecondes]格式</b>存储（第8-13行）；
   </li>
-  <li>如果毫秒数为偶数，则显示一条错误信息（第19–22行）；
+  <li>如果毫秒数为偶数，则触发错误信息（第19-22行）；
   </li>
-  <li>此处的目的是理解 try / catch / finally 的工作原理
+  <li>此处旨在理解 try / catch / finally 的工作原理
   </li>
 </ul>
 
@@ -897,66 +899,66 @@
 <span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
 </code></pre></div>
 
-<p>我们可以看到，无论是否发生错误，<strong>[finally]</strong> 子句都会被执行。</p>
-<p><a id="refheadingtoc225364640539168"></a></p>
+<p>可以看到，无论是否发生错误，<strong>[finally]</strong> 语句都会被执行。</p>
+<p><span id="refheadingtoc225364640539168" name="refheadingtoc225364640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="92-excep-02">9.2. <span style="color: #4f81bd">脚本 [excep-02]</span></h2>
-<p>本脚本演示了 <strong>[throw]</strong> 语句可以抛出任何类型的数据，并且这些数据会被 <strong>[catch]</strong> 子句完全捕获。</p>
+<p>该脚本由语句 <strong>[throw]</strong> 调用，可处理任意类型的数据，且该数据会被子句 <strong>[catch]</strong> 完整捕获。</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// you can &quot;throw&quot; just about anything to signal an error</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 几乎可以“抛出”（throw）任何内容来报告错误</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// launch a string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 抛出字符串</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;msg d&#x27;erreur&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// there has been a mistake</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 发生了错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// launch a table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 生成表格</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">i++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// there has been a mistake</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 发生错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// launch a literal object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 抛出一个字面量对象</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">i++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> { nom: </span><span style="color:#a31515">&quot;hercule&quot;</span><span style="color:#000000">, pays: </span><span style="color:#a31515">&quot;grèce antique&quot;</span><span style="color:#000000"> }</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// there has been a mistake</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 发生错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// lancer un type Error</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 抛出 Error 类型</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">i++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Error(</span><span style="color:#a31515">&quot;erreur de connexion au réseau&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// there has been a mistake</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 发生错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// lancer un type Error</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 抛出 Error 类型</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">i++;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Error(</span><span style="color:#a31515">&quot;erreur de connexion au réseau&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// there has been an error - the message is in [error.message]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 发生错误 - 消息位于 [error.message]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur.message=</span><span style="font-weight:bold;color:#a31515">[&quot;, error.message, &quot;]</span><span style="color:#a31515">, type(error)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>注释</strong></p>
 <ul>
-  <li>第 35、44 行：<b>[Error]</b> 是一个 JavaScript 类，其构造函数接受一条错误消息作为可选的第一个参数。该消息可通过 <b>[Error.message]</b> 属性获取（第 47 行）；
+  <li>第 35、44 行：<b>[Error]</b> 是一个 JavaScript 类，其构造函数允许将错误消息作为第一个可选参数。该消息可通过属性 <b>[Error.message]</b>（第 47 行）获取；
   </li>
-  <li>除了 <b>[Error]</b> 之外，还有其他类可以触发错误：[EvalError, InternalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError]；
+  <li>除 <b>[Error]</b> 之外，还有其他类可用于报告错误： [EvalError, InternalError, RangeError, ReferenceError, SyntaxError,  TypeError, URIError)；
   </li>
 </ul>
 
@@ -985,26 +987,26 @@
 <span class="odt-code-line"><span class="odt-code-line-content">erreur.message=<span style="font-weight:bold">[ erreur de connexion au réseau ]</span>, type(error)= object</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc225366640539168"></a></p>
+<p><span id="refheadingtoc225366640539168" name="refheadingtoc225366640539168" class="odt-bookmark-anchor"></span></p>
 <h2 id="93-excep-03">9.3. <span style="color: #4f81bd">脚本 [excep-03]</span></h2>
-<p>此脚本演示了在 <strong>[catch]</strong> 块内，可以区分由 <strong>[catch]</strong> 捕获的 <strong>[Error]</strong> 实例的类型：</p>
+<p>该脚本表明，在 <strong>[catch]</strong> 中，可以区分由 <strong>[catch]</strong> 拦截的 <strong>[Error]</strong> 实例的类型：</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// package moment</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&#x27;use strict&#x27;;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// moment 包</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// differentiate the Error instance received in a [catch]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 将收到的 Error 实例解析为 [catch]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// date - current time</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 当前时刻的日期和时间</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = Date.now();</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// format time to get milliseconds</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 时间格式化以获取毫秒</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> time = moment(now).format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// milliseconds</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// 毫秒</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> milli = Number(time.substr(time.length - 3));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;--------------------itération n° &quot;</span><span style="color:#000000">, i);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// nbre [0, 1, 2]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 数量 [0, 1, 2]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> nbre = milli % 3;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">switch</span><span style="color:#000000"> (nbre) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">case</span><span style="color:#000000"> 0:</span></span></span>
@@ -1015,7 +1017,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> EvalError(</span><span style="color:#a31515">&quot;erreur 3&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// there has been a mistake</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// 发生错误</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> ReferenceError) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;ReferenceError :&quot;</span><span style="color:#000000">, error.message);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
